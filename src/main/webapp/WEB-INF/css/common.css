@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+.no-featured-image-padding .featured-image {
+	margin-left: -0px;
+	margin-right: -0px;
+}
+
+.post-image-above-header .no-featured-image-padding .inside-article .featured-image
+	{
+	margin-top: -0px;
+}
+
+@media ( max-width :768px) {
+	.no-featured-image-padding .featured-image {
+		margin-left: -0px;
+		margin-right: -0px;
+	}
+	.post-image-above-header .no-featured-image-padding .inside-article .featured-image
+		{
+		margin-top: -0px;
+	}
+}
+
+.is-right-sidebar {
+	width: 30%;
+}
+
+.is-left-sidebar {
+	width: 25%;
+}
+
+.site-content .content-area {
+	width: 100%;
+}
+
+@media ( max-width : 768px) {
+	.main-navigation .menu-toggle, .sidebar-nav-mobile:not(#sticky-placeholder)
+		{
+		display: block;
+	}
+	.main-navigation ul, .gen-sidebar-nav, .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+		.has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav)
+		{
+		display: none;
+	}
+	.nav-align-right .inside-navigation, .nav-align-center .inside-navigation
+		{
+		justify-content: space-between;
+	}
+}
+
+.dynamic-author-image-rounded {
+	border-radius: 100%;
+}
+
+.dynamic-featured-image, .dynamic-author-image {
+	vertical-align: middle;
+}
+
+.one-container.blog .dynamic-content-template:not(:last-child),
+	.one-container.archive .dynamic-content-template:not(:last-child) {
+	padding-bottom: 0px;
+}
+
+.dynamic-entry-excerpt>p:last-child {
+	margin-bottom: 0px;
+}
+
+.generate-sections-inside-container {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#oss-title.generate-sections-container {
+	background-image:
+		url(https://reviewpro.co.kr/wp-content/uploads/2020/05/Review-Pro.jpg);
+}
+
+#oss-title .generate-sections-inside-container {
+	padding-top: 17%;
+	padding-bottom: 17%;
+	color: #ffffff;
+}
+
+@media ( max-width :768px) {
+	.generate-sections-inside-container {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+#generate-section-2 .generate-sections-inside-container {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+@media ( max-width :768px) {
+	.generate-sections-inside-container {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--main-text);
+    background-color: #fff;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+:root {
+    --main-color: #00A1E4;
+    --alt-color: #E6197D;
+    --alt2-color: #34BF49;
+    --main-underline: #00A1E430;
+    --alt-underline: #E6197D30;
+    --alt2-underline: #34BF4930;
+    --main-text: #211e1f;
+    --alt-text: #011424;
+    --light-text: #a9a9a9;
+    --icon-color: #5a5a5a;
+    --background-color: #F6F6F6;
+    --border-color: #E6E6E6;
+    --border-radius-outer: 5px;
+    --border-radius-inner: 10px;
+    --website-name: '리뷰프로';
+}
+
+
+html {
+    font-family: var(--body-font);
+    font-size: 16px;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-family: var(--body-font);
+    font-size: 16px;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+::selection {
+    background: var(--alt-color);
+    color: #fff;
+}
+
+.sidebar .widget, .page-header, .widget-area .main-navigation, .site-main>* {
+    margin-bottom: 0;
+}
+
+.generate-sections-container {
+    background-size: cover;
+}
+
+div {
+    display: block;
+}
+
+.entry-header, .site-content {
+    word-wrap: break-word;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--main-text);
+    background-color: #fff;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fff;
+    color: #211e1f;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--main-text);
+    background-color: #fff;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --main-color: #00A1E4;
+    --alt-color: #E6197D;
+    --alt2-color: #34BF49;
+    --main-underline: #00A1E430;
+    --alt-underline: #E6197D30;
+    --alt2-underline: #34BF4930;
+    --main-text: #211e1f;
+    --alt-text: #011424;
+    --light-text: #a9a9a9;
+    --icon-color: #5a5a5a;
+    --background-color: #F6F6F6;
+    --border-color: #E6E6E6;
+    --border-radius-outer: 5px;
+    --border-radius-inner: 10px;
+    --website-name: '리뷰프로';
+}

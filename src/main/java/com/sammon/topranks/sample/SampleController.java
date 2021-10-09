@@ -13,10 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class SampleController {
 
-	@RequestMapping("/sample")
-	public String getintro(HttpServletRequest req, HttpServletResponse res)
-	{
-		req.setAttribute("message", "hihihi hello world !!");
-		return "/sample";
-	}
+	/*
+	 * @RequestMapping("/sample") public String getintro(HttpServletRequest req,
+	 * HttpServletResponse res) { req.setAttribute("message",
+	 * "hihihi hello world !!"); return "/sample"; }
+	 */
 }
