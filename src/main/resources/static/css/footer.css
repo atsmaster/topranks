@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+#footer {
+    background-color: #fafbfc;
+    border-top: 1px solid #e4e8eb;
+}
+
+#footer .footer_inner {
+    width: 1130px;
+    padding: 0 30px 92px;
+    margin: 0 auto;
+}
+
+#footer .banner_area {
+    overflow: hidden;
+    padding: 24px 0;
+}
+
+#da_public_left {
+    float: left;
+}
+
+#da_public_right {
+    float: left;
+    margin-left: 40px;
+}
+
+footer iframe {
+    overflow: hidden;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+#footer .notice_area {
+    overflow: hidden;
+    padding: 16px 0 15px;
+    border-top: 1px solid #e4e8eb;
+}
+
+#footer .notice_box {
+    float: left;
+}
+
+#footer .notice_box .title {
+    float: left;
+    margin-right: 13px;
+    color: #202020;
+}
+
+footer h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+footer body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+#footer .notice_area .link_all {
+    float: right;
+    font-weight: 700;
+    color: #202020;
+}
+
+#footer .notice_area .link_all:after {
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    background-position: -408px -134px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    content: '';
+    margin-left: 10px;
+    vertical-align: -2px;
+}
+
+#footer .aside_area {
+    overflow: hidden;
+    border-top: 1px solid #e4e8eb;
+}
+
+#footer .partner_box_wrap {
+    float: left;
+    width: 780px;
+    padding: 20px 0;
+}
+
+#footer .partner_box {
+    overflow: hidden;
+}
+
+#footer .partner_box .title {
+    float: left;
+    width: 87px;
+}
+
+#footer .service_box_wrap {
+    overflow: hidden;
+    float: right;
+    width: 350px;
+    padding: 27px 0;
+}
+
+#footer .service_box {
+    overflow: hidden;
+    float: left;
+    max-width: 150px;
+}
+
+#footer .service_box .service_logo {
+    float: right;
+    margin-left: 12px;
+}
+
+footer img {
+    vertical-align: top;
+}
+
+footer fieldset, img {
+    border: 0;
+}
+
+footer img[Attributes Style] {
+    width: 48px;
+    aspect-ratio: auto 48 / 48;
+    height: 48px;
+}
+
+#footer .service_box .service_info {
+    overflow: hidden;
+}
+
+#footer .service_box .dsc, #footer .service_box .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    padding-top: 2px;
+}
+
+#footer .service_box+.service_box {
+    margin-left: 50px;
+}
+
+footer .service_box {
+    overflow: hidden;
+    float: left;
+    max-width: 150px;
+}
+
+#footer .service_box .dsc {
+    color: grey;
+}
+
+footer strong {
+    font-weight: bold;
+}
+
+#footer .partner_box+.partner_box {
+    margin-top: 9px;
+}
+
+
+
+#footer .partner_box .link_partner {
+    float: left;
+    color: #777;
+}
+
+#footer .corp_area {
+    padding-top: 25px;
+    border-top: 1px solid #e4e8eb;
+}
+
+footer .blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+#footer .list_corp .corp_item {
+    float: left;
+    color: #777;
+}
+
+
+#footer .list_corp {
+    overflow: hidden;
+    float: left;
+    margin-right: 13px;
+}
+
+footer ol, ul {
+    list-style: none;
+}
+
+footer input, select, table, textarea {
+    font-size: 12px;
+    line-height: 16px;
+    color: #202020;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+
+ footer a:link { color: red; text-decoration: none;}
+ footer a:visited { color: black; text-decoration: none;}
+ footer a:hover { color: blue; text-decoration: none;}
+
+
+#footer .corp_area .addr {
+    float: left;
+    color: #202020;
+    font-weight: 700;
+}
+
+footer address, em {
+    font-style: normal;
+}
