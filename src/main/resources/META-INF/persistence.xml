@@ -13,6 +13,7 @@
 		<class>com.sammon.topranks.coupang.vo.CpApiPrdctSearch</class> -->
 		
 		<!-- 추가 Start -->
+		<class>com.mine.daemon.db.vo.CpApiPrdctSearch</class>
 		
 		<class>com.sammon.topranks.db.vo.WebCtgrA</class>
 		<class>com.sammon.topranks.db.vo.WebPostA</class>
