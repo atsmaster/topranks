@@ -21,40 +21,40 @@ public class WebContentA {
 	@Id
 	@Column(name = "CONTENT_NO")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int ContentNo;
+	private int contentNo;
 	
 	@Column(name = "CONTENT_PRD_RK")
-	private String ContentPrdRk;
+	private String contentPrdRk;
 	
 	@Column(name = "CONTENT_PRD_NM")
-	private String ContentPrdNm;
+	private String contentPrdNm;
 	
 	@Column(name = "CONTENT_PRD_PRICE")
-	private String ContentPrdPrice;
+	private String contentPrdPrice;
 	
 	@Column(name = "CONTENT_PRD_IMG")
-	private String ContentPrdImg;
+	private String contentPrdImg;
 	
 	@Column(name = "CONTENT_PRD_URL")
-	private String ContentPrdUrl;
+	private String contentPrdUrl;
 	
 	@Column(name = "CONTENT_VISIT_CNT")
-	private String ContentVisitCnt;
+	private String contentVisitCnt;
 	
 	@Column(name = "REG_DD")
-	private String RegDd;
+	private String regDd;
 	
 	@Column(name = "REG_DDTM")
-	private String RegDdtm;
+	private String regDdtm;
 	
 	//	FK(WEB_POST_A)
 	@Column(name = "POST_NO")
-	private String PostNo;
+	private String postNo;
 	
 	@Column(name = "POST_TITLE")
-	private String PostTitle;
+	private String postTitle;
 	
 	@Column(name = "POST_URL")
-	private String PostUrl;
+	private String postUrl;
 	
 }

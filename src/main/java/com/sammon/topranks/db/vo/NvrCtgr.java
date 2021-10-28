@@ -21,15 +21,15 @@ public class NvrCtgr {
     @Id
     @Column(name = "NVR_CTGR_NO")
     @GeneratedValue(strategy = GenerationType.IDENTITY)  //DB.Column에 auto_increment 옵션 있어야함
-	private int NvrCtgrNo;
+	private int nvrCtgrNo;
     
     @Column(name = "NVR_CTGR_NM")
-	private String NvrCtgrNm;
+	private String nvrCtgrNm;
     
     @Column(name = "REG_DD")
-	private String RegDd;
+	private String regDd;
 
     @Column(name = "REG_DDTM")
-	private String RegDdtm;
+	private String regDdtm;
 
 }

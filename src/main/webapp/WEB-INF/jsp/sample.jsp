@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <%@include file ="header.jsp" %>
 		
 	<div id="topList"></div>
+	<div id="topList2"></div>
 	
 <%@include file ="footer.jsp" %>
 
@@ -88,8 +92,13 @@
 $(function() {
 	//alert("${prdctName}");
 	showTopList();
+	showTopList2();
+	
 });
-
+function showTopList2(){
+	var sHtml = "<ul><c:choose><c:when test='${cpApiPrdctSearchList.size() > 0 }'><c:forEach var='i' items='${cpApiPrdctSearchList}'><li>${i.apiPrdctSearchPrdRk }</li></c:forEach></c:when><c:otherwise><li>검색내용이 없습니다.</li></c:otherwise></c:choose></ul>";
+	$("#topList2").html(sHtml);
+}
 function showTopList(){
 	var listCount = "20";
 	var sHtml = "";

@@ -4,14 +4,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="topranks">
-		<!-- <class>com.sammon.topranks.coupang.vo.Board</class>
-		<class>com.sammon.topranks.coupang.vo.Pay</class>
-		<class>com.sammon.topranks.coupang.vo.Pay2</class>
-		<class>com.sammon.topranks.coupang.vo.CpPost</class>
-		<class>com.sammon.topranks.coupang.vo.CpPostPrdct</class>
-		<class>com.sammon.topranks.coupang.vo.CpPostPrdctPK</class>
-		<class>com.sammon.topranks.coupang.vo.CpApiPrdctSearch</class> -->
 		
+		<class>com.sammon.topranks.db.vo.NvrKeyword</class>
+		<class>com.sammon.topranks.db.vo.NvrCtgr</class>
+		<class>com.sammon.topranks.db.vo.cpApiPrdctSearch</class>
 		<!-- 추가 Start -->
 		
 		<class>com.sammon.topranks.db.vo.WebCtgrA</class>

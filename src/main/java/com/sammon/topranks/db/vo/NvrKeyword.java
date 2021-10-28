@@ -21,21 +21,21 @@ public class NvrKeyword {
     @Id
     @Column(name = "NVR_KEYWORD_NO")
     @GeneratedValue(strategy = GenerationType.IDENTITY)  //DB.Column에 auto_increment 옵션 있어야함
-	private int NvrKeywordNo;
+	private int nvrKeywordNo;
     
     @Column(name = "NVR_KEYWORD_NM")
-	private String NvrKeywordNm;
+	private String nvrKeywordNm;
     
     @Column(name = "NVR_KEYWORD_RNK")
-	private String NvrKeywordRnk;
+	private String nvrKeywordRnk;
     
     @Column(name = "REG_DD")
-	private String RegDd;
+	private String regDd;
 
     @Column(name = "REG_DDTM")
-	private String RegDdtm;
+	private String regDdtm;
     
     @Column(name = "NVR_CTGR_NO")
-	private int NvrCtgrNo;
+	private int nvrCtgrNo;
 
 }
