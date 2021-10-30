@@ -31,23 +31,21 @@ public class MainController {
 	
 	@RequestMapping(value = "/{postUrl}")
 	public String getintro(HttpServletRequest req, HttpServletResponse res, @PathVariable String postUrl, Model model)throws Exception{
-		
+		System.out.println("postUrl :: "+postUrl);
 		webCtgrAListName = mainService.getCtgListName();
-		System.out.println(webCtgrAListName);
-		model.addAttribute("webCtgrAListName", webCtgrAListName);
+		model.addAttribute("webCtgrAListName",webCtgrAListName);
 		if(!"".equals(postUrl) && postUrl != null) {
-			//Long ApiPrdctSearchNo = 1L; 
 			cpApiPrdctSearchList =	mainService.getCpApiPrdctSearchAllList();
 			
-			
 			model.addAttribute("cpApiPrdctSearchList",cpApiPrdctSearchList);
-
+			//req.setAttribute("cpApiPrdctSearchList", cpApiPrdctSearchList);
 			System.out.println(cpApiPrdctSearchList);
-			System.out.println(postUrl);
+			System.out.println("go sample");
 			return "/sample";
 		}else {
-			System.out.println("1");
-			
+			System.out.println("go index");
+			req.setAttribute("message", "hihihi hello world !!");
+			model.addAttribute("test", "sample");
 			return "/index";
 		}
 	}

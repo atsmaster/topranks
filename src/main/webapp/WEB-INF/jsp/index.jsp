@@ -1,13 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file ="header.jsp" %>
-
+<%-- <%
+request.setAttribute("message", "gg");
+%> --%>
 <div id="prdctList"></div>
+<p>hi</p>
+<p>${message}</p>
 
 <%@include file ="footer.jsp" %>
 <script type="text/javascript">
 $(function() {
-    console.log( "${message}" );
+    console.log("${message}");
     showList();
 });
 

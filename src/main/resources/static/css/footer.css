@@ -123,11 +123,6 @@ footer fieldset, img {
     border: 0;
 }
 
-footer img[Attributes Style] {
-    width: 48px;
-    aspect-ratio: auto 48 / 48;
-    height: 48px;
-}
 
 #footer .service_box .service_info {
     overflow: hidden;

@@ -7,8 +7,8 @@
 		
 		<class>com.sammon.topranks.db.vo.NvrKeyword</class>
 		<class>com.sammon.topranks.db.vo.NvrCtgr</class>
-		<class>com.sammon.topranks.db.vo.cpApiPrdctSearch</class>
-
+		<class>com.sammon.topranks.db.vo.CpApiPrdctSearch</class>
+		<!-- 추가 Start -->
 		
 		<class>com.sammon.topranks.db.vo.WebCtgrA</class>
 		<class>com.sammon.topranks.db.vo.WebPostA</class>

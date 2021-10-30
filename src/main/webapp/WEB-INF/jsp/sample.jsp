@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-
-
+	pageEncoding="UTF-8"%>
 <%@include file ="header.jsp" %>
 		
 	<div id="topList"></div>
@@ -95,8 +92,17 @@ $(function() {
 	showTopList2();
 	
 });
+
 function showTopList2(){
-	var sHtml = "<ul><c:choose><c:when test='${cpApiPrdctSearchList.size() > 0 }'><c:forEach var='i' items='${cpApiPrdctSearchList}'><li>${i.apiPrdctSearchPrdRk }</li></c:forEach></c:when><c:otherwise><li>검색내용이 없습니다.</li></c:otherwise></c:choose></ul>";
+	var sHtml = "";
+	var listCount = ${cpApiPrdctSearchList.size()};
+	//alert(listCount);
+	if(listCount > 0){
+		sHtml = "<ul><c:choose><c:when test='${cpApiPrdctSearchList.size() > 0 }'><c:forEach var='i' items='${cpApiPrdctSearchList}'><li>${i.apiPrdctSearchNo}</li></c:forEach></c:when><c:otherwise><li>검색내용이 없습니다.</li></c:otherwise></c:choose></ul>";
+	}else{
+		alert("hi");
+	}
+	
 	$("#topList2").html(sHtml);
 }
 function showTopList(){

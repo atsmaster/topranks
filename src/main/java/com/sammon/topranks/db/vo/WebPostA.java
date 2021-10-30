@@ -49,6 +49,4 @@ public class WebPostA {
 	@ManyToOne
 	@JoinColumn(name = "CTGR_NO")
 	private WebCtgrA webCtgrA;
-
-	
 }

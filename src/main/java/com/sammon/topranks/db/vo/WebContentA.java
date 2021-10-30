@@ -38,9 +38,6 @@ public class WebContentA {
 	@Column(name = "CONTENT_PRD_URL")
 	private String contentPrdUrl;
 	
-	@Column(name = "CONTENT_VISIT_CNT")
-	private String contentVisitCnt;
-	
 	@Column(name = "REG_DD")
 	private String regDd;
 	
@@ -56,5 +53,4 @@ public class WebContentA {
 	
 	@Column(name = "POST_URL")
 	private String postUrl;
-	
 }
