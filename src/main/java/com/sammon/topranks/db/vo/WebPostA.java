@@ -21,25 +21,25 @@ public class WebPostA {
 	@Id
 	@Column(name="POST_NO")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int PostNo;
+	private int postNo;
 	
 	@Column(name="POST_TITLE")
-	private String PostTitle;
+	private String postTitle;
 	
 	@Column(name="POST_URL")
-	private String PostUrl;
+	private String postUrl;
 	
 	@Column(name="POST_VISIT_CNT")
-	private String PostVisitCnt;
+	private String postVisitCnt;
 	
 	@Column(name="REG_DD")
-	private String RegDd;
+	private String regDd;
 	
 	@Column(name="REG_DDTM")
-	private String RegDdtm;
+	private String regDdtm;
 	
 	//	FK(WEB_CTGR)
 	@Column(name="CTGR_NO")
-	private String CtgrNo;
+	private String ctgrNo;
 	
 }

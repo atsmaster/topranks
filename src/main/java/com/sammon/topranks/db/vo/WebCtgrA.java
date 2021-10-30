@@ -21,15 +21,15 @@ public class WebCtgrA {
 	@Id
 	@Column(name="CTGR_NO")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int CtgrNo;
+	private int ctgrNo;
 	
 	@Column(name="CTGR_NM")
-	private String CtgrNm;
+	private String ctgrNm;
 	
 	@Column(name="REG_DD")
-	private String RegDd;
+	private String regDd;
 	
 	@Column(name="REG_DDTM")
-	private String RegDdtm;
+	private String regDdtm;
 	
 }

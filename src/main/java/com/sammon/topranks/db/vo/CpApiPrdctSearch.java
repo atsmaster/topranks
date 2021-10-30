@@ -21,30 +21,30 @@ public class CpApiPrdctSearch {
     @Id
     @Column(name = "API_PRDCT_SEARCH_NO")
     @GeneratedValue(strategy = GenerationType.IDENTITY)  //DB.Column에 auto_increment 옵션 있어야함
-	private int ApiPrdctSearchNo;
+	private int apiPrdctSearchNo;
     
     @Column(name = "API_PRDCT_SEARCH_PRD_RK")
-	private String ApiPrdctSearchPrdRk;
+	private String apiPrdctSearchPrdRk;
     
     @Column(name = "API_PRDCT_SEARCH_PRD_IMG")
-	private String ApiPrdctSearchPrdImg;
+	private String apiPrdctSearchPrdImg;
 
     @Column(name = "API_PRDCT_SEARCH_PRD_NM")
-	private String ApiPrdctSearchPrdNm;
+	private String apiPrdctSearchPrdNm;
     
     @Column(name = "API_PRDCT_SEARCH_PRD_PRICE")
-	private String ApiPrdctSearchPrdPrice;
+	private String apiPrdctSearchPrdPrice;
 
     @Column(name = "API_PRDCT_SEARCH_PRD_URL")
-	private String ApiPrdctSearchPrdUrl;
+	private String apiPrdctSearchPrdUrl;
 
     @Column(name = "REG_DD")
-	private String RegDd;
+	private String regDd;
 
     @Column(name = "REG_DDTM")
-	private String RegDdtm;
+	private String regDdtm;
     
     @Column(name = "API_PRDCT_SEARCH_KEYWORD")
-    private String ApiPrdctSearchKeyword;
+    private String apiPrdctSearchKeyword;
     
 }
