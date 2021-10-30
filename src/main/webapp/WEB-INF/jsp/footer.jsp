@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	
-	
-	
+		<!-- float: left; 해제 div -->
+		<div style="clear:both; margin-bottom: 1%;"></div>
+		
 		</main>
 	</div>
 </div>

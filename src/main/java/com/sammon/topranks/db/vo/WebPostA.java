@@ -2,9 +2,13 @@ package com.sammon.topranks.db.vo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -39,7 +43,13 @@ public class WebPostA {
 	private String regDdtm;
 	
 	//	FK(WEB_CTGR)
-	@Column(name="CTGR_NO")
-	private String ctgrNo;
+	@Column(name="CTGR_NO",insertable=false, updatable=false)
+	private int ctgrNo;
+	
+	@ManyToOne
+	@JoinColumn(name = "CTGR_NO")
+	private WebCtgrA webCtgrA;
+
+	
 	
 }

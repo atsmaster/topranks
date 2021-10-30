@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="../css/common.css">
 <link rel="stylesheet" href="../css/footer.css">
 </head>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <body
 	class="home page-template-default page page-id-21 wp-embed-responsive post-image-below-header post-image-aligned-center sticky-menu-fade regular-menu-logo menu-logo-enabled generate-sections-enabled sections-no-sidebars adthrive-disable-all adthrive-navigation-noads navigation reviewpro no-sidebar nav-above-header one-container nav-search-enabled nav-aligned-left header-aligned-left dropdown-hover">
 	<div id="content" class="site-content">
@@ -17,9 +18,16 @@
 				<div>
 					<span class="">페이지 이동 추가할거</span> 
 					<select class="rigthSort selectBox_1">
-						<option>첫번째 선택항목</option>
-						<option>두번째 선택항목</option>
-						<option>세번째 선택항목</option>
+						<c:choose>
+							<c:when test="${webCtgrAListName.size() > 0}">
+								<c:forEach var='i' items='${webCtgrAListName}'>
+									<option>${i.ctgrNm }</option>
+								</c:forEach>
+							</c:when>
+							<c:otherwise>
+								<option>데이터를 불러오는데 실패하셨습니다.</option>
+							</c:otherwise>
+						</c:choose>
 					</select>
 				</div>
 

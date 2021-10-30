@@ -74,10 +74,26 @@
 	padding-left: 0px;
 	padding-right: 0px;
 }
-
+.maindivOutter{
+	float: left;
+    width: 45%;
+    margin-left: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.mainImgOutter{
+	width: 100%;
+    height: 40%;
+    border-radius: 2%;
+    background-color: white;
+}
 .mainImg{
-	width: 30%;
+	width: 100%;
     height: 30%;
+    border-radius: 2%
+}
+.shw-div-img{
+	width: 100%;
 }
 .mainText{
 	font-size: 80%;
@@ -832,3 +848,7 @@ a.photo-credit-link:visited {
 		width: 58%
 	}
 }
+
+a:link { color: red; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: none;}

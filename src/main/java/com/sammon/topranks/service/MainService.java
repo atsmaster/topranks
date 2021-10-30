@@ -12,6 +12,7 @@ import com.sammon.topranks.db.repo.WebContentARepo;
 import com.sammon.topranks.db.repo.WebCtgrARepo;
 import com.sammon.topranks.db.repo.WebPostARepo;
 import com.sammon.topranks.db.vo.CpApiPrdctSearch;
+import com.sammon.topranks.db.vo.WebCtgrA;
 
 @Service
 public class MainService {
@@ -38,5 +39,10 @@ public class MainService {
 	public List<CpApiPrdctSearch> getCpApiPrdctSearchAllList() {
 		List<CpApiPrdctSearch> cpApiPrdctSearchAllList = cpApiPrdctSearchRepo.findAll();
 		return cpApiPrdctSearchAllList;
-	} 
+	}
+	
+	public List<WebCtgrA> getCtgListName(){
+		List<WebCtgrA> webCtgrAListName = webCtgrARepo.findAll();
+		return webCtgrAListName;
+	}
 }

@@ -3,7 +3,7 @@
 <%@include file ="header.jsp" %>
 
 <div id="prdctList"></div>
-				
+
 <%@include file ="footer.jsp" %>
 <script type="text/javascript">
 $(function() {
@@ -11,7 +11,27 @@ $(function() {
     showList();
 });
 
+
 function showList(){
+	var sHtml = "";
+	var listCount = "3";
+	if(listCount>0){
+		for(var i=0; i<listCount; i++){
+			sHtml +="<div class='maindivOutter'>";
+			sHtml +=	"<button class='mainImgOutter' type='button'>";
+			sHtml +=		"<a href='/sample'>";//POST_URL
+			sHtml +=			"<img class='mainImg' src='https://reviewpro.co.kr/wp-content/uploads/2021/09/Depositphotos_172911896_xl-2015-scaled.jpg' alt=''>";//CONTENT_PRD_IMG
+			sHtml +=			"<p>TOP 20위 상품명 추천순위</p>";//CTGR_NM
+			sHtml +=		"</a>";
+			sHtml +=	"</button>";
+			sHtml +="</div>";	
+		}
+	}else{
+		sHtml = "죄송합니다. 페이지 준비중입니다.";
+	}
+	$("#prdctList").html(sHtml);
+}
+/* function showList(){
 	
 	var sHtml = "";
 	
@@ -21,12 +41,12 @@ function showList(){
 	if(listCount>0){
 		//		상품 리스트가 존재할경우
 		for(var i=0; i<listCount; i++){
-			sHtml +=	"<div id='generate-section-2' class='generate-sections-container'>";
-			sHtml +=		"<div class='generate-sections-inside-container' itemprop='text'>";
+			sHtml +=	"<div class=''>";
+			sHtml +=		"<div class='' itemprop='text'>";
 			sHtml +=			"<div>";
 			sHtml +=				"<section class='ptp-post-grid container-inner'>";
 			sHtml +=					"<div class='ptp-post-grid-wrapper'>";
-			sHtml +=						"<div class='ptp-post-grid-single ptp-single-width-1'>";
+			sHtml +=						"<div class='shw-div-img'>";
 			sHtml +=							"<img class='mainImg' alt='TOP 7 소파 추천, 이케아, 리클라이너, 패브릭 소파 2021' src='https://reviewpro.co.kr/wp-content/uploads/2021/09/Depositphotos_172911896_xl-2015-scaled.jpg' height='185' data-ll-status='loaded'>";
 			sHtml +=							"<noscript>";
 			sHtml +=								"<img class='ptp-post-grid-image no_pin no-pin' alt='TOP 7 소파 추천, 이케아, 리클라이너, 패브릭 소파 2021' src='https://reviewpro.co.kr/wp-content/uploads/2021/09/Depositphotos_172911896_xl-2015-scaled.jpg' height='185' />";				
@@ -45,7 +65,7 @@ function showList(){
 		sHtml = "없다 병신아";
 	}
 	$("#prdctList").html(sHtml);
-}
+} */
 
 </script>
 
