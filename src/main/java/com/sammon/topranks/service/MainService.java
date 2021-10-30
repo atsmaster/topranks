@@ -38,6 +38,12 @@ public class MainService {
 	
 	public List<CpApiPrdctSearch> getCpApiPrdctSearchAllList() {
 		List<CpApiPrdctSearch> cpApiPrdctSearchAllList = cpApiPrdctSearchRepo.findAll();
+		
+		for(CpApiPrdctSearch cpApiPrdctSearchAll : cpApiPrdctSearchAllList)
+		{
+			System.out.println(cpApiPrdctSearchAll.getApiPrdctSearchPrdNm());
+		}
+			
 		return cpApiPrdctSearchAllList;
 	}
 	

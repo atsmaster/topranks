@@ -43,14 +43,16 @@ public class CpApiPrdctSearch {
 
     @Column(name = "REG_DDTM")
 	private String regDdtm;
-    
+
     @Column(name = "NVR_KEYWORD_NO")
     private String nvrKeywordNo;
     
     @Column(name = "NVR_KEYWORD_NM")
     private String nvrKeywordNm;
-    
-    /*@Column(name = "API_PRDCT_SEARCH_KEYWORD")
-	private String ApiPrdctSearchKeyword;*/
+	/*
+	 * @Column(name = "API_PRDCT_SEARCH_KEYWORD") private String
+	 * apiPrdctSearchKeyword;
+	 */
+
     
 }

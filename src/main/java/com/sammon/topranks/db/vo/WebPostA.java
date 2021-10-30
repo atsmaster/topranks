@@ -51,5 +51,4 @@ public class WebPostA {
 	private WebCtgrA webCtgrA;
 
 	
-	
 }
