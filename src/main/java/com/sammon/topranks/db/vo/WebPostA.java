@@ -43,13 +43,15 @@ public class WebPostA {
 	private String regDdtm;
 	
 	//	FK(WEB_CTGR)
-	@Column(name="CTGR_NO",insertable=false, updatable=false)
+	@Column(name="CTGR_NO")
 	private int ctgrNo;
 	
 	@Column(name="NVR_KEYWORD_NO")
 	private int nvrKeywordNo;
 	
-	@ManyToOne
-	@JoinColumn(name = "CTGR_NO")
-	private WebCtgrA webCtgrA;
+	/*
+	 * @ManyToOne
+	 * 
+	 * @JoinColumn(name = "CTGR_NO") private WebCtgrA webCtgrA;
+	 */
 }

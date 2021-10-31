@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.sammon.topranks.db.vo.CpApiPrdctSearch;
 import com.sammon.topranks.db.vo.WebCtgrA;
@@ -30,34 +31,63 @@ public class MainController {
 	@Autowired
 	private MainService mainService;
 	
-	@RequestMapping(value = "/{postUrl}")
-	public String getintro(HttpServletRequest req, HttpServletResponse res, @PathVariable String postUrl, Model model)throws Exception{
-		// 카테고리만 나온경우
-		if(postUrl.indexOf("/") == -1) {
-			System.out.println("카테고리만 나온경우 :: "+postUrl);
-		}else {	//	카테고리+post인경우
-			System.out.println("카테고리+Post :: "+postUrl);
-		}
-		
-		webCtgrAListName = mainService.getCtgListName();
-		model.addAttribute("webCtgrAListName",webCtgrAListName);
-		List<Map> test_1 = mainService.getTest();
-		System.out.println("test_1 :: "+test_1);
-		if(!"".equals(postUrl) && postUrl != null) {
-			cpApiPrdctSearchList =	mainService.getCpApiPrdctSearchAllList();
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String getStart(HttpServletRequest req, HttpServletResponse res
+			, Model model) {
+			System.out.println("대문 >>>>>>");
+			webCtgrAListName = mainService.getCtgListName();
+			model.addAttribute("webCtgrAListName",webCtgrAListName);
+			System.out.println("webCtgrAListName :: "+webCtgrAListName);
 			
-			model.addAttribute("cpApiPrdctSearchList",cpApiPrdctSearchList);
-			//req.setAttribute("cpApiPrdctSearchList", cpApiPrdctSearchList);
-			System.out.println(cpApiPrdctSearchList);
-			System.out.println("go sample");
-			return "/sample";
-		}else {
-			System.out.println("go index");
-			req.setAttribute("message", "hihihi hello world !!");
-			model.addAttribute("test", "sample");
-			return "/index";
-		}
+		return "/index";
 	}
 	
+	@RequestMapping(value = "/{param1}", method = RequestMethod.POST)
+	public String getintro(HttpServletRequest req, HttpServletResponse res
+			, @PathVariable(value = "param1") String param1
+			, Model model)throws Exception{
+		
+		System.out.println("Post >>>>>>");
+			webCtgrAListName = mainService.getCtgListName();
+			model.addAttribute("webCtgrAListName",webCtgrAListName);
+			System.out.println("webCtgrAListName :: "+webCtgrAListName);
+		
+		return "/sample";
+	}
+	
+	@RequestMapping(value = "/{param1}/{param2}", method = RequestMethod.POST)
+	public String getintro(HttpServletRequest req, HttpServletResponse res
+			, @PathVariable(value = "param1") String param1
+			, @PathVariable(value = "param2") String param2
+			, Model model)throws Exception{
+		// 카테고리만 나온경우
+		System.out.println("param1 :: " + param1 + " param2 :: "+ param2);
+		System.out.println("detail >>>>>>");
+		webCtgrAListName = mainService.getCtgListName();
+		model.addAttribute("webCtgrAListName",webCtgrAListName);
+		System.out.println("webCtgrAListName :: "+webCtgrAListName);
+		List<Map> test_1 = mainService.getTest();
+		System.out.println("test_1 :: "+test_1);
+		
+		cpApiPrdctSearchList =	mainService.getCpApiPrdctSearchAllList();
+		
+		model.addAttribute("cpApiPrdctSearchList",cpApiPrdctSearchList);
+		//req.setAttribute("cpApiPrdctSearchList", cpApiPrdctSearchList);
+		System.out.println(cpApiPrdctSearchList);
+		System.out.println("go sample");
+		return "/sample";
+		
+	} 
+	
+	
+	/*
+	 * @RequestMapping(value = {"/category", "/posturl"}, method =
+	 * RequestMethod.GET) public String getDepthCatg(HttpServletRequest req,
+	 * HttpServletResponse res, @PathVariable("category") String
+	 * categoryUrl, @PathVariable("posturl") String postUrl, Model model) throws
+	 * Exception{ System.out.println("go categoryUrl/postUrl :: "+
+	 * categoryUrl+"/"+postUrl); return "/test"; }
+	 */
+	 
 	
 }

@@ -6,8 +6,15 @@
 <meta charset="EUC-KR">
 <title>SEMO CHUREE</title>
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- <link rel="icon" href="data:;base64,iVBORw0KGgo="> -->
+<!-- <link rel="icon" href="data:,">  -->
 <link rel="stylesheet" href="../css/common.css">
 <link rel="stylesheet" href="../css/footer.css">
+<link rel="shortcut icon" href="">
+<link rel="shortcut icon" href="#" />
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
 </head>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -17,7 +24,7 @@
 		<div id="primary" class="content-area grid-parent grid-100">
 			<main id="main" class="site-main">
 				<div>
-					<span class="">페이지 이동 추가할거</span> 
+					<span class=""><a href='/category/sofa'>페이지 이동 추가할거</a></span>
 					<select class="rigthSort selectBox_1">
 						<c:choose>
 							<c:when test="${webCtgrAListName.size() > 0}">

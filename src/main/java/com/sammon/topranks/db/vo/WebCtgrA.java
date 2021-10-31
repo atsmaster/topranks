@@ -36,6 +36,6 @@ public class WebCtgrA {
 	@Column(name="REG_DDTM")
 	private String regDdtm;
 	
-	@OneToMany(mappedBy = "webCtgrA")
-	private List<WebPostA> webPostAList = new ArrayList<WebPostA>();
+//	@OneToMany(mappedBy = "webCtgrA")
+//	private List<WebPostA> webPostAList = new ArrayList<WebPostA>();
 }
