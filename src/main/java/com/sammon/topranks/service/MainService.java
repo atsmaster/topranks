@@ -1,10 +1,12 @@
 package com.sammon.topranks.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.sammon.topranks.batisSqlDao.MainDao;
 import com.sammon.topranks.db.repo.CpApiPrdctSearchRepo;
 import com.sammon.topranks.db.repo.NvrCtgrRepo;
 import com.sammon.topranks.db.repo.NvrKeywordRepo;
@@ -29,7 +31,10 @@ public class MainService {
 	@Autowired
 	private WebCtgrARepo webCtgrARepo;
 	@Autowired
-	private WebPostARepo webPostARepo; 
+	private WebPostARepo webPostARepo;
+	
+	@Autowired	//	myBatis sql
+	private MainDao dao;
 	 
 	// 예시CP_API_PRDCT_SEARCH
 	public CpApiPrdctSearch getCpApiPrdctSearchList(Long ApiPrdctSearchNo) {
@@ -41,6 +46,9 @@ public class MainService {
 		return cpApiPrdctSearchAllList;
 	}
 	
+	public List<Map> getTest(){
+		return dao.getTest();
+	}
 	public List<WebCtgrA> getCtgListName(){
 		List<WebCtgrA> webCtgrAListName = webCtgrARepo.findAll();
 		return webCtgrAListName;

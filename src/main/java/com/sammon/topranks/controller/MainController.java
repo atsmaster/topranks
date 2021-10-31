@@ -1,6 +1,7 @@
 package com.sammon.topranks.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,9 +32,17 @@ public class MainController {
 	
 	@RequestMapping(value = "/{postUrl}")
 	public String getintro(HttpServletRequest req, HttpServletResponse res, @PathVariable String postUrl, Model model)throws Exception{
-		System.out.println("postUrl :: "+postUrl);
+		// 카테고리만 나온경우
+		if(postUrl.indexOf("/") == -1) {
+			System.out.println("카테고리만 나온경우 :: "+postUrl);
+		}else {	//	카테고리+post인경우
+			System.out.println("카테고리+Post :: "+postUrl);
+		}
+		
 		webCtgrAListName = mainService.getCtgListName();
 		model.addAttribute("webCtgrAListName",webCtgrAListName);
+		List<Map> test_1 = mainService.getTest();
+		System.out.println("test_1 :: "+test_1);
 		if(!"".equals(postUrl) && postUrl != null) {
 			cpApiPrdctSearchList =	mainService.getCpApiPrdctSearchAllList();
 			
