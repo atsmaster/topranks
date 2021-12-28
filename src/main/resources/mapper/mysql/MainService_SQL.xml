@@ -6,4 +6,63 @@
 		SELECT NOW() AS AA 
 	</select>
 	
+	<select id="SelectFirstList" resultType="hashmap">
+		SELECT A.CTGR_NO
+			 , A.CTGR_NM 
+			 , A.CTGR_NM_EN 
+			 , B.POST_URL
+			 , C.CONTENT_PRD_IMG 
+		  FROM WEB_CTGR_A A
+		  JOIN WEB_POST_A B ON A.CTGR_NO =  B.CTGR_NO
+		  JOIN WEB_CONTENT_A C ON B.POST_NO = C.POST_NO
+		 WHERE C.CONTENT_PRD_RK = 1 
+	</select>
+	
+	<select id="selectPostList" parameterType="int" resultType="hashmap">
+		SELECT A.POST_TITLE 
+			 , A.POST_URL 
+			 , A.POST_NO
+			 , A.CTGR_NO
+			 , B.CONTENT_PRD_IMG 
+		  FROM WEB_POST_A A 
+		  JOIN WEB_CONTENT_A B ON A.POST_NO = B.POST_NO 
+		 WHERE A.CTGR_NO = #{ctgrNo}
+		   AND B.CONTENT_PRD_RK = 1
+	</select>
+	
+	<select id="selectContentList" parameterType="int" resultType="hashmap">
+		SELECT * FROM WEB_CONTENT_A WHERE POST_NO = #{postNo} ORDER BY CONTENT_PRD_RK ASC
+	</select>
+	
+	<select id="selectContentListUrl" parameterType="String" resultType="hashmap">
+		SELECT * FROM WEB_CONTENT_A WHERE POST_URL = #{postUrl} ORDER BY CONTENT_PRD_RK ASC
+	</select>
+	
+	<update id="postVisitCnt" parameterType="int">
+		UPDATE WEB_POST_A SET POST_VISIT_CNT = POST_VISIT_CNT +1 WHERE POST_NO = #{postNo}
+	</update>
+	
+	<select id="selectCtgrNo" parameterType="String" resultType="int">
+	SELECT CTGR_NO FROM WEB_CTGR_A WHERE CTGR_NM_EN = #{ctgrNmEn}
+	</select>
+	
+	<select id="selectPostNo" parameterType="String" resultType="int">
+		SELECT POST_NO FROM WEB_POST_A WHERE POST_URL = #{postUrl}
+	</select>
+	
+	<update id="contentVisitCnt" parameterType="int">
+		UPDATE WEB_CONTENT_A SET CONTENT_VISIT_CNT =  IF(CONTENT_VISIT_CNT IS NULL, 1, CONTENT_VISIT_CNT+1) WHERE CONTENT_NO = #{contentNo}
+	</update>
+	
+	<select id="selectPostTitle" parameterType="String" resultType="String">
+		SELECT POST_TITLE FROM WEB_POST_A WHERE POST_NO = #{postNo}
+	</select>
+	
+	<select id="selectPopContentList" parameterType="int" resultType="hashmap">
+		SELECT * FROM WEB_CONTENT_A WHERE 1 = #{num} ORDER BY CONTENT_VISIT_CNT DESC, CONTENT_PRD_RK ASC, CONTENT_PRD_NM DESC LIMIT 4
+	</select>
+	
+	<select id="selectRecentContentList" parameterType="int" resultType="hashmap">
+		SELECT * FROM WEB_CONTENT_A WHERE 1 = #{num} ORDER BY REG_DDTM DESC,CONTENT_VISIT_CNT DESC, CONTENT_PRD_RK ASC, CONTENT_PRD_NM DESC LIMIT 4;
+	</select>
 </mapper>

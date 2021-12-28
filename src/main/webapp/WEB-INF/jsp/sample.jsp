@@ -1,13 +1,137 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file ="header.jsp" %>
+	
+	<!-- <div class='ptp-pc ptp-top-table force-fullscreen'> -->
+	<div class='main-div'>
 		
-	<div id="topList"></div>
-	<div id="topList2"></div>
+		<div class='first-div'>
+			<!-- <div> -->
+				<section class='ptp-pc-inner-product force-fullscreen-inner' id='product-comparison'>
+					<div class='ptp-div-table'>
+						<div class='ptp-table-head'>
+							<div class='ptp-table-row'>
+								<div class='ptp-table-thead-image'>이미지</div>
+								<div class='ptp-table-thead-title'>모델</div>
+								<div class='ptp-table-thead-mobile-title'>추천</div>
+								<div class='ptp-table-thead-features'>정보</div>
+								<div class='ptp-table-thead-button'></div>
+							</div>
+						</div>
+						<c:choose>
+							<c:when test="${contentList.size() > 0 }">
+							<form id='frm' name='frm' method="post" onsubmit="return false;">
+							
+							<input type='hidden' name='contentNo' value=''>
+							<input type='hidden' name='contentPrdUrl' value=''>
+							
+								<c:forEach var='i' items='${contentList }' varStatus="status">
+									<div class='ptp-table-body'>
+										<div class='ptp-table-row'>
+											<div class='ptp-table-cell ptp-table-image num_${status.count }'>
+											<span style="width:30px;position:absolute;color:#fff;background-color:#dc3545;border-radius:2px;top: 0;left:0;">${status.count }</span>
+												<img height='160' class='product-image custom-product-image ptp-table-inner-image' src='${i.CONTENT_PRD_IMG }' alt='Product Image of the ${i.CONTENT_PRD_NM}'>
+												
+											</div>
+											<div class='ptp-table-cell ptp-table-title-award'>
+												<div class='ptp-table-award ptp-table-title' title='${i.CONTENT_PRD_NM}'>${i.CONTENT_PRD_NM}</div>
+												<!-- <div class='ptp-table-title' title='웰퍼니쳐 에반 아쿠아텍스 카우치 소파 4인용'>웰퍼니쳐 에반 아쿠아텍스 카우치 소파 4인용</div> -->
+											</div>
+											
+											<div class='ptp-table-cell ptp-table-features'>
+												<ul class='ptp-table-features-list'>
+													<li>${i.CONTENT_PRD_PRICE}원</li>
+													
+													<c:choose>
+														<c:when test="${i.CONTENT_VISIT_CNT == 0  || i.CONTENT_VISIT_CNT == null}">
+														</c:when>
+														<c:otherwise>
+															<li>조회수 : ${i.CONTENT_VISIT_CNT}</li>
+														</c:otherwise>
+													</c:choose>
+													 
+												</ul>
+											</div>
+											<div class='ptp-table-cell ptp-table-button'>
+												
+												<button class='ptp-table-button-inner' onclick='countUp("${i.CONTENT_PRD_NM }", "${i.CONTENT_NO }", "${i.CONTENT_PRD_URL }")'>최저가 보기</button>
+												
+											</div>
+										</div>
+									</div>
+								</c:forEach>
+							</form>
+							
+							</c:when>
+							<c:otherwise>
+							
+							</c:otherwise>
+						</c:choose>
+					</div>
+				</section>
+			</div>
+			
+		
+		
+		<div class="sidebar" id="sidebar">
+		<form id="frm_two" name="frm_two" action="post">
+			<input type="hidden" id="postNo" name="postNo" value="">
+			<h2 class="blind">추가 정보</h2>
+			<div class="section_area">
+				<h3 class="tit_section">인기글</h3>
+				<ol class="list_article list_sub list_sidebar">
+					<c:forEach var='i' items='${popContentList }' varStatus="status">
+						<li class="liTag">
+							<div class="liBox">
+								<button class="link_thumb" onclick='goTwoDepth("${i.POST_URL}")'>
+									<div class="box_thumb" style="display: block;">
+										<img height='160' class='product-image custom-product-image ptp-table-inner-image' src='${i.CONTENT_PRD_IMG }' alt='Product Image of the ${i.CONTENT_PRD_NM}'>
+										<span class="item_count">${status.count }</span>
+									</div>
+									<div class="cont_thumb">
+										<strong class="txt_thumb">${i.CONTENT_PRD_NM }</strong>
+										<p class="txt_date">${i.REG_DDTM }</p>
+									</div>
+								</button>
+							</div>	
+						</li>
+						
+					</c:forEach>
+				</ol>
+			</div>
+			
+			<div class="section_area">
+				<h3 class="tit_section">최신글</h3>
+				<ol class="list_article list_sub list_sidebar list_recent">
+					<c:forEach var='i' items='${recentContentList }' varStatus="status">
+						<li class="liTag">
+							<div class="liBox">
+								<button class="link_thumb" onclick='goTwoDepth("${i.POST_URL}")'>
+									<div class="box_thumb" style="display: block;">
+										<img height='160' class='product-image custom-product-image ptp-table-inner-image' src='${i.CONTENT_PRD_IMG }' alt='Product Image of the ${i.CONTENT_PRD_NM}'>
+										<span class="item_count">${status.count }</span>
+									</div>
+									<div class="cont_thumb">
+										<strong class="txt_thumb">${i.CONTENT_PRD_NM }</strong>
+										<p class="txt_date">${i.REG_DDTM }</p>
+									</div>
+								</button>
+								
+							</div>
+						</li>
+					</c:forEach>
+				</ol>
+			</div>
+			</form>
+		</div>
+		
+	</div>
+	
+	<!-- </div> -->
 	
 <%@include file ="footer.jsp" %>
 
-<script>
+<!-- <script>
 	window.lazyLoadOptions = {
 		elements_selector : "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",
 		data_src : "lazy-src",
@@ -82,82 +206,61 @@
 							observer.observe(b, config)
 						}
 					}, !1)
-</script>
-<script data-no-minify="1" async src="https://reviewpro.co.kr/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script>
+</script> -->
+<!-- <script data-no-minify="1" async src="https://reviewpro.co.kr/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script> -->
 
 <script type="text/javascript">
 $(function() {
-	//alert("${prdctName}");
-	showTopList();
-	showTopList2();
+	var urlCheck = window.location.href;
+	$("meta[property='og\\:url']").attr("content", urlCheck );
+	
+	console.log("${POST_TITLE}");
+	var now = new Date();	// 현재 날짜 및 시간
+	var year = now.getFullYear();	// 연도
+	$("meta[property='og\\:title']").attr("content", "[SEMOCHUREE] 가성비 좋은 ${POST_TITLE} TOP 15 추천 순위 ("+year+"기준)");
+	
+	var img = $(".num_1").find('img').attr('src');
+	console.log("img :: " + img);
+	$("meta[property='og\\:image']").attr("content",  img);
 	
 });
-
-function showTopList2(){
-	var sHtml = "";
-	var listCount = ${cpApiPrdctSearchList.size()};
-	//alert(listCount);
-	if(listCount > 0){
-		sHtml = "<ul><c:choose><c:when test='${cpApiPrdctSearchList.size() > 0 }'><c:forEach var='i' items='${cpApiPrdctSearchList}'><li>${i.apiPrdctSearchNo}</li></c:forEach></c:when><c:otherwise><li>검색내용이 없습니다.</li></c:otherwise></c:choose></ul>";
+function goTwoDepth(postUrl){
+	var postNo = "";
+	if(postUrl != null && postUrl != ""){
+		 
+		postNo = postUrl.substring(postUrl.indexOf('/')+1);
+		document.frm_two.postNo.value = postNo; 
+		$("#frm_two").attr("action", "/"+postUrl);
+		$("#frm_two").attr("method", "post");
+		$("#frm_two").submit();
+		
 	}else{
-		alert("hi");
+		return false;
 	}
 	
-	$("#topList2").html(sHtml);
 }
-function showTopList(){
-	var listCount = "20";
-	var sHtml = "";
-	if(listCount>0){
-		sHtml +="<div class='ptp-pc ptp-top-table force-fullscreen'>";
-		sHtml +="<section class='ptp-pc-inner-product force-fullscreen-inner' id='product-comparison'>";
-		sHtml +=	"<div class='ptp-div-table'>";
-		sHtml +=		"<div class='ptp-table-head'>";
-		sHtml +=			"<div class='ptp-table-row'>";
-		sHtml +=				"<div class='ptp-table-thead-image'>이미지</div>";
-		sHtml +=				"<div class='ptp-table-thead-title'>모델</div>";
-		sHtml +=				"<div class='ptp-table-thead-mobile-title'>추천</div>";
-		sHtml +=				"<div class='ptp-table-thead-features'>특징</div>";
-		sHtml +=				"<div class='ptp-table-thead-button'></div>";
-		sHtml +=			"</div>";
-		sHtml +=		"</div>";
-		for(var i=0; i<listCount; i++){
-			sHtml += "<div class='ptp-table-body'>";
-			sHtml += 	"<div class='ptp-table-row'>";
-			sHtml += 		"<div class='ptp-table-cell ptp-table-image'>";
-			sHtml += 			"<img height='160' class='product-image custom-product-image ptp-table-inner-image' src='data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%20160'%3E%3C/svg%3E' alt='Product Image of the 웰퍼니쳐 에반 아쿠아텍스 카우치 소파 4인용' data-lazy-src='https://reviewpro.co.kr/wp-content/uploads/2021/09/웰퍼니쳐-에반-아쿠아텍스-카우치.webp'>";
-			sHtml += 			"<noscript>";
-			sHtml += 				"<img height='160' class='product-image custom-product-image ptp-table-inner-image' src='https://reviewpro.co.kr/wp-content/uploads/2021/09/웰퍼니쳐-에반-아쿠아텍스-카우치.webp' alt='Product Image of the 웰퍼니쳐 에반 아쿠아텍스 카우치 소파 4인용'>";
-			sHtml += 			"</noscript>";
-			sHtml += 		"</div>";
-			sHtml += 		"<div class='ptp-table-cell ptp-table-title-award'>";
-			sHtml +=			"<div class='ptp-table-award'>생활방수 가능</div>";
-			sHtml += 			"<div class='ptp-table-title' title='웰퍼니쳐 에반 아쿠아텍스 카우치 소파 4인용'>웰퍼니쳐 에반 아쿠아텍스 카우치 소파 4인용</div>";
-			sHtml += 		"</div>";
-			sHtml += 		"<div class='ptp-table-cell ptp-table-features'>";
-			sHtml +=			"<ul class='ptp-table-features-list'>";
-			sHtml += 				"<li>뛰어난 가성비</li>";
-			sHtml += 				"<li>생활방수 가능</li>";
-			sHtml += 				"<li>다양한 컬러</li>";
-			sHtml += 			"</ul>";
-			sHtml += 		"</div>";
-			sHtml += 		"<div class='ptp-table-cell ptp-table-button'>";
-			sHtml += 			"<a class='ptp-table-link product-table-linkbutton-link' href=https://coupa.ng/b77NYQ rel='nofollow noopener' target='_blank' title='Shop the Product'>";
-			sHtml += 				"<div class='ptp-table-button-inner'>최저가 보기</div>";
-			sHtml += 			"</a>";
-			sHtml += 		"</div>";
-			sHtml +=	 "</div>";
-			sHtml += "</div>";
+function countUp(contentPrdNm, contentNo, contentPrdUrl){
+	console.log(contentNo+" "+contentPrdUrl);
+	document.frm.contentNo.value = contentNo;
+	
+	$.ajax({
+		type:"POST",
+		dataType:"json",
+		url:"/ajax/VISCNTUP",
+		data:$('[name=frm]').serialize(),
+		success:function(data){
+			if(data != '0'){
+				
+				window.open(contentPrdUrl, contentPrdNm, '');
+				location.reload();
+			}
+		},
+		error : function(){
+			
 		}
-		sHtml +=	"</div>";
-		sHtml +="</section>";
-		sHtml +="</div>";
-	}else{
-		// 상품리스트가 없을 경우
-		sHtml = "없다 병신아";
-	}
+	});
 	
-	
-	$("#topList").html(sHtml);
 }
+
+
 </script>

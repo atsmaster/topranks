@@ -49,9 +49,4 @@ public class WebPostA {
 	@Column(name="NVR_KEYWORD_NO")
 	private int nvrKeywordNo;
 	
-	/*
-	 * @ManyToOne
-	 * 
-	 * @JoinColumn(name = "CTGR_NO") private WebCtgrA webCtgrA;
-	 */
 }

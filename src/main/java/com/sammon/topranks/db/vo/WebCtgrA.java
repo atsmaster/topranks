@@ -30,6 +30,9 @@ public class WebCtgrA {
 	@Column(name="CTGR_NM")
 	private String ctgrNm;
 	
+	@Column(name="CTGR_NM_EN")
+	private String ctgrNmEn;
+	
 	@Column(name="REG_DD")
 	private String regDd;
 	
@@ -38,4 +41,11 @@ public class WebCtgrA {
 	
 //	@OneToMany(mappedBy = "webCtgrA")
 //	private List<WebPostA> webPostAList = new ArrayList<WebPostA>();
+	
+	// 추가 VO
+	/*
+	 * @Column(name="POST_URL") private String postUrl;
+	 * 
+	 * @Column(name = "CONTENT_PRD_IMG") private String contentPrdImg;
+	 */
 }

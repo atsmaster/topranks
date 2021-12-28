@@ -13,6 +13,9 @@
 		<class>com.sammon.topranks.db.vo.WebCtgrA</class>
 		<class>com.sammon.topranks.db.vo.WebPostA</class>
 		<class>com.sammon.topranks.db.vo.WebContentA</class>
+		
+		<!-- <class>com.sammon.topranks.batisSqlDao.MainDao</class> -->
+		
 		<!-- 추가 end -->
 		<properties>
 

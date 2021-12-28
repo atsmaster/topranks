@@ -1,28 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file ="header.jsp" %>
-<%-- <%
-request.setAttribute("message", "gg");
-%> --%>
+
 <div id="prdctList"></div>
 
 <div class='maindivOutter'>
 	<c:choose>
-		<c:when test='${webCtgrAListName.size() > 0}'>
+		<c:when test='${mainList.size() > 0}'>
 			<form id='frm' name='frm' action=''>
-				<input type='hidden' name='ctgrNm' value=''/>
+				<input type='hidden' name='ctgrNmEn' value=''/>
+				<!-- <input type='hidden' name='ctgrNm' value=''/> -->
 				<input type='hidden' name='ctgrNo' value=''>
-				<c:forEach var='i' items='${webCtgrAListName }' varStatus="status">
-					
-					<button class='mainImgOutter' type='button' onclick='goTwoDepth("${status.index+1}", "${i.ctgrNm}", "${i.ctgrNo}")'>
-						<img class='mainImg' src='https://reviewpro.co.kr/wp-content/uploads/2021/09/Depositphotos_172911896_xl-2015-scaled.jpg' alt=''>
-						<p>TOP 20위 ${i.ctgrNm } 추천순위</p>
+				<c:forEach var='i' items='${mainList }' varStatus="status">
+					<input type='hidden' id="CTGR_NM_${status.index+1}" value='${i.CTGR_NM }'>
+					<button class='mainImgOutter num_${status.index+1}' type='button' onclick='goTwoDepth("${status.index+1}", "${i.CTGR_NM_EN}", "${i.CTGR_NO}")'>
+						<img class='mainImg' src='${i.CONTENT_PRD_IMG}' alt="가성비 좋은 ${CTGR_NM}">
+						<p>TOP 20위 ${i.CTGR_NM } 추천순위</p>
 					</button>
 				</c:forEach>
 			</form>
 		</c:when>
 		<c:otherwise>
-			<p>죄송합니다. 페이지 준비중입니다.</p>
+			<c:choose>
+				<c:when test='${postList.size() > 0}'>
+					<form id='frm' name='frm' action=''>
+					<input type='hidden' name='ctgrNm' value=''/>
+					<input type='hidden' name='postNo' value=''>
+						<c:forEach var='i' items='${postList }' varStatus="status">
+							<button class='mainImgOutter num_${status.index+1}' type='button' onclick='goTwoDepth2("${status.index+1}", "${CTGR_NM_EN }", "${i.POST_URL}", "${i.POST_NO }")'>
+								<img class='mainImg' src='${i.CONTENT_PRD_IMG}' alt="가성비 좋은 ${i.POST_TITLE }">
+								<p>TOP 20위 ${i.POST_TITLE } 추천순위</p>
+							</button>
+						</c:forEach>
+					</form>
+		 		</c:when>
+		 		<c:otherwise>
+		 			
+		 		</c:otherwise>
+		 	</c:choose>
 		</c:otherwise>
 	</c:choose>
 </div>
@@ -30,91 +45,54 @@ request.setAttribute("message", "gg");
 <%@include file ="footer.jsp" %>
 <script type="text/javascript">
 $(function() {
-    console.log("${message}");
-    //showList();
+	var urlCheck = window.location.href;
+	// 대문페이지가 아닐경우
+	if(urlCheck.substring(urlCheck.lastIndexOf('/')+1) != ''){
+		//console.log(urlCheck.substring(urlCheck.lastIndexOf('/')+1));
+		//console.log("${CTGR_NM}");
+		//var urlPlus =  urlCheck.substring(urlCheck.lastIndexOf('/')+1);
+		$("meta[property='og\\:url']").attr("content", urlCheck );
+		
+		//var oneDepthTitle = localStorage.getItem("oneDepthTitle");
+		var now = new Date();	// 현재 날짜 및 시간
+		var year = now.getFullYear();	// 연도
+		$("meta[property='og\\:title']").attr("content", "[SEMOCHUREE] 가성비 좋은 ${CTGR_NM} 추천 순위 ("+year+"기준)");
+		
+		
+		//alert("${CTGR_NM}");
+	}else{
+		
+	}
+	var img = $(".num_1").find('img').attr('src');
+	console.log("img :: " + img);
+	$("meta[property='og\\:image']").attr("content",  img);
+	
 });
 
-/* function test(url1,url2){
-	alert(url1);
-	alert(url2);
-	if(url2 == ''){
-		location.href=url1;
-	}else{
-		location.href=url1+'/'+url2;
-	}
-	
-// 	location.href='category';
-	
-} */
+//$("meta[property='og\\:title']").attr("content", '타이틀넣기' );
 
-function goTwoDepth(index, ctgrNm, ctgrNo){//(${status.index+1}, ${i.ctgrNm}, ${i.ctgrNo})
-	document.frm.ctgrNm.value = ctgrNm;
-	document.frm.ctgrNo.value = ctgrNo;
+
+function goTwoDepth(index, ctgrNmEn, ctgrNo){//(${status.index+1}, ${i.ctgrNm}, ${i.ctgrNo})
 	
-	console.log("ctgrNm :: "+ ctgrNm +" ,ctgrNo :: "+ctgrNo);
-	$("#frm").attr("action", "/"+ctgrNm);
+	document.frm.ctgrNmEn.value = ctgrNmEn;
+	document.frm.ctgrNo.value = ctgrNo;
+	//document.frm.ctgrNm.value = $("#CTGR_NM_1").val();
+	
+	//localStorage.setItem("oneDepthTitle", $("#CTGR_NM_1").val());
+	console.log("ctgrNmEn :: "+ ctgrNmEn +" ,ctgrNo :: "+ctgrNo);
+	$("#frm").attr("action", "/"+ctgrNmEn);
 	$("#frm").attr("method", "post");
 	$("#frm").submit();
-	
 }
-function showList(){
-	var sHtml = "";
-	var listCount = "3";
-	if(listCount>0){
-		/* for(var i=0; i<listCount; i++){
-			sHtml +="<div class='maindivOutter'>"; 
-			sHtml +="<form id='frm"+i+"' name='frm"+i+"' action=''>"; 
-			sHtml +=	"<button class='mainImgOutter' type='button' onclick='goTwoDepth(+"i"+)'>";
-			//sHtml +=		"<a  onclick=\"test('category','posturl')\">";//POST_URL
-			//sHtml +=		"<a href='/category'>";//POST_URL
-			sHtml +=			"<img class='mainImg' src='https://reviewpro.co.kr/wp-content/uploads/2021/09/Depositphotos_172911896_xl-2015-scaled.jpg' alt=''>";//CONTENT_PRD_IMG
-			sHtml +=			"<p>TOP 20위 상품명 추천순위</p>";//CTGR_NM
-			//sHtml +=		"</a>";
-			sHtml +=	"</button>";
-			sHtml +="</form>";
-			sHtml +="</div>";	
-		} */
+function goTwoDepth2(index, ctgrNmEn, postUrl, postNo){
+	document.frm.postNo.value = postNo;
+	
+	$("#frm").attr("action", "/"+ctgrNmEn+"/"+postNo);
+	$("#frm").attr("method", "post");
+	$("#frm").submit();
+}
 
-	}else{
-		sHtml = "죄송합니다. 페이지 준비중입니다.";
-	}
-	$("#prdctList").html(sHtml);
-}
-/* function showList(){
-	
-	var sHtml = "";
-	
-	//	DB에서 받아온 리스트 목록 확인
-	//var listCount = "${test}";
-	var listCount = "2";
-	if(listCount>0){
-		//		상품 리스트가 존재할경우
-		for(var i=0; i<listCount; i++){
-			sHtml +=	"<div class=''>";
-			sHtml +=		"<div class='' itemprop='text'>";
-			sHtml +=			"<div>";
-			sHtml +=				"<section class='ptp-post-grid container-inner'>";
-			sHtml +=					"<div class='ptp-post-grid-wrapper'>";
-			sHtml +=						"<div class='shw-div-img'>";
-			sHtml +=							"<img class='mainImg' alt='TOP 7 소파 추천, 이케아, 리클라이너, 패브릭 소파 2021' src='https://reviewpro.co.kr/wp-content/uploads/2021/09/Depositphotos_172911896_xl-2015-scaled.jpg' height='185' data-ll-status='loaded'>";
-			sHtml +=							"<noscript>";
-			sHtml +=								"<img class='ptp-post-grid-image no_pin no-pin' alt='TOP 7 소파 추천, 이케아, 리클라이너, 패브릭 소파 2021' src='https://reviewpro.co.kr/wp-content/uploads/2021/09/Depositphotos_172911896_xl-2015-scaled.jpg' height='185' />";				
-			sHtml +=							"</noscript>";
-			sHtml +=							"<a class='ptp-post-grid-container ptp-post-grid-link' href='/sample'><p class='mainText'>TOP 7 소파 추천, 이케아, 리클라이너, 패브릭 소파 2021</p></a>";
-			sHtml +=						"</div>";
-			sHtml +=					"</div>";
-			sHtml +=				"</section>";
-			sHtml +=			"</div>";
-			sHtml +=		"</div>";
-			sHtml +=	"</div>";
-		}
-		
-	}else{
-		// 상품리스트가 없을 경우
-		sHtml = "없다 병신아";
-	}
-	$("#prdctList").html(sHtml);
-} */
+
 
 </script>
 
