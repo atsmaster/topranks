@@ -37,7 +37,7 @@
 		<div id="primary" class="content-area grid-parent grid-100">
 			<main id="main" class="site-main">
 				<div>
-					<span class=""><a href='/'>home</a></span>
+					<span class=""><a href='/' style="color:white">Home</a></span>
 					<form id="selFrm" name="selFrm" action="post">
 					<input type="hidden" name="ctgrNm" id="ctgrNm" value="">
 					<input type="hidden" name="ctgrNmEn" id="ctgrNmEn" value="">
