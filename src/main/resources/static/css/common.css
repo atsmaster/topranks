@@ -1041,6 +1041,150 @@ p {
 	height: 85px;
 }
 
+.header-container {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.header-outer {
+    /* background-color: #7c04d6; */
+	margin-bottom: 1.5rem;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	order: 1;
+}
+
+.header-inner {
+    margin: auto;
+    padding: 20px 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 650px) and (max-width: 950px){
+	.container-inner_2, .force-fullscreen-inner {
+		max-width: 950px;
+		width: calc(100vw - 110px);
+	}
+}
+
+
+.title-container {
+    flex: 70%;
+}
+
+.entry-title {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-family: var(--body-font);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.02rem;
+    margin-bottom: 0;
+}
+
+.header-meta {
+    font-size: .85rem;
+    color: #fff;
+    line-height: 1.5;
+    margin-top: 0.5em;
+}
+
+.header-meta-author-wrap {
+    margin-left: 0;
+}
+
+.header-meta-author-wrap, .header-meta-date-wrap, .header-meta-tags-wrap, .header-meta-comments-wrap, .header-meta-share-wrap, .header-meta-tags-links {
+    display: inline-block;
+}
+
+.header-meta svg.icon-post-meta {
+    fill: #ffff;
+}
+
+svg.icon-post-meta {
+    fill: var(--icon-color);
+    margin: 3px 3px 0 0;
+    float: left;
+    width: 15px;
+    height: 15px;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* path[Attributes Style] {
+    d: path("M 888 1184 l 116 -116 l -152 -152 l -116 116 v 56 h 96 v 96 h 56 Z m 440 -720 q -16 -16 -33 1 l -350 350 q -17 17 -1 33 t 33 -1 l 350 -350 q 17 -17 1 -33 Z m 80 594 v 190 q 0 119 -84.5 203.5 t -203.5 84.5 h -832 q -119 0 -203.5 -84.5 t -84.5 -203.5 v -832 q 0 -119 84.5 -203.5 t 203.5 -84.5 h 832 q 63 0 117 25 q 15 7 18 23 q 3 17 -9 29 l -49 49 q -14 14 -32 8 q -23 -6 -45 -6 h -832 q -66 0 -113 47 t -47 113 v 832 q 0 66 47 113 t 113 47 h 832 q 66 0 113 -47 t 47 -113 v -126 q 0 -13 9 -22 l 64 -64 q 15 -15 35 -7 t 20 29 Z m -96 -738 l 288 288 l -672 672 h -288 v -288 Z m 444 132 l -92 92 l -288 -288 l 92 -92 q 28 -28 68 -28 t 68 28 l 152 152 q 28 28 28 68 t -28 68 Z");
+} */
+
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+
+.header-meta svg.icon-post-meta {
+    fill: #ffff;
+}
+
+.header-meta a {
+    text-decoration: underline;
+    color: #fff;
+    font-weight: 700;
+}
+
+a, button, input {
+    transition: color .1s ease-in-out,background-color .1s ease-in-out,font-weight .1s ease-in-out;
+}
+
+.header-meta-date-wrap, .header-meta-tags-wrap {
+    margin-left: 10px;
+}
+
+element.style {
+    height: 230px;
+}
+
+.featured-image img {
+    border: 3px solid #fff;
+    object-fit: cover;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 5%;
+    height: 230px;
+    max-height: 230px;
+    min-height: 230px;
+}
+@media (max-width: 600px){
+	.header-inner {
+		display: block;
+	}
+}
+
+@media (max-width: 768px){
+	h1 {
+		font-size: 2rem;
+	}
+}
+
+
+.featured-image {
+    flex: 30%;
+}
+
+@media (max-width: 600px){
+	.featured-image {
+		margin-top: 1rem;
+	}
+}
+
+
 
 a:link { color: red; text-decoration: none;}
 a:visited { color: black; text-decoration: none;}

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file ="header.jsp" %>
+<%@include file ="header_Detail.jsp" %>
 	
 	<!-- <div class='ptp-pc ptp-top-table force-fullscreen'> -->
 	<div class='main-div'>
@@ -217,8 +217,10 @@ $(function() {
 	console.log("${POST_TITLE}");
 	var now = new Date();	// 현재 날짜 및 시간
 	var year = now.getFullYear();	// 연도
-	$("meta[property='og\\:title']").attr("content", "[SEMOCHUREE] 가성비 좋은 ${POST_TITLE} TOP 15 추천 순위 ("+year+"기준)");
-	
+	$("meta[property='og\\:title']").attr("content", "[SEMOCHUREE] 가성비 좋은 ${POST_TITLE} TOP 10 추천 순위 ("+year+"기준)");
+	$(".entry-title").text("가성비 좋은 ${POST_TITLE} TOP 10 추천 순위 ("+year+"기준)");
+	//${REG_DDTM }
+	$(".entry-date").text("${REG_DDTM }");
 	var img = $(".num_1").find('img').attr('src');
 	console.log("img :: " + img);
 	$("meta[property='og\\:image']").attr("content",  img);

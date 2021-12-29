@@ -6,7 +6,6 @@
 		
 		</main>
 	</div>
-</div>
 </body>
 <footer>
 <div id="footer" role="contentinfo">

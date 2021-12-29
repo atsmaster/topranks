@@ -98,4 +98,10 @@
 			 , CONTENT_PRD_RK ASC
 			 , CONTENT_PRD_NM DESC LIMIT 4
 	</select>
+	
+	<select id="selectRegYmd" parameterType="String" resultType="String">
+		SELECT DATE_FORMAT(REG_DDTM, '%Y년 %m월 %d일 %T') AS REG_DDTM 
+		  FROM WEB_CONTENT_A 
+ 		 WHERE POST_NO = #{postNo} ORDER BY REG_DDTM DESC LIMIT 1;
+	</select>
 </mapper>

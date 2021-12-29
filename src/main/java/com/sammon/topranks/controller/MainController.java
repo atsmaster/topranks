@@ -111,6 +111,8 @@ public class MainController {
 		//System.out.println("MainController contentList :: "+contentList);
 		webCtgrAListName = mainService.getCtgListName();
 		
+		//	작성일 가져오기 => DB에 가장 늦게 기록된 날짜를 가져옴
+		String regYmd = mainService.getRegYmd(postNo);
 		
 		
 		//	인기글
@@ -123,6 +125,7 @@ public class MainController {
 		
 		
 		model.addAttribute("POST_TITLE",postTitle);
+		model.addAttribute("REG_DDTM", regYmd);
 		model.addAttribute("contentList",contentList);
 		model.addAttribute("webCtgrAListName",webCtgrAListName);
 		

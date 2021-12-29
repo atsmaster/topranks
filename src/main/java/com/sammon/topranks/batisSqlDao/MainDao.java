@@ -66,4 +66,8 @@ public class MainDao extends AbstractDAO {
 		int num = 1;
 		return selectList("selectRecentContentList", num);
 	}
+	
+	public String getRegYmd(String postNo) {
+		return (String) selectOne("selectRegYmd", postNo);
+	}
 }

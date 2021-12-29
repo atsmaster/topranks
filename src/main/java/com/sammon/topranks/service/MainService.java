@@ -118,4 +118,8 @@ public class MainService {
 	public List<Map> getRecentContentList(){
 		return dao.getRecentContentList();
 	}
+	
+	public String getRegYmd(String postNo) {
+		return dao.getRegYmd(postNo);
+	}
 }
