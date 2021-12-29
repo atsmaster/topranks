@@ -108,7 +108,9 @@ public class MainController {
 		mainService.upPostVisitCnt(Integer.parseInt(postNo));
 		contentList = mainService.getContentList(Integer.parseInt(postNo));
 		String postTitle = mainService.getPostTitle(postNo);
-		//System.out.println("MainController contentList :: "+contentList);
+		System.out.println("MainController contentList :: "+contentList);
+		String contentPrdImg = contentList.get(0).get("CONTENT_PRD_IMG").toString();
+		
 		webCtgrAListName = mainService.getCtgListName();
 		
 		//	작성일 가져오기 => DB에 가장 늦게 기록된 날짜를 가져옴
@@ -124,6 +126,7 @@ public class MainController {
 		 
 		
 		
+		model.addAttribute("CONTENT_PRD_IMG",contentPrdImg);
 		model.addAttribute("POST_TITLE",postTitle);
 		model.addAttribute("REG_DDTM", regYmd);
 		model.addAttribute("contentList",contentList);

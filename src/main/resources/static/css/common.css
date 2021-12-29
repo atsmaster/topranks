@@ -1152,14 +1152,15 @@ element.style {
 }
 
 .featured-image img {
-    border: 3px solid #fff;
-    object-fit: cover;
-    background-color: #fff;
-    box-sizing: border-box;
-    border-radius: 5%;
-    height: 230px;
-    max-height: 230px;
-    min-height: 230px;
+	border: 3px solid #fff;
+	object-fit: cover;
+	background-color: #fff;
+	box-sizing: border-box;
+	border-radius: 5%;
+	height: 120%;
+	width: auto;
+	max-height: 120%;
+	min-height: 120%;
 }
 @media (max-width: 600px){
 	.header-inner {
