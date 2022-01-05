@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@include file ="header.jsp" %>
 
-<div id="prdctList"></div>
+<!-- <div id="prdctList"></div> -->
 
 <div class='maindivOutter'>
 	<c:choose>

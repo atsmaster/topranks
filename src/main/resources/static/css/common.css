@@ -104,11 +104,12 @@
 }
 
 #oss-title.generate-sections-container {
-	background-image:url("../img/SEMOCHUREE.png");
-    background-size: 600px;
-    width: 99%;
-    height: 300px;
-    border: 2px solid;
+	background-image: url(../img/SEMOCHUREE.png);
+	background-size: 600px;
+	width: 99%;
+	height: 300px;
+	border: 2px solid;
+	margin-left: 0.5%;
 }
 
 #oss-title .generate-sections-inside-container {

@@ -20,48 +20,47 @@
 						</div>
 						<c:choose>
 							<c:when test="${contentList.size() > 0 }">
-							<form id='frm' name='frm' method="post" onsubmit="return false;">
-							
-							<input type='hidden' name='contentNo' value=''>
-							<input type='hidden' name='contentPrdUrl' value=''>
-							
-								<c:forEach var='i' items='${contentList }' varStatus="status">
-									<div class='ptp-table-body'>
-										<div class='ptp-table-row'>
-											<div class='ptp-table-cell ptp-table-image num_${status.count }'>
-											<span style="width:30px;position:absolute;color:#fff;background-color:#dc3545;border-radius:2px;top: 0;left:0;">${status.count }</span>
-												<img height='160' class='product-image custom-product-image ptp-table-inner-image' src='${i.CONTENT_PRD_IMG }' alt='Product Image of the ${i.CONTENT_PRD_NM}'>
-												
-											</div>
-											<div class='ptp-table-cell ptp-table-title-award'>
-												<div class='ptp-table-award ptp-table-title' title='${i.CONTENT_PRD_NM}'>${i.CONTENT_PRD_NM}</div>
-												<!-- <div class='ptp-table-title' title='웰퍼니쳐 에반 아쿠아텍스 카우치 소파 4인용'>웰퍼니쳐 에반 아쿠아텍스 카우치 소파 4인용</div> -->
-											</div>
-											
-											<div class='ptp-table-cell ptp-table-features'>
-												<ul class='ptp-table-features-list'>
-													<li>${i.CONTENT_PRD_PRICE}원</li>
+								<form id='frm' name='frm' method="post" onsubmit="return false;">
+									<input type='hidden' name='contentNo' value=''>
+									<input type='hidden' name='contentPrdUrl' value=''>
+									
+									<c:forEach var='i' items='${contentList }' varStatus="status">
+										<div class='ptp-table-body'>
+											<div class='ptp-table-row'>
+												<div class='ptp-table-cell ptp-table-image num_${status.count }'>
+												<span style="width:30px;position:absolute;color:#fff;background-color:#dc3545;border-radius:2px;top: 0;left:0;">${status.count }</span>
+													<img height='160' class='product-image custom-product-image ptp-table-inner-image' src='${i.CONTENT_PRD_IMG }' alt='Product Image of the ${i.CONTENT_PRD_NM}'>
 													
-													<c:choose>
-														<c:when test="${i.CONTENT_VISIT_CNT == 0  || i.CONTENT_VISIT_CNT == null}">
-														</c:when>
-														<c:otherwise>
-															<li>조회수 : ${i.CONTENT_VISIT_CNT}</li>
-														</c:otherwise>
-													</c:choose>
-													 
-												</ul>
-											</div>
-											<div class='ptp-table-cell ptp-table-button'>
+												</div>
+												<div class='ptp-table-cell ptp-table-title-award'>
+													<div class='ptp-table-award ptp-table-title' title='${i.CONTENT_PRD_NM}'>${i.CONTENT_PRD_NM}</div>
+												</div>
 												
-												<button class='ptp-table-button-inner' onclick='countUp("${i.CONTENT_PRD_NM }", "${i.CONTENT_NO }", "${i.CONTENT_PRD_URL }")'>최저가 보기</button>
-												
+												<div class='ptp-table-cell ptp-table-features'>
+													<ul class='ptp-table-features-list'>
+														<li>${i.CONTENT_PRD_PRICE}원</li>
+														
+														<c:choose>
+															<c:when test="${i.CONTENT_VISIT_CNT == 0  || i.CONTENT_VISIT_CNT == null}">
+															
+															</c:when>
+															<c:otherwise>
+																<li>조회수 : ${i.CONTENT_VISIT_CNT}</li>
+															</c:otherwise>
+														</c:choose>
+														 
+													</ul>
+												</div>
+												<div class='ptp-table-cell ptp-table-button'>
+													
+													<button class='ptp-table-button-inner' onclick='countUp("${i.CONTENT_PRD_NM }", "${i.CONTENT_NO }", "${i.CONTENT_PRD_URL }")'>최저가 보기</button>
+													
+												</div>
 											</div>
 										</div>
-									</div>
-								</c:forEach>
-							</form>
-							
+									</c:forEach>
+								</form>
+								
 							</c:when>
 							<c:otherwise>
 							
@@ -149,6 +148,7 @@ $(function() {
 	var mainImg = "${CONTENT_PRD_IMG}";
 	$(".featured-image").find('img').attr('src', mainImg);
 	$(".featured-image").find('img').attr('srcset', mainImg);
+	$(".featured-image").find('img').attr('alt', "가성비 좋은 ${POST_TITLE} TOP 10 추천 순위 ("+year+"기준)");
 	
 });
 function goTwoDepth(postUrl){
