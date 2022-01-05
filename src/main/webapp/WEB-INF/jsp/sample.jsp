@@ -140,6 +140,7 @@ $(function() {
 	$(".entry-title").text("가성비 좋은 ${POST_TITLE} TOP 10 추천 순위 ("+year+"기준)");
 	//${REG_DDTM }
 	$(".entry-date").text("${REG_DDTM }");
+	$(".entry-date").attr('datetime', "${REG_DDTM }");
 	
 	var img = $(".num_1").find('img').attr('src');
 	console.log("img :: " + img);
