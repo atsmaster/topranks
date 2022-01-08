@@ -62,7 +62,7 @@
 				<div id="oss-title" class="generate-sections-container">
 					<div class="generate-sections-inside-container" itemprop="text">
 						<div class="container-inner" style="max-width: 800px; margin: auto; text-align: center;">
-							<h1 class="entry-title" itemprop="headline" >SEMO CHUREE</h1>
+							<h1 class="entry-title" style="opacity: 0;" itemprop="headline" >SEMO CHUREE</h1>
 							<p class=""></p>
 						</div>
 					</div>

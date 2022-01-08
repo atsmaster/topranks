@@ -6,13 +6,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.5</version>
+		<version>2.5.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sammon</groupId>
-	<artifactId>TopRanks</artifactId>
+	<artifactId>topranks</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>TopRanks</name>
+	<packaging>jar</packaging>
+	<name>topranks</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -72,6 +73,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
+			<optional>true</optional>
 		</dependency>
 		
 		<dependency>
@@ -110,7 +112,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
+				<!-- <configuration>
+					<mainClass>com.sammon.topranks</mainClass>
+					<skip>true</skip>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
@@ -118,8 +122,20 @@
 							<optional>true</optional>
 						</exclude>
 					</excludes>
+				</configuration> -->
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<!-- test 코드 build 무시 -->
+					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
+			
+			
+			
 		</plugins>
 	</build>
 

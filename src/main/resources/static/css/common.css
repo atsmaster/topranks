@@ -105,9 +105,9 @@
 
 #oss-title.generate-sections-container {
 	background-image: url(../img/SEMOCHUREE.png);
-	background-size: 600px;
+	background-size: 100% 100%;
 	width: 99%;
-	height: 300px;
+	height: 190px;
 	border: 2px solid;
 	margin-left: 0.5%;
 }
@@ -242,7 +242,7 @@ body {
 	font-weight: 400;
 	line-height: 1.65;
 	color: var(- -main-text);
-	background-color: #ade1de;
+	/* background-color: #ade1de; */
 	color: #211e1f;
 	max-width: 100%;
 	overflow-x: hidden
@@ -1061,7 +1061,7 @@ p {
 .header-inner {
     margin: auto;
     padding: 20px 0;
-    color: #fff;
+    color: #cdcdb0;
     display: flex;
     align-items: center;
 }
