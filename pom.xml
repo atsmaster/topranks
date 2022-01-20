@@ -30,6 +30,12 @@
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
 		
+		<!-- 리소스에 관련된 url 제공 -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-hateoas</artifactId>
+        </dependency>
+		
 		<!-- 히카리CP 커넥션 풀 사용을 위한 Starter  -->
 		<dependency>
             <groupId>org.springframework.boot</groupId>

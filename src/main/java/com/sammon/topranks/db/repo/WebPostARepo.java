@@ -5,7 +5,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.sammon.topranks.db.vo.WebPostA;
 
-@RepositoryRestResource
-public interface WebPostARepo extends JpaRepository<WebPostA, Long>{
+@RepositoryRestResource(collectionResourceRel = "posts", path = "posts")
+public interface WebPostARepo extends JpaRepository<WebPostA, Integer>{
 
 }

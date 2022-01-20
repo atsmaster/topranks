@@ -5,7 +5,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.sammon.topranks.db.vo.WebContentA;
 
-@RepositoryRestResource
-public interface WebContentARepo extends JpaRepository<WebContentA, Long>{
+@RepositoryRestResource(collectionResourceRel = "contents", path = "contents")
+public interface WebContentARepo extends JpaRepository<WebContentA, Integer>{
 
 }
