@@ -1,4 +1,4 @@
-package com.sammon.topranks.database;
+package com.sammon.topranks.config;
 import java.util.HashMap;
 import java.util.Map;
 

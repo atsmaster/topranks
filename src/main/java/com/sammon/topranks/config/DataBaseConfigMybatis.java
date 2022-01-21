@@ -1,4 +1,4 @@
-package com.sammon.topranks.database;
+package com.sammon.topranks.config;
 import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSessionFactory;

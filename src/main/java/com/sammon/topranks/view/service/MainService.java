@@ -1,4 +1,4 @@
-package com.sammon.topranks.service;
+package com.sammon.topranks.view.service;
 
 import java.util.List;
 import java.util.Map;
@@ -7,7 +7,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sammon.topranks.batisSqlDao.MainDao;
 import com.sammon.topranks.db.repo.CpApiPrdctSearchRepo;
 import com.sammon.topranks.db.repo.NvrCtgrRepo;
 import com.sammon.topranks.db.repo.NvrKeywordRepo;
@@ -18,6 +17,7 @@ import com.sammon.topranks.db.vo.CpApiPrdctSearch;
 import com.sammon.topranks.db.vo.WebContentA;
 import com.sammon.topranks.db.vo.WebCtgrA;
 import com.sammon.topranks.db.vo.WebPostA;
+import com.sammon.topranks.view.dao.MainDao;
 
 @Service
 public class MainService {

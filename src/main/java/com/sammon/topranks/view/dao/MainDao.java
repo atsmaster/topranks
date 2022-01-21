@@ -1,4 +1,4 @@
-package com.sammon.topranks.batisSqlDao;
+package com.sammon.topranks.view.dao;
 
 import java.util.List;
 import java.util.Map;
