@@ -1,11 +1,12 @@
 package com.sammon.topranks.db.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.sammon.topranks.db.vo.NvrKeyword;
 
-@Repository
+
+@RepositoryRestResource(exported = false)
 public interface NvrKeywordRepo extends JpaRepository<NvrKeyword, Long>{
 
 }

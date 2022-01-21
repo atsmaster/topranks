@@ -60,7 +60,7 @@
         	<optional>true</optional>
         </dependency>
         
-     <!-- MyBatis -->
+     	<!-- MyBatis -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
