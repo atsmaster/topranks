@@ -18,13 +18,18 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 		http.cors();
 	}
 
+	/**
+	 * 
+	 * */
+	
 	@Bean
 	CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
-		configuration.setAllowedOriginPatterns(Arrays.asList("*"));
-		configuration.setAllowedMethods(Arrays.asList("HEAD", "GET", "POST", "PUT"));
-		configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
-		configuration.setAllowCredentials(true);
+		configuration.setAllowedOriginPatterns(Arrays.asList("*"));	// 모든 Origin 허용
+//		configuration.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500/"));	// 추후 도메인 연결시 매핑해주기 (위 *로 세팅돼있는거 지우기)
+		configuration.setAllowedMethods(Arrays.asList("HEAD", "GET", "PATCH")); // 메소드 허용 제한
+		configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type")); // 헤더 세팅
+		configuration.setAllowCredentials(true); //
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", configuration);
 		return source;

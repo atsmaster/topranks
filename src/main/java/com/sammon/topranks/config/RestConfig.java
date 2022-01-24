@@ -15,9 +15,11 @@ public class RestConfig implements RepositoryRestConfigurer {
 	
 	@Override
 	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
+		// Response Type을 Json으로 설정
 		config.setDefaultMediaType(MediaType.APPLICATION_JSON); //Response Defalut Type Json
         config.useHalAsDefaultJsonMediaType(false); // hal+json type false
         
+        // 요청 Method 제한하기
         HttpMethod[] unsupportedActions = {HttpMethod.PUT, HttpMethod.POST, HttpMethod.DELETE, HttpMethod.PATCH};
         
         config.getExposureConfiguration()
