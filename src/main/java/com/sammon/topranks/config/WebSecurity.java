@@ -31,7 +31,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 		configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type")); // 헤더 세팅
 		configuration.setAllowCredentials(true); //
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-		source.registerCorsConfiguration("/**", configuration);
+		source.registerCorsConfiguration("/**", configuration); // 모든자원 접근
 		return source;
 	}
 }

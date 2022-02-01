@@ -19,13 +19,13 @@ public class RestConfig implements RepositoryRestConfigurer {
 		config.setDefaultMediaType(MediaType.APPLICATION_JSON); //Response Defalut Type Json
         config.useHalAsDefaultJsonMediaType(false); // hal+json type false
         
-        // 요청 Method 제한하기
-        HttpMethod[] unsupportedActions = {HttpMethod.PUT, HttpMethod.POST, HttpMethod.DELETE, HttpMethod.PATCH};
-        
-        config.getExposureConfiguration()
-        .forDomainType(WebCtgrA.class)
-        .withItemExposure((metadata, HttpMethods) -> HttpMethods.disable(unsupportedActions))
-        .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable(unsupportedActions));
+//        // 요청 Method 제한하기
+//        HttpMethod[] unsupportedActions = {HttpMethod.PUT, HttpMethod.POST, HttpMethod.DELETE, HttpMethod.PATCH};
+//        
+//        config.getExposureConfiguration()
+//        .forDomainType(WebCtgrA.class)
+//        .withItemExposure((metadata, HttpMethods) -> HttpMethods.disable(unsupportedActions))
+//        .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable(unsupportedActions));
         
 	}
 }
