@@ -46,7 +46,7 @@ public class WebContentA {
 	
 	//	FK(WEB_POST_A)
 	@Column(name = "POST_NO")
-	private String postNo;
+	private int postNo;
 	
 	@Column(name = "POST_TITLE")
 	private String postTitle;
