@@ -1,5 +1,6 @@
 package com.sammon.topranks.db.vo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +21,12 @@ import lombok.ToString;
 @NoArgsConstructor
 @Entity
 @Table(name="WEB_CTGR_A")
-public class WebCtgrA {
+public class WebCtgrA implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9046067118572669181L;
 	
 	@Id
 	@Column(name="CTGR_NO")

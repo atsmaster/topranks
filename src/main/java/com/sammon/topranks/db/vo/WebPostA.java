@@ -1,5 +1,7 @@
 package com.sammon.topranks.db.vo;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -20,7 +22,12 @@ import lombok.ToString;
 @NoArgsConstructor
 @Entity
 @Table(name="WEB_POST_A")
-public class WebPostA {
+public class WebPostA implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9046067118572669181L;
 	
 	@Id
 	@Column(name="POST_NO")

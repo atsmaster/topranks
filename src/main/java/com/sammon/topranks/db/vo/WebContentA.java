@@ -1,5 +1,7 @@
 package com.sammon.topranks.db.vo;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,7 +18,12 @@ import lombok.ToString;
 @NoArgsConstructor
 @Entity
 @Table(name="WEB_CONTENT_A")
-public class WebContentA {
+public class WebContentA implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9046067118572669181L;
 
 	@Id
 	@Column(name = "CONTENT_NO")
