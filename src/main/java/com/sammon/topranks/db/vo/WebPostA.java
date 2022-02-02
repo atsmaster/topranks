@@ -34,7 +34,10 @@ public class WebPostA {
 	private String postUrl;
 	
 	@Column(name="POST_VISIT_CNT")
-	private String postVisitCnt;
+	private int postVisitCnt;
+
+	@Column(name="USE_YN")
+	private String useYn;
 	
 	@Column(name="REG_DD")
 	private String regDd;

@@ -24,13 +24,13 @@ public class WebContentA {
 	private int contentNo;
 	
 	@Column(name = "CONTENT_PRD_RK")
-	private String contentPrdRk;
+	private int contentPrdRk;
 	
 	@Column(name = "CONTENT_PRD_NM")
 	private String contentPrdNm;
 	
 	@Column(name = "CONTENT_PRD_PRICE")
-	private String contentPrdPrice;
+	private int contentPrdPrice;
 	
 	@Column(name = "CONTENT_PRD_IMG")
 	private String contentPrdImg;
