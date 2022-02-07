@@ -1,0 +1,41 @@
+{"items": 
+    [
+        {
+            "url": "/clothes"
+            , "title": "패션의류 게시물"
+            , "ctgrNo": "50000000"
+        },{
+            "url": "/accessories"
+            , "title": "패션잡화 게시물"
+            , "ctgrNo": "50000001"
+        },{
+            "url": "/beauty"
+            , "title": "화장품 미용 게시물"
+            , "ctgrNo": "50000002"
+        },{
+            "url": "/appliances"
+            , "title": "디지털 가전 게시물"
+            , "ctgrNo": "50000003"
+        },{
+            "url": "/interior"
+            , "title": "가구 인테리어 게시물"
+            , "ctgrNo": "50000004"
+        },{
+            "url": "/parenting"
+            , "title": "출산 육아 게시물"
+            , "ctgrNo": "50000005"
+        },{
+            "url": "/food"
+            , "title": "식품 게시물"
+            , "ctgrNo": "50000006"
+        },{
+            "url": "/sport"
+            , "title": "스포츠 레저 게시물"
+            , "ctgrNo": "50000007"
+        },{
+            "url": "/health"
+            , "title": "생활 건강 게시물"
+            , "ctgrNo": "50000008"
+        }
+    ]
+}
