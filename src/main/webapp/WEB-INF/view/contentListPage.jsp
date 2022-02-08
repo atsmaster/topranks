@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,7 +103,12 @@
         window.onload = function(){
             
             // 41은 예시임 컨트롤러에서 받아온 값으로 유동적으로 변하게 할것
-            var postKey =  "41";
+            var postKey =  "${postKey}";
+            console.log(postKey);
+            if(postKey == "" || postKey == null){
+            	postKey = "41";
+            }
+            
             var contentsPath = "postNo?postNo="+postKey;
             
             postWrite("contents", "search", contentsPath);

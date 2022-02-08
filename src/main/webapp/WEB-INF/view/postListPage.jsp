@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,8 +73,10 @@
         $(function() {
             
             // 50000000은 예시임 컨트롤러에서 받아온 값으로 유동적으로 변하게 할것
-            console.log("${ctgr_No}");
-            var ctgrKey =  "50000000";
+            var ctgrKey =  "${ctgr_No}";
+            if(ctgrKey == "" || ctgrKey == null){
+            	ctgrKey =  "50000000";
+            }
             var ctgrPath = "ctgrNo?ctgrNo="+ctgrKey+"&sort=postNo,desc";
             postWrite("posts", "search", ctgrPath);
             

@@ -37,7 +37,7 @@ public class MainController {
 			, Model model)throws Exception{
 		
 			System.out.println("ctgrNo ["+ctgrNo+"] param1["+param1+"]");
-			ctgrNo = "50000001";
+			//ctgrNo = "50000001";
 			// test a태그가 아닌 form태그로 변경할 것
 			
 			model.addAttribute("ctgr_No",ctgrNo);

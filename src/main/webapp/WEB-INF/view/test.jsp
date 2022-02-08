@@ -1,10 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-	<title>Hello, AMPs</title>
+	<title>SEMOCHUREE</title>
 	<!-- script -->
 	
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -42,6 +44,8 @@
             
         <!-- main -->
         <section class="container">
+        <form id='frm' name='frm_main' method="post" onsubmit="return false;">
+        <input type="hidden" name="postUrl" value="" />
             <div class="listViewHolder">
                 <label>최신 게시물</label> 
                 <div class="wrapper">
@@ -190,33 +194,36 @@
                         <button update id="fixed-button" class="button" on="tap:live-list-2.update">
                             new updates on live list 1
                           </button>
-                          <div items class="liveListWrap" id="50000008"> </div>
-                  </amp-live-list>
-                </div>
-            </div>
+						<div items class="liveListWrap" id="50000008"> </div>
+					</amp-live-list>
+				</div>
+			</div>
+		</form>
+		</section>
 
-        </section>
-
-        <!-- sidebar section -->
-        <section>
-            <!--side bar data -->
+		<!-- sidebar section -->
+		<section>
+			<!--side bar data -->
             
 
             <!-- side bar ui -->
             <div>
                 <amp-sidebar id="sidebar" class="desktop-sidebar" layout="nodisplay" side="right">
                     <h1>Desktop Sidebar</h1>
+                    <form id='frm' name='frm' method="post" onsubmit="return false;">
                     <amp-list layout="fixed-height" height="400" [height]="200" src="../static/json/navigation.json" binding="no">
                         <template type="amp-mustache">
-                        	<form id='frm' name='frm' method="post" onsubmit="return false;">
-                        		<input type='hidden' name='url' value=''>
+                        	
                         		<input type='hidden' name='ctgrNo' value=''>
-                            	
-                            	<!-- <div><a href="{{url}}">&nbsp;&nbsp;{{title}}</a></div> -->
-                            	<button onclick='goPostList("{{url}}", "{{ctgrNo}}")'>{{title}}</button>
-                            </form>
+                        		<input type='hidden' name='url' value=''>
+                        		
+                        		<input type='hidden' name='{{title}}url' value='{{url}}'>
+                        		<input type='hidden' name='{{title}}ctgrNo' value='{{ctgrNo}}'>
+                            	<button class='naviBtn'>{{title}}</button>
+                            
                         </template>
                     </amp-list>
+                    </form>
                 </amp-sidebar>
             </div>
         </section>
@@ -227,39 +234,57 @@
     <script>
         var contentLen = "";
         $(function() {
-            //App.config.init()
-            //post("post", "","");
-            
-            // 최신게시물
-            postWrite("R", "posts?sort=postNo,desc&size=4");
-            postWrite("50000000", "posts", "search", "ctgrNo?ctgrNo=50000000&size=4&sort=postNo,desc");
-            postWrite("50000001", "posts", "search", "ctgrNo?ctgrNo=50000001&size=4&sort=postNo,desc");
-            postWrite("50000002", "posts", "search", "ctgrNo?ctgrNo=50000002&size=4&sort=postNo,desc");
-            postWrite("50000003", "posts", "search", "ctgrNo?ctgrNo=50000003&size=4&sort=postNo,desc");
-            postWrite("50000004", "posts", "search", "ctgrNo?ctgrNo=50000004&size=4&sort=postNo,desc");
-            postWrite("50000005", "posts", "search", "ctgrNo?ctgrNo=50000005&size=4&sort=postNo,desc");
-            postWrite("50000006", "posts", "search", "ctgrNo?ctgrNo=50000006&size=4&sort=postNo,desc");
-            postWrite("50000007", "posts", "search", "ctgrNo?ctgrNo=50000007&size=4&sort=postNo,desc");
-            postWrite("50000008", "posts", "search", "ctgrNo?ctgrNo=50000008&size=4&sort=postNo,desc");
+			
+			// 최신게시물
+			postWrite("R", "posts?sort=postNo,desc&size=4");
+			postWrite("50000000", "posts", "search", "ctgrNo?ctgrNo=50000000&size=4&sort=postNo,desc");
+			postWrite("50000001", "posts", "search", "ctgrNo?ctgrNo=50000001&size=4&sort=postNo,desc");
+			postWrite("50000002", "posts", "search", "ctgrNo?ctgrNo=50000002&size=4&sort=postNo,desc");
+			postWrite("50000003", "posts", "search", "ctgrNo?ctgrNo=50000003&size=4&sort=postNo,desc");
+			postWrite("50000004", "posts", "search", "ctgrNo?ctgrNo=50000004&size=4&sort=postNo,desc");
+			postWrite("50000005", "posts", "search", "ctgrNo?ctgrNo=50000005&size=4&sort=postNo,desc");
+			postWrite("50000006", "posts", "search", "ctgrNo?ctgrNo=50000006&size=4&sort=postNo,desc");
+			postWrite("50000007", "posts", "search", "ctgrNo?ctgrNo=50000007&size=4&sort=postNo,desc");
+			postWrite("50000008", "posts", "search", "ctgrNo?ctgrNo=50000008&size=4&sort=postNo,desc");
+			
+			//	navi
+			$(document).on('click', '.naviBtn', function(){
+				var t = $(this);
+				var sort = t.text();
+				console.log(sort);
+				
+				var naviCtgrNo = document.IBF.elements[sort+"ctgrNo"].value;
+				var naviUrl = document.IBF.elements[sort+"url"].value;
+				goPostList()
+				
+			});
+		});
+		function goPostList(url, ctgrNo){
+			document.frm.ctgrNo.value = ctgrNo;
+			document.frm.url.value = url;
+			
+			$("#frm").attr("action", "/"+url);
+			$("#frm").attr("method", "post");
+			$("#frm").submit();
+		}
+		
+		
+		async function postWrite(way, condition, condition_2, condition_3) {
+			// http://www.semochuree.com:11111/api/
+			var url = "https://www.semochuree.com:11111/api/"+ condition;
+			if("" != condition_2 && null != condition_2){
+				url += "/" + condition_2;
+				if("" != condition_3 && null != condition_3){
+					url += "/" + condition_3;
+				}
+			}
+			//console.log(url);
 
-        });
-        
-        async function postWrite(way, condition, condition_2, condition_3) {
-            // http://www.semochuree.com:11111/api/
-            var url = "https://www.semochuree.com:11111/api/"+ condition;
-            if("" != condition_2 && null != condition_2){
-                url += "/" + condition_2;
-                if("" != condition_3 && null != condition_3){
-                    url += "/" + condition_3;
-                }
-            }
-            console.log(url);
-
-            var res = await fetch(url);
-            var data = await res.json();
-            if(res.ok){
-                console.log(data);
-                contentLen = data.content.length;
+			var res = await fetch(url);
+			var data = await res.json();
+			if(res.ok){
+				//console.log(data);
+				contentLen = data.content.length;
                 switch(way){
                     case 'R':
                     if(contentLen > 0){
@@ -449,16 +474,11 @@
             }
         }
         
-		function goPostList(url, ctgrNo){
-			document.frm.ctgrNo.value = ctgrNo;
-			
-			$("#frm").attr("action", "/"+url);
-			$("#frm").attr("method", "post");
-			$("#frm").submit();
-		}
+		
 
     </script>
 </body>
 </html>
 
 
+	
