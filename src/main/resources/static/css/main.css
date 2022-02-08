@@ -177,7 +177,9 @@ div > header > nav > div > ul > li {
 .testView{
     vertical-align: middle;
 }
-
+.labelName{
+	color:black!important;
+}
    a:link { color: red; text-decoration: none;}
    a:visited { color: black; text-decoration: none;}
    a:hover { color: black; text-decoration: none;}

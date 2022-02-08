@@ -52,7 +52,7 @@ public class MainController {
 			, @RequestParam(value = "postNo", required = false) String postNo
 			, Model model)throws Exception{
 		System.out.println("postNo ["+postNo+"] param1["+param1+"] param2["+param2+"]");
-		
+		model.addAttribute("postKey",param2);
 		return "contentListPage";
 		
 	}
