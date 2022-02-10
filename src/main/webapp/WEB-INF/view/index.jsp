@@ -277,6 +277,7 @@
 			$("#frm").submit();
 		}
 		
+		
 		function styleR_Func(num){
 			var url = document.styleR_frm.elements["styleR"+num].value;
 			location.href = url;
