@@ -43,8 +43,9 @@ public class WebPostA implements Serializable{
 	@Column(name="POST_VISIT_CNT")
 	private int postVisitCnt;
 
-	@Column(name="USE_YN")
-	private String useYn;
+	/*
+	 * @Column(name="USE_YN") private String useYn;
+	 */
 	
 	@Column(name="REG_DD")
 	private String regDd;
