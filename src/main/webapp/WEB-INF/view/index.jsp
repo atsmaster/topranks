@@ -32,7 +32,7 @@
 		<!-- header -->
 		<header>
 			<nav>
-				<h1>메인 내비게이션</h1> 
+				<h1>SEMO CHUREE</h1>
 				<div>
 					<ul> 
 						<li on="tap:sidebar"><img src="../static/asset/svg/ic_menu.svg" alt="menu"></li> 
@@ -40,7 +40,11 @@
 				</div>
 			</nav>
 		</header>
-
+		
+		<!-- test Start -->
+		<!-- <section class="container" id="main-section"></section> -->
+		<!-- test End -->
+		
 		<!-- main -->
 		<section class="container">
 		
@@ -54,7 +58,8 @@
 						<button update id="fixed-button" class="button" on="tap:live-list-1.update">
 							new updates on live list 1
 						</button>
-						<form name="styleR_frm" id="styleR_frm" action="post">
+						<form name="styleR_frm" id="styleR_frm" th:action="post">
+							<input type="hidden" name="postTitle" value="">
 							<div items class="liveListWrap" id="styleR"></div>
 						</form>
 					</amp-live-list>
@@ -72,6 +77,7 @@
 							new updates on live list 1
 						</button>
 						<form name="frm_50000000" id="frm_50000000" action="post">
+							<input type="hidden" name="postTitle" value="">
 							<div items class="liveListWrap" id="50000000"></div>
 						</form>
 					</amp-live-list>
@@ -79,18 +85,19 @@
 			</div>
 			<!-- 패션의류 50000000 Start  -->
 
-            <div class="listViewHolder">
-                <label>패션잡화 게시물</label> 
-                <div class="wrapper">
-                    <amp-live-list id="live-list-2" data-poll-interval="20000" data-max-items-per-page="4">
-                        <button update id="fixed-button" class="button" on="tap:live-list-2.update">
-                            new updates on live list 1
-                          </button>
-                          <form name="frm_50000001" id="frm_50000001" action="post">
-                          <div items class="liveListWrap" id="50000001"> </div>
-                          </form>
-                  </amp-live-list>
-                </div>
+			<div class="listViewHolder">
+				<label>패션잡화 게시물</label> 
+				<div class="wrapper">
+					<amp-live-list id="live-list-2" data-poll-interval="20000" data-max-items-per-page="4">
+						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
+							new updates on live list 1
+						</button>
+						<form name="frm_50000001" id="frm_50000001" action="post">
+							<input type="hidden" name="postTitle" value="">
+							<div items class="liveListWrap" id="50000001"> </div>
+						</form>
+					</amp-live-list>
+				</div>
 			</div>
 
 			<div class="listViewHolder">
@@ -104,6 +111,7 @@
 							new updates on live list 1
 						</button>
 						<form name="frm_50000002" id="frm_50000002" action="post">
+							<input type="hidden" name="postTitle" value="">
 							<div items class="liveListWrap" id="50000002"> </div>
 						</form>
 					</amp-live-list>
@@ -122,6 +130,7 @@
 							new updates on live list 1
 						</button>
 						<form name="frm_50000003" id="frm_50000003" action="post">
+							<input type="hidden" name="postTitle" value="">
 							<div items class="liveListWrap" id="50000003"> </div>
 						</form>
 					</amp-live-list>
@@ -139,6 +148,7 @@
 							new updates on live list 1
 						</button>
 						<form name="frm_50000004" id="frm_50000004" action="post">
+							<input type="hidden" name="postTitle" value="">
 							<div items class="liveListWrap" id="50000004"> </div>
 						</form>
 					</amp-live-list>
@@ -156,6 +166,7 @@
 							new updates on live list 1
 						</button>
 						<form name="frm_50000005" id="frm_50000005" action="post">
+							<input type="hidden" name="postTitle" value="">
 							<div items class="liveListWrap" id="50000005"> </div>
 						</form>
 					</amp-live-list>
@@ -173,6 +184,7 @@
 							new updates on live list 1
 						</button>
 						<form name="frm_50000006" id="frm_50000006" action="post">
+							<input type="hidden" name="postTitle" value="">
 							<div items class="liveListWrap" id="50000006"> </div>
 						</form>
 					</amp-live-list>
@@ -190,6 +202,7 @@
 							new updates on live list 1
 						</button>
 						<form name="frm_50000007" id="frm_50000007" action="post">
+							<input type="hidden" name="postTitle" value="">
 							<div items class="liveListWrap" id="50000007"> </div>
 						</form>
 					</amp-live-list>
@@ -207,6 +220,7 @@
 							new updates on live list 1
 						</button>
 						<form name="frm_50000008" id="frm_50000008" action="post">
+							<input type="hidden" name="postTitle" value="">
 							<div items class="liveListWrap" id="50000008"> </div>
 						</form>
 					</amp-live-list>
@@ -217,14 +231,60 @@
 
 		<!-- sidebar section -->
 		<section>
-
+			<amp-state id="placeholderState">
+				<script type="application/json">
+					{"items": 
+						[
+							{
+								"url": "/clothes"
+								, "title": "패션의류 게시물"
+								, "ctgrNo": "50000000"
+							},{
+								"url": "/accessories"
+								, "title": "패션잡화 게시물"
+								, "ctgrNo": "50000001"
+							},{
+								"url": "/beauty"
+								    , "title": "화장품 미용 게시물"
+								    , "ctgrNo": "50000002"
+							},{
+								"url": "/appliances"
+								, "title": "디지털 가전 게시물"
+								, "ctgrNo": "50000003"
+							},{
+								"url": "/interior"
+								, "title": "가구 인테리어 게시물"
+								, "ctgrNo": "50000004"
+							},{
+								"url": "/parenting"
+								, "title": "출산 육아 게시물"
+								, "ctgrNo": "50000005"
+							},{
+								"url": "/food"
+								, "title": "식품 게시물"
+								, "ctgrNo": "50000006"
+							},{
+								"url": "/sport"
+								, "title": "스포츠 레저 게시물"
+								, "ctgrNo": "50000007"
+							},{
+								"url": "/health"
+								, "title": "생활 건강 게시물"
+								, "ctgrNo": "50000008"
+							}
+						]
+					}
+				
+				</script>
+			</amp-state>
 			<div>
 				<amp-sidebar id="sidebar" class="desktop-sidebar" layout="nodisplay" side="right">
-					<h1>Desktop Sidebar</h1>
-					<form id='frm' name='frm' method="post" onsubmit="return false;">
+					<h1><a href="/">SEMO CHUREE</a></h1>
+					<form id='frm' name='frm' method="post">
 						<input type='hidden' name='ctgrNo' value=''>
-						<input type='hidden' name='url' value=''>
-						<amp-list layout="fixed-height" height="400" [height]="200" src="../static/json/navigation.json" binding="no">
+						<input type='hidden' name='postUrl' value=''>
+						<!-- <amp-list layout="fixed-height" height="400" [height]="200" src="../static/json/navigation.json" binding="no"> -->
+						<amp-list layout="fixed-height" height="400" [height]="200" src="amp-state:placeholderState" binding="no">
 							<template type="amp-mustache">
 								
 								<input type='hidden' name='{{title}}url' value='{{url}}'>
@@ -259,20 +319,23 @@
 			//	navi
 			$(document).on('click', '.naviBtn', function(){
 				var t = $(this);
+				
 				var sort = t.text();
 				console.log(sort);
 				
-				var naviCtgrNo = document.IBF.elements[sort+"ctgrNo"].value;
-				var naviUrl = document.IBF.elements[sort+"url"].value;
+				var naviCtgrNo = document.frm.elements[sort+"ctgrNo"].value;
+				var naviUrl = document.frm.elements[sort+"url"].value;
+				console.log("naviCtgrNo : "+naviCtgrNo+"naviUrl : "+naviUrl);
 				goPostList(naviUrl, naviCtgrNo);
 				
 			});
 		});
 		function goPostList(url, ctgrNo){
+			console.log("url : "+url+" ctgrNo : "+ctgrNo);
 			document.frm.ctgrNo.value = ctgrNo;
-			document.frm.url.value = url;
+			document.frm.postUrl.value = url;
 			
-			$("#frm").attr("action", "/"+url);
+			$("#frm").attr("action", url);
 			$("#frm").attr("method", "post");
 			$("#frm").submit();
 		}
@@ -280,52 +343,92 @@
 		
 		function styleR_Func(num){
 			var url = document.styleR_frm.elements["styleR"+num].value;
-			location.href = url;
+			document.styleR_frm.elements["postTitle"].value = document.styleR_frm.elements["postTitle"+num].value;
+			//location.href = url;
+			$("#styleR_frm").attr("action", "/"+url);
+			$("#styleR_frm").attr("method", "post");
+			$("#styleR_frm").submit();
 		}
 		
 		function func_50000000(num){
 			var url = document.frm_50000000.elements["ctgr50"+num].value;
-			location.href = url;
+			document.frm_50000000.elements["postTitle"].value = document.frm_50000000.elements["postTitle"+num].value;
+			//location.href = url;
+			$("#frm_50000000").attr("action", "/"+url);
+			$("#frm_50000000").attr("method", "post");
+			$("#frm_50000000").submit();
 		}
 		
 		function func_50000001(num){
 			var url = document.frm_50000001.elements["ctgr51"+num].value;
-			location.href = url;
+			document.frm_50000001.elements["postTitle"].value = document.frm_50000001.elements["postTitle"+num].value;
+			//location.href = url;
+			$("#frm_50000001").attr("action", "/"+url);
+			$("#frm_50000001").attr("method", "post");
+			$("#frm_50000001").submit();
 		}
 		
 		function func_50000002(num){
 			var url = document.frm_50000002.elements["ctgr52"+num].value;
-			location.href = url;
+			document.frm_50000002.elements["postTitle"].value = document.frm_50000002.elements["postTitle"+num].value;
+			//location.href = url;
+			$("#frm_50000002").attr("action", "/"+url);
+			$("#frm_50000002").attr("method", "post");
+			$("#frm_50000002").submit();
 		}
 		
 		function func_50000003(num){
 			var url = document.frm_50000003.elements["ctgr53"+num].value;
-			location.href = url;
+			document.frm_50000003.elements["postTitle"].value = document.frm_50000003.elements["postTitle"+num].value;
+			//location.href = url;
+			$("#frm_50000003").attr("action", "/"+url);
+			$("#frm_50000003").attr("method", "post");
+			$("#frm_50000003").submit();
 		}
 		
 		function func_50000004(num){
 			var url = document.frm_50000004.elements["ctgr54"+num].value;
-			location.href = url;
+			document.frm_50000004.elements["postTitle"].value = document.frm_50000004.elements["postTitle"+num].value;
+			//location.href = url;
+			$("#frm_50000004").attr("action", "/"+url);
+			$("#frm_50000004").attr("method", "post");
+			$("#frm_50000004").submit();
 		}
 		
 		function func_50000005(num){
 			var url = document.frm_50000005.elements["ctgr55"+num].value;
-			location.href = url;
+			document.frm_50000005.elements["postTitle"].value = document.frm_50000005.elements["postTitle"+num].value;
+			//location.href = url;
+			$("#frm_50000005").attr("action", "/"+url);
+			$("#frm_50000005").attr("method", "post");
+			$("#frm_50000005").submit();
 		}
 		
 		function func_50000006(num){
 			var url = document.frm_50000006.elements["ctgr56"+num].value;
-			location.href = url;
+			document.frm_50000006.elements["postTitle"].value = document.frm_50000006.elements["postTitle"+num].value;
+			//location.href = url;
+			$("#frm_50000006").attr("action", "/"+url);
+			$("#frm_50000006").attr("method", "post");
+			$("#frm_50000006").submit();
 		}
 		
 		function func_50000007(num){
 			var url = document.frm_50000007.elements["ctgr57"+num].value;
-			location.href = url;
+			document.frm_50000007.elements["postTitle"].value = document.frm_50000007.elements["postTitle"+num].value;
+			//location.href = url;
+			$("#frm_50000007").attr("action", "/"+url);
+			$("#frm_50000007").attr("method", "post");
+			$("#frm_50000007").submit();
 		}
 		
 		function func_50000008(num){
 			var url = document.frm_50000008.elements["ctgr58"+num].value;
-			location.href = url;
+			document.frm_50000008.elements["postTitle"].value = document.frm_50000008.elements["postTitle"+num].value;
+			//location.href = url;
+			$("#frm_50000008").attr("action", "/"+url);
+			$("#frm_50000008").attr("method", "post");
+			$("#frm_50000008").submit();
 		}
 		
 		async function postWrite(way, condition, condition_2, condition_3) {
@@ -351,8 +454,9 @@
                         var sHtml = "";
                         for(var i = 0; i < contentLen; i++){
                             sHtml += "<div class='liveListItem amp-live-list-item' onclick='styleR_Func("+i+")'>"
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
                             sHtml += "<input type='hidden' name='styleR"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml +=     "<img width='100%' height='250px' src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+                            sHtml +=     "<img width='100%' height='250px' src='"+data.content[i].postImgUrl+"'>"
                             sHtml +=     "<div>"
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
                             sHtml +=     "</div>"
@@ -370,9 +474,10 @@
                         for(var i = 0; i < contentLen; i++){
                             
                             sHtml += "<div class='liveListItem amp-live-list-item' onclick='func_50000000("+i+")'>"
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
                             sHtml += "<input type='hidden' name='ctgr50"+i+"' value='"+data.content[i].postUrl+"' >"
                             sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
                             sHtml += "</div>"
                             sHtml +=     "<div>"
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
@@ -387,11 +492,12 @@
                         console.log(contentLen);
                         var sHtml = "";
                         for(var i = 0; i < contentLen; i++){
-                            
+                        	
                             sHtml += "<div class='liveListItem amp-live-list-item' onclick='func_50000001("+i+")'>"
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
                             sHtml += "<input type='hidden' name='ctgr51"+i+"' value='"+data.content[i].postUrl+"' >"
                             sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
                             sHtml += "</div>"
                             sHtml +=     "<div>"
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
@@ -409,9 +515,10 @@
                         for(var i = 0; i < contentLen; i++){
                             
                             sHtml += "<div class='liveListItem amp-live-list-item' onclick='func_50000002("+i+")'>"
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
                             sHtml += "<input type='hidden' name='ctgr52"+i+"' value='"+data.content[i].postUrl+"' >"
                             sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
                             sHtml += "</div>"
                             sHtml +=     "<div>"
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
@@ -428,9 +535,10 @@
                         for(var i = 0; i < contentLen; i++){
                             
                             sHtml += "<div class='liveListItem amp-live-list-item' onclick='func_50000003("+i+")'>"
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
                             sHtml += "<input type='hidden' name='ctgr53"+i+"' value='"+data.content[i].postUrl+"' >"
                             sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
                             sHtml += "</div>"
                             sHtml +=     "<div>"
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
@@ -447,9 +555,10 @@
                         for(var i = 0; i < contentLen; i++){
                             
                             sHtml += "<div class='liveListItem amp-live-list-item' onclick='func_50000004("+i+")'>"
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
                             sHtml += "<input type='hidden' name='ctgr54"+i+"' value='"+data.content[i].postUrl+"' >"
                             sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
                             sHtml += "</div>"
                             sHtml +=     "<div>"
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
@@ -466,9 +575,10 @@
                         for(var i = 0; i < contentLen; i++){
                             
                             sHtml += "<div class='liveListItem amp-live-list-item' onclick='func_50000005("+i+")'>"
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
                             sHtml += "<input type='hidden' name='ctgr55"+i+"' value='"+data.content[i].postUrl+"' >"
                             sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
                             sHtml += "</div>"
                             sHtml +=     "<div>"
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
@@ -485,9 +595,10 @@
                         for(var i = 0; i < contentLen; i++){
                             
                             sHtml += "<div class='liveListItem amp-live-list-item' onclick='func_50000006("+i+")'>"
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
                             sHtml += "<input type='hidden' name='ctgr56"+i+"' value='"+data.content[i].postUrl+"' >"
                             sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
                             sHtml += "</div>"
                             sHtml +=     "<div>"
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
@@ -504,9 +615,10 @@
                         for(var i = 0; i < contentLen; i++){
                             
                             sHtml += "<div class='liveListItem amp-live-list-item' onclick='func_50000007("+i+")'>"
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
                             sHtml += "<input type='hidden' name='ctgr57"+i+"' value='"+data.content[i].postUrl+"' >"
                             sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
                             sHtml += "</div>"
                             sHtml +=     "<div>"
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
@@ -523,9 +635,10 @@
                         for(var i = 0; i < contentLen; i++){
                             
                             sHtml += "<div class='liveListItem amp-live-list-item' onclick='func_50000008("+i+")'>"
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
                             sHtml += "<input type='hidden' name='ctgr58"+i+"' value='"+data.content[i].postUrl+"' >"
                             sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
                             sHtml += "</div>"
                             sHtml +=     "<div>"
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"

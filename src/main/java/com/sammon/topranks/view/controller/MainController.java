@@ -30,6 +30,10 @@ public class MainController {
 		return "index";
 	}
 	
+	@RequestMapping(value = "favicon.ico") 
+	@ResponseBody public void returnNoFavicon() { }
+
+	
 	@RequestMapping(value = "/{param1}", method = {RequestMethod.GET,RequestMethod.POST})
 	public String getintro(HttpServletRequest req, HttpServletResponse res
 			, @PathVariable(value = "param1", required = false) String param1
@@ -50,9 +54,11 @@ public class MainController {
 			, @PathVariable(value = "param1", required = false) String param1
 			, @PathVariable(value = "param2", required = false) String param2
 			, @RequestParam(value = "postNo", required = false) String postNo
+			, @RequestParam(value = "postTitle", required = false) String postTitle
 			, Model model)throws Exception{
-		System.out.println("postNo ["+postNo+"] param1["+param1+"] param2["+param2+"]");
+		System.out.println("postTitle ["+postTitle+"] param1["+param1+"] param2["+param2+"]");
 		model.addAttribute("postKey",param2);
+		model.addAttribute("postTitle",postTitle);
 		return "contentListPage";
 		
 	}

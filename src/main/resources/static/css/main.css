@@ -94,6 +94,10 @@ div > header > nav > div > ul > li {
     text-align: center;
 }
 
+.errorPage{
+	text-align: center;
+}
+
 .liveListItem_2{
     width: calc(20%);
     display: inline-block;
@@ -142,11 +146,17 @@ div > header > nav > div > ul > li {
     background-color: darkgray;
 }
 .postText{
-    display:-webkit-box;
+	display:-webkit-box;
     -webkit-line-clamp:3;
     -webkit-box-orient:vertical;
     overflow:hidden;
     text-overflow:ellipsis;
+}
+
+.oneOverFlow{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .regDd{
     font-style: oblique;
@@ -175,8 +185,24 @@ div > header > nav > div > ul > li {
 }
 
 .testView{
-    vertical-align: middle;
+	vertical-align: middle;
 }
+
+.font_type{
+	margin-top: 10px;
+	font-family :fantasy
+}
+
+.naviBtn{
+	border:0;
+	outline:0;
+}
+
+.moreBtn{
+	border:0;
+	outline:0;
+}
+
 .labelName{
 	color:black!important;
 }

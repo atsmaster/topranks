@@ -16,6 +16,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.cors();
+		// 403에러 때문에 추가.
+		http.csrf().disable();
 	}
 
 	/**
