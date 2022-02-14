@@ -203,6 +203,14 @@ div > header > nav > div > ul > li {
 	outline:0;
 }
 
+.numbering{
+	width:17px;
+	position:absolute;
+	color:#fff;
+	background-color:#dc3545;
+	z-index:1;
+	text-align: center;
+}
 .labelName{
 	color:black!important;
 }

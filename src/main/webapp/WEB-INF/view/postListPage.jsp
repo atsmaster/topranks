@@ -46,10 +46,10 @@
 		<section class="container">
 			
 			<div class="listViewHolder">
-				<label>앞에서 받아온파라미터</label>
+				<label class="lodingSuccess" id="titleName"></label>
 				<form id='frm_main' name='frm_main' method="post">
 				<input type="hidden" name="postTitle" value="">
-					<div class="wrapper" id="amp_live_list"></div>
+					<div class="wrapper" id="amp_live_list" class="lodingSuccess"></div>
 				</form>
 				<div class="wrapper" id="errorBox" style='display:none'>
 					<div style="width: 92.7%;">
@@ -142,6 +142,9 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script>
 		var contentLen = "";
+		var ctgrPath = "";
+		var ctgrKey = "";
+		var param = "";
 		$(function() {
 			$(document).on('click', '.naviBtn', function(){
 				var t = $(this);
@@ -156,13 +159,13 @@
 				
 			});
 			// 50000000은 예시임 컨트롤러에서 받아온 값으로 유동적으로 변하게 할것
-			var ctgrKey =  "${ctgr_No}";
+			ctgrKey =  "${ctgr_No}";
+			param =  "${param1}";
 			if(ctgrKey == "" || ctgrKey == null){
-				ctgrKey =  "50000000";
+				firstFnc(param, "N");
+			}else{
+				firstFnc(ctgrKey, "Y");
 			}
-			var ctgrPath = "ctgrNo?ctgrNo="+ctgrKey+"&sort=postNo,desc";
-			postWrite("posts", "search", ctgrPath, "F");
-			
 		});
 		
 		function goPostList(url, ctgrNo){
@@ -175,6 +178,11 @@
 			$("#frm").submit();
 		}
 		
+		function replaceAll(fullStr,originalStr,changeStr){ 
+			return fullStr.split(originalStr).join(changeStr); 
+		}
+		
+		
 		function goMoreThan(num){
 			var url = document.frm_main.elements["postUrl"+num].value;
 			document.frm_main.elements["postTitle"].value = document.frm_main.elements["postTitle"+num].value;
@@ -185,15 +193,60 @@
 			$("#frm_main").submit();
 		}
 		
+		async function firstFnc(condition, yn) {
+			console.log("hi")
+			var url = "";
+			var res = "";
+			var data = "";
+			var titleName =  "";
+			if(yn == "N"){
+				url = "https://www.semochuree.com:11111/api/ctgrs/search/ctgrNmEn?ctgrNmEn="+ condition;
+				res = await fetch(url);
+				data = await res.json();
+				if(res.ok){
+					if(data.content[0].links[0].href != "" && data.content[0].links[0].href != null){
+						titleName = replaceAll(data.content[0].ctgrNm, "_", " ");
+						$("#titleName").text(titleName);
+						ctgrKey = data.content[0].links[0].href.substring(data.content[0].links[0].href.lastIndexOf("/")+1);
+						ctgrPath = "ctgrNo?ctgrNo="+ctgrKey+"&sort=postNo,desc";
+						postWrite("posts", "search", ctgrPath, "F");
+					}else{
+						$(".lodingSuccess").hide();
+						$("#errorBox").show();
+					}
+				}else{
+					throw Error(data);
+				}
+				
+			}else if(yn == "Y"){
+				url = "https://www.semochuree.com:11111/api/ctgrs/"+ condition;
+				res = await fetch(url);
+				data = await res.json();
+				if(res.ok){
+					if(data.ctgrNm != "" && data.ctgrNm != null){
+						titleName = replaceAll(data.ctgrNm, "_", " ");
+						$("#titleName").text(titleName);
+						ctgrPath = "ctgrNo?ctgrNo="+ctgrKey+"&sort=postNo,desc";
+						postWrite("posts", "search", ctgrPath, "F");
+					}else{
+						$(".lodingSuccess").hide();
+						$("#errorBox").show();
+					}
+				}else{
+					throw Error(data);
+				}
+			}
+		}
+		
 		async function postWrite(condition, condition_2, condition_3, way) {
 			// http://www.semochuree.com:11111/api/
 			var url = "https://www.semochuree.com:11111/api/"+ condition;
-            if("" != condition_2 && null != condition_2){
-                url += "/" + condition_2;
-                if("" != condition_3 && null != condition_3){
-                    url += "/" + condition_3;
-                }
-            }
+			if("" != condition_2 && null != condition_2){
+				url += "/" + condition_2;
+				if("" != condition_3 && null != condition_3){
+					url += "/" + condition_3;
+				}
+			}
 			console.log(url);
 
 			var res = await fetch(url);
@@ -214,7 +267,7 @@
 							sHtml +=     "<div items class='liveListWrap_2'>"
 							sHtml +=        "<div class='liveListItem_2 amp-live-list-item'>"
 							sHtml +=            "<div>"
-							sHtml +=                "<amp-img class='ampImg"+i+"' height='250px'  src='https://static.coupangcdn.com/image/vendor_inventory/1ca5/88b7f7aebfd5927939688f881629d0c1c13e16c1d4de5897e215842f5cc1.jpg'>"
+							sHtml +=                "<amp-img class='ampImg"+i+"' height='250px'  src=''>"
 							sHtml +=            "</div>"
 							
 							sHtml +=        "</div>"
@@ -244,7 +297,7 @@
 					}
 				}else{
 					console.log("상품이없는경우");
-					$("#amp_live_list").hide();
+					$(".lodingSuccess").hide();
 					$("#errorBox").show();
 					
 				}

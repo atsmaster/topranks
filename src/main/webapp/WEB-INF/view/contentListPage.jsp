@@ -162,6 +162,7 @@
 		var contentLen = "";
 		var postKey =  "${postKey}";
 		var postTitle =  "${postTitle}";
+		
 		$(function() {
 			
 			// 41은 예시임 컨트롤러에서 받아온 값으로 유동적으로 변하게 할것
@@ -183,13 +184,9 @@
 				$("#postTitle").text(postTitle);
 			}
 			console.log(postKey);
-			if(postKey == "" || postKey == null){
-				postKey = "41";
-			}
+			firstFnc(postKey);
 			
-			var contentsPath = "postNo?postNo="+postKey;
 			
-			postWrite("contents", "search", contentsPath);
 			
 		});
 		
@@ -209,7 +206,25 @@
 			window.open(contentPrdUrl, '', '');
 			location.reload();
 		}
-
+		async function firstFnc(condition) {
+			var url = "https://www.semochuree.com:11111/api/posts/"+ condition;
+			console.log("firstFnc :: " + url);
+			var res = await fetch(url);
+			var data = await res.json();
+			if(res.ok){
+				if(data.postTitle != "" && data.postTitle != null){
+					$("#postTitle").text(data.postTitle);
+					
+					var contentsPath = "postNo?postNo="+postKey;
+					postWrite("contents", "search", contentsPath);
+				}else{
+					$("#lodingSuccess").hide();
+					$("#errorBox").show();
+				}
+			}else{
+				throw Error(data);
+			}
+		}
 		async function postWrite(condition, condition_2, condition_3) {
 			// http://www.semochuree.com:11111/api/
 			var url = "https://www.semochuree.com:11111/api/"+ condition;
@@ -236,7 +251,7 @@
 						sHtml += "<div items class='liveListWrap_3'>"
 						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_img amp-live-list-item'>"
 						sHtml +=        "<div>"
-						sHtml +=        "<span style='width:12px;position:absolute;color:#fff;background-color:#dc3545;border-radius:2px;'>"+(i+1)+"</span>"
+						sHtml +=        "<span class='numbering''>"+(i+1)+"</span>"
 						sHtml +=            "<amp-img style='position: relative;'' height='130px'  src='"+data.content[i].contentPrdImg+"'>"
 						sHtml +=        "</div>"
 						sHtml +=    "</div>"
@@ -254,10 +269,8 @@
 				}else{
 					$("#lodingSuccess").hide();
 					$("#errorBox").show();
-					
 				}
 			}else{
-				
 				throw Error(data);
 			}
 		}

@@ -45,6 +45,7 @@ public class MainController {
 			// test a태그가 아닌 form태그로 변경할 것
 			
 			model.addAttribute("ctgr_No",ctgrNo);
+			model.addAttribute("param1",param1);
 			
 		return "postListPage";
 	}
