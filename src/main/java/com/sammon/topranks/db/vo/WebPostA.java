@@ -66,7 +66,7 @@ public class WebPostA implements Serializable{
 	@Column(name="POST_DESC1")  
 	private String postDesc1;
 	
-	@Column(name="POST_DESC2") 
+	@Column(name="POST_DESC2")  
 	private String postDesc2;
 	
 	@Column(name="POST_DESC3") 
