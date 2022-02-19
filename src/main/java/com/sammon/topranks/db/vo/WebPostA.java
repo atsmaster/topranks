@@ -53,7 +53,7 @@ public class WebPostA implements Serializable{
 	@Column(name="REG_DDTM")
 	private String regDdtm;
 	
-	//	FK(WEB_CTGR) 
+	//	FK(WEB_CTGR)
 	@Column(name="CTGR_NO")
 	private int ctgrNo;
 	
@@ -69,7 +69,7 @@ public class WebPostA implements Serializable{
 	@Column(name="POST_DESC2")  
 	private String postDesc2;
 	
-	@Column(name="POST_DESC3") 
+	@Column(name="POST_DESC3")  
 	private String postDesc3;
 	
 }
