@@ -63,7 +63,7 @@ public class WebPostA implements Serializable{
 	@Column(name="POST_IMG_URL") 
 	private String postImgUrl;
 	
-	@Column(name="POST_DESC1") 
+	@Column(name="POST_DESC1")  
 	private String postDesc1;
 	
 	@Column(name="POST_DESC2") 
