@@ -32,7 +32,7 @@
 		<!-- header -->
 		<header>
 			<nav>
-				<h1>SEMO CHUREE</h1>
+				<h1 style="text-align: center;">SEMO CHUREE</h1>
 				<div>
 					<ul> 
 						<li on="tap:sidebar"><img src="../static/asset/svg/ic_menu.svg" alt="menu"></li> 
