@@ -81,18 +81,23 @@ div > header > nav > div > ul > li {
 }
 
 .liveListWrap_3_1{
-    --width: 100%;
-    --width: 160px;
-    height: 130px;
-    font-size: 15px;
-    border: 1px solid gray;
+	--width: 100%;
+	--width: 160px;
+	height: 130px;
+	font-size: 15px;
+	border: 1px solid gray;
 }
 
 .liveListItem{
-    width: calc(25% - 20px);
-    display: inline-block;
-    text-align: center;
+	width: calc(25% - 20px);
+	display: inline-block;
+	text-align: center;
 }
+
+.cursor{
+	cursor: pointer;
+}
+
 
 .errorPage{
 	text-align: center;
@@ -194,13 +199,19 @@ div > header > nav > div > ul > li {
 }
 
 .naviBtn{
+	font-family: Lora, serif;
 	border:0;
 	outline:0;
+	cursor:pointer;
 }
 
+.test{
+	margin-right:15px;
+}
 .moreBtn{
 	border:0;
 	outline:0;
+	cursor:pointer;
 }
 
 .numbering{

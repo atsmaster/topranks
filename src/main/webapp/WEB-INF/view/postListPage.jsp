@@ -78,39 +78,39 @@
 						[
 							{
 								"url": "/clothes"
-								, "title": "패션의류 게시물"
+								, "title": "패션의류"
 								, "ctgrNo": "50000000"
 							},{
 								"url": "/accessories"
-								, "title": "패션잡화 게시물"
+								, "title": "패션잡화"
 								, "ctgrNo": "50000001"
 							},{
 								"url": "/beauty"
-								    , "title": "화장품 미용 게시물"
+								    , "title": "화장품 미용"
 								    , "ctgrNo": "50000002"
 							},{
 								"url": "/appliances"
-								, "title": "디지털 가전 게시물"
+								, "title": "디지털 가전"
 								, "ctgrNo": "50000003"
 							},{
 								"url": "/interior"
-								, "title": "가구 인테리어 게시물"
+								, "title": "가구 인테리어"
 								, "ctgrNo": "50000004"
 							},{
 								"url": "/parenting"
-								, "title": "출산 육아 게시물"
+								, "title": "출산 육아"
 								, "ctgrNo": "50000005"
 							},{
 								"url": "/food"
-								, "title": "식품 게시물"
+								, "title": "식품"
 								, "ctgrNo": "50000006"
 							},{
 								"url": "/sport"
-								, "title": "스포츠 레저 게시물"
+								, "title": "스포츠 레저"
 								, "ctgrNo": "50000007"
 							},{
 								"url": "/health"
-								, "title": "생활 건강 게시물"
+								, "title": "생활 건강"
 								, "ctgrNo": "50000008"
 							}
 						]
@@ -119,21 +119,24 @@
 				</script>
 			</amp-state>
 			<div>
-				<amp-sidebar id="sidebar" class="desktop-sidebar" layout="nodisplay" side="right">
-					<h1><a href="/">SEMO CHUREE</a></h1>
+				<amp-sidebar id="sidebar" class="ampstart-sidebar" layout="nodisplay" side="right">
+					<h1 style="margin-bottom:0px;"><a href="/">SEMO CHUREE</a></h1>
+					<div style="margin-left:15px;">
 					<form id='frm' name='frm' method="post">
 						<input type='hidden' name='ctgrNo' value=''>
 						<input type='hidden' name='postUrl' value=''>
 						<!-- <amp-list layout="fixed-height" height="400" [height]="200" src="../static/json/navigation.json" binding="no"> -->
 						<amp-list layout="fixed-height" height="400" [height]="200" src="amp-state:placeholderState" binding="no">
-							<template type="amp-mustache">
+							<template type="amp-mustache" class="test">
 								
 								<input type='hidden' name='{{title}}url' value='{{url}}'>
 								<input type='hidden' name='{{title}}ctgrNo' value='{{ctgrNo}}'>
 								<button class='naviBtn'>{{title}}</button>
 							</template>
+							
 						</amp-list>
 					</form>
+					</div>
 				</amp-sidebar>
 			</div>
 		</section>
