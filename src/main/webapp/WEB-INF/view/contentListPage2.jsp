@@ -8,7 +8,6 @@
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<title>Hello, AMPs</title>
 	<!-- script -->
-	
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
 	<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
 	<script async custom-element="amp-base-carousel" src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js"></script>
@@ -20,6 +19,7 @@
 	<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
 	<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 	<script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
+	<!-- <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script> -->
 	
 	<script src="../static/js/main.js"></script>
 	<!-- css -->
@@ -28,7 +28,6 @@
 	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 </head>
 <body>
-	
 	<div class="wrap">
 		<!-- header -->
 		<header>
@@ -42,15 +41,34 @@
 			</nav>
 		</header>
 		<!-- main -->
-		
 		<section class="container">
-			
 			<div class="listViewHolder">
-				<label class="lodingSuccess" id="titleName"></label>
-				<form id='frm_main' name='frm_main' method="post">
-				<input type="hidden" name="postTitle" value="">
-					<div class="wrapper" id="amp_live_list" class="lodingSuccess"></div>
-				</form>
+				
+				<div class="wrapper" id="lodingSuccess" style="display:none;">
+					<div style="width: 92.7%;">
+						<amp-accordion disable-session-states>
+							<section expanded>
+								<h2><label id="postTitle">SEME CHUREE</label></h2>
+								<div>상품 설명입니다.</div>
+							</section>
+						</amp-accordion>
+					</div>
+					<br>
+					<amp-live-list id="live-list-1" data-poll-interval="20000" data-max-items-per-page="15">
+						<button update id="fixed-button" class="button" on="tap:live-list-1.update">
+							new updates on live list 1</button>
+						<div items class='liveListWrap_3'>
+							<div class='liveListItem_3 liveListItem_img'>이미지</div>
+							<div class='liveListItem_3 liveListItem_model'>상품명</div>
+							<div class='liveListItem_3 liveListItem_features'>정보</div>
+							<div class='liveListItem_3 liveListItem_button'>
+							</div>
+						</div>
+						<div id="contents_list"></div>
+					</amp-live-list>
+					<div style="clear:both; margin-bottom: 1%;"></div>
+					<span style="color: rgb(194, 187, 187);">파트너스활동으로 수수료를 지급받을 수 있습니다.</span>
+				</div>
 				<div class="wrapper" id="errorBox" style='display:none'>
 					<div style="width: 92.7%;">
 						<amp-accordion disable-session-states>
@@ -66,13 +84,11 @@
 						</amp-accordion>
 					</div>
 				</div>
-				
 			</div>
 		</section>
-		
+
 		<!-- sidebar section -->
 		<section>
-			
 			<amp-state id="placeholderState">
 				<script type="application/json">
 					{"items": 
@@ -143,13 +159,18 @@
 		</section>
 	</div>
 
+
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script>
 		var contentLen = "";
-		var ctgrPath = "";
-		var ctgrKey = "";
-		var param = "";
+		var postKey =  "${postKey}";
+		var postTitle =  "${postTitle}";
+		
 		$(function() {
+			
+			// 41은 예시임 컨트롤러에서 받아온 값으로 유동적으로 변하게 할것
+			
+			//	navi
 			$(document).on('click', '.naviBtn', function(){
 				var t = $(this);
 				
@@ -162,14 +183,14 @@
 				goPostList(naviUrl, naviCtgrNo);
 				
 			});
-			// 50000000은 예시임 컨트롤러에서 받아온 값으로 유동적으로 변하게 할것
-			ctgrKey =  "${ctgr_No}";
-			param =  "${param1}";
-			if(ctgrKey == "" || ctgrKey == null){
-				firstFnc(param, "N");
-			}else{
-				firstFnc(ctgrKey, "Y");
+			if(postTitle != null && postTitle != ""){
+				$("#postTitle").text(postTitle);
 			}
+			console.log(postKey);
+			firstFnc(postKey);
+			
+			
+			
 		});
 		
 		function goPostList(url, ctgrNo){
@@ -182,67 +203,32 @@
 			$("#frm").submit();
 		}
 		
-		function replaceAll(fullStr,originalStr,changeStr){ 
-			return fullStr.split(originalStr).join(changeStr); 
+		function countUp(urlNo){
+			//  조회수 올리고 
+			var contentPrdUrl = $("#contentsUrl"+urlNo).val();
+			window.open(contentPrdUrl, '', '');
+			location.reload();
 		}
-		
-		
-		function goMoreThan(num){
-			var url = document.frm_main.elements["postUrl"+num].value;
-			document.frm_main.elements["postTitle"].value = document.frm_main.elements["postTitle"+num].value;
-			console.log(url);
-			
-			$("#frm_main").attr("action", "/"+url);
-			$("#frm_main").attr("method", "post");
-			$("#frm_main").submit();
-		}
-		
-		async function firstFnc(condition, yn) {
-			console.log("hi")
-			var url = "";
-			var res = "";
-			var data = "";
-			var titleName =  "";
-			if(yn == "N"){
-				url = "https://www.semochuree.com:11111/api/ctgrs/search/ctgrNmEn?ctgrNmEn="+ condition;
-				res = await fetch(url);
-				data = await res.json();
-				if(res.ok){
-					if(data.content[0].links[0].href != "" && data.content[0].links[0].href != null){
-						titleName = replaceAll(data.content[0].ctgrNm, "_", " ");
-						$("#titleName").text(titleName);
-						ctgrKey = data.content[0].links[0].href.substring(data.content[0].links[0].href.lastIndexOf("/")+1);
-						ctgrPath = "ctgrNo?ctgrNo="+ctgrKey+"&sort=postNo,desc";
-						postWrite("posts", "search", ctgrPath, "F");
-					}else{
-						$(".lodingSuccess").hide();
-						$("#errorBox").show();
-					}
+		async function firstFnc(condition) {
+			var url = "https://www.semochuree.com:11111/api/posts/"+ condition;
+			console.log("firstFnc :: " + url);
+			var res = await fetch(url);
+			var data = await res.json();
+			if(res.ok){
+				if(data.postTitle != "" && data.postTitle != null){
+					$("#postTitle").text(data.postTitle);
+					
+					var contentsPath = "postNo?postNo="+postKey;
+					postWrite("contents", "search", contentsPath);
 				}else{
-					throw Error(data);
+					$("#lodingSuccess").hide();
+					$("#errorBox").show();
 				}
-				
-			}else if(yn == "Y"){
-				url = "https://www.semochuree.com:11111/api/ctgrs/"+ condition;
-				res = await fetch(url);
-				data = await res.json();
-				if(res.ok){
-					if(data.ctgrNm != "" && data.ctgrNm != null){
-						titleName = replaceAll(data.ctgrNm, "_", " ");
-						$("#titleName").text(titleName);
-						ctgrPath = "ctgrNo?ctgrNo="+ctgrKey+"&sort=postNo,desc";
-						postWrite("posts", "search", ctgrPath, "F");
-					}else{
-						$(".lodingSuccess").hide();
-						$("#errorBox").show();
-					}
-				}else{
-					throw Error(data);
-				}
+			}else{
+				throw Error(data);
 			}
 		}
-		
-		async function postWrite(condition, condition_2, condition_3, way) {
+		async function postWrite(condition, condition_2, condition_3) {
 			// http://www.semochuree.com:11111/api/
 			var url = "https://www.semochuree.com:11111/api/"+ condition;
 			if("" != condition_2 && null != condition_2){
@@ -252,66 +238,46 @@
 				}
 			}
 			console.log(url);
-
+			
 			var res = await fetch(url);
 			var data = await res.json();
 			if(res.ok){
 				console.log(data);
 				contentLen = data.content.length;
-				console.log(contentLen)
+				//console.log(contentLen);
 				
-				if(contentLen > 0 && data.content[0].postTitle != null){
+				if(contentLen > 0 && data.content[0].postNo != null){
 					console.log(contentLen);
 					var sHtml = "";
-					if(way == "F"){
-						for(var i = 0; i < contentLen; i++){
-							
-							sHtml += "<amp-live-list id='live-list-"+i+"' data-poll-interval='20000' data-max-items-per-page='1' style='margin-top:10px'>"
-							sHtml +=    "<button update id='fixed-button' class='button' on='tap:live-list-"+i+".update'>new updates on live list 1</button>"
-							sHtml +=     "<div items class='liveListWrap_2'>"
-							sHtml +=        "<div class='liveListItem_2 amp-live-list-item'>"
-							sHtml +=            "<div>"
-							sHtml +=                "<amp-img class='ampImg"+i+"' height='250px'  src=''>"
-							sHtml +=            "</div>"
-							
-							sHtml +=        "</div>"
-							sHtml +=        "<div items class='liveListItem_2_3'>"
-							sHtml +=            "<h2 class='oneOverFlow'>"+data.content[i].postTitle+"</h2>"
-							sHtml +=            "<input type='hidden' name='postUrl'"+i+" value="+data.content[i].postUrl+">"
-							sHtml +=            "<div class='postText' style='font-size:15px'>"
-							sHtml +=                "<span>"
-							sHtml +=                    "게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명"
-							sHtml +=                "</span>"
-							sHtml +=            "</div>"
-							sHtml +=            "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"'>"
-							sHtml +=            "<input type='hidden' name='postUrl"+i+"' value='"+data.content[i].postUrl+"'>"
-							sHtml +=            "<span class='regDd'>등록일 "+data.content[i].regDd.substring(0,4)+"년 "+data.content[i].regDd.substring(4,6)+"월 "+data.content[i].regDd.substring(6)+"일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class='moreBtn' onclick='goMoreThan("+i+")'>더보기</button></span>" 
-							sHtml +=        "</div>"
-							sHtml +=    "</div>"
-							sHtml += "</amp-live-list>"
-							//console.log("postNo :: "+data.content[i].postUrl.substr(data.content[i].postUrl.indexOf("/")+1));
-							postWrite("contents", "search", "postNo?postNo="+data.content[i].postUrl.substr(data.content[i].postUrl.indexOf("/")+1)+"&sort=contentPrdRk&size=1", i);
-						}
-						$("#amp_live_list").html(sHtml);
-						
-					}else{
-						//console.log("IMG : "+data.content[0].contentPrdImg);
-						$(".ampImg"+way).attr("src", data.content[0].contentPrdImg);
-						$(".ampImg"+way).find("img").attr("src", data.content[0].contentPrdImg);
+					for(var i = 0; i < contentLen; i++){
+						//var contentsUrl_temp = data.content[i].contentPrdUrl;
+						sHtml += "<div items class='liveListWrap_3'>"
+						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_img amp-live-list-item'>"
+						sHtml +=        "<div>"
+						sHtml +=        "<span class='numbering''>"+(i+1)+"</span>"
+						sHtml +=            "<amp-img style='position: relative;'' height='130px'  src='"+data.content[i].contentPrdImg+"'>"
+						sHtml +=        "</div>"
+						sHtml +=    "</div>"
+						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_model postText'><div class='font_type'>&nbsp;&nbsp;&nbsp;&nbsp;"+data.content[i].contentPrdNm+"</div></div>"
+						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_features'><br><div class='font_type testView'>가격 : "+data.content[i].contentPrdPrice+"원</div></div>"
+						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_button'>"
+						sHtml +=    "<input type='hidden' id='contentsUrl"+i+"' value='"+data.content[i].contentPrdUrl+"' >"
+						sHtml +=        "<br><div class='testView'><button class='button-inner' onclick='countUp("+i+")'>최저가 보기</button></div>"
+						sHtml +=    "</div>"
+						sHtml += "</div>"
 					}
+					$("#contents_list").html(sHtml);
+					$("#lodingSuccess").show();
+					$("#errorBox").hide();
 				}else{
-					console.log("상품이없는경우");
-					$(".lodingSuccess").hide();
+					$("#lodingSuccess").hide();
 					$("#errorBox").show();
-					
 				}
-				//return data;
 			}else{
 				throw Error(data);
 			}
 		}
-
-    </script>
+	</script>
 </body>
 </html>
 

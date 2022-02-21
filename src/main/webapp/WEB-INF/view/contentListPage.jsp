@@ -42,6 +42,13 @@
 		</header>
 		<!-- main -->
 		<section class="container">
+			<amp-state id="testList">
+				 
+				<script type="application/json">
+					{"items":[{"number":1,"contentPrdPrice":47540,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/89e9/2f42d2f6a738f638e410b9d788bc22989cbd99c83583c69592c54f658bfa.jpg","contentPrdNm":"(우체국당일출고)14k귀걸이 사은품 빅사이즈 망또 케이프코트 여자코트 울코트","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6266888117&itemId=12793515836&vendorItemId=80512319991&traceid=V0-153-dc4b58a02d18d795"},{"number":2,"contentPrdPrice":149000,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/e238/1566e13d1a91dd57635123e62f17982a0462a0a7e4804fecf2273ad162c6.jpg","contentPrdNm":"[모조에스핀] J214XSE006 리본포인트 원피스","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6173328888&itemId=12065250823&vendorItemId=79337306511&traceid=V0-153-37968d1b152992a4"},{"number":3,"contentPrdPrice":99000,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/c153/2b133878d094adf7686ede00dabe2b3f5c9c5f0299f661c357119bef3cd2.jpg","contentPrdNm":"[모조에스핀] J214XSF002 트위드 나그랑 재킷","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6137346364&itemId=11745965678&vendorItemId=79019846681&traceid=V0-153-c4cf26e8f65a2d50"},{"number":4,"contentPrdPrice":45990,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/bb2e/6fca52d1d24077d3ca7b56b08993f3be395b32e96259beab4a2c03e052c5.jpg","contentPrdNm":"루스핏 라운드넥 모조에스핀 원피스 롱 니트 2021 가과 겨울 데님 슬링 크 블루","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6139118837&itemId=11761983894&vendorItemId=79035796779&traceid=V0-153-d309e50e35451687"},{"number":5,"contentPrdPrice":299000,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/4217/ffdd6eaa7d0c9ff4e65961c8dbb9f9f302eb2ed9d220abc816a7a242eb6c.JPG","contentPrdNm":"[모조에스핀] J221XSE001 프릴넥 앞트임 원피스","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6281979061&itemId=12904070762&vendorItemId=80179727095&traceid=V0-153-2c87fb4da781bbfd"},{"number":6,"contentPrdPrice":99000,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/1e60/1f09b3060a843929b7c71a5b8032716e63a4569b6462da77223d6bfff384.jpg","contentPrdNm":"모조에스핀 J212XSE003 네크라인 쉬폰 배색 원피스","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6322361482&itemId=13182923299&vendorItemId=80441506786&traceid=V0-153-c6b274b4a5a856d5"},{"number":7,"contentPrdPrice":41040,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/e622/ad5d7c1c9140aa9fe05a0838ae232d5a9eb4cf3ebdd83abf0470600a5fec.jpg","contentPrdNm":"루스핏 라운드넥 모조에스핀 원피스 롱 니트 대학 스타일 정장 드레스 여성 2021","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6139117344&itemId=11761971743&vendorItemId=79035784326&traceid=V0-153-796765874191506a"},{"number":8,"contentPrdPrice":129000,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/830f/4e4cb232dc20a1a8c9ca161d01b8ecb1439e2476e71235825fa358758b49.jpg","contentPrdNm":"케이엘 KL 중앙로 고급원단 센슈얼한 세미캐쥬얼재킷","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=2155533080&itemId=3661192604&vendorItemId=71646623549&traceid=V0-153-44f9fbc7dec60422"},{"number":9,"contentPrdPrice":41580,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/f65e/a2056dd00b06473c8fdfe28e29796432511d197fc4f50c683d0b73d388a8.jpg","contentPrdNm":"루스핏 라운드넥 모조에스핀 원피스 니트 롱 하이 센스 블랙 슈트 긴팔 드레스 프랑스","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6139119367&itemId=11761987291&vendorItemId=79035800616&traceid=V0-153-7d5ec54594c3df71"},{"number":10,"contentPrdPrice":122180,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/72f2/228d6a9f68b5a5a6f53d3deb2fb0086ff05bc076383d4e4a0ae588ee8079.jpg","contentPrdNm":"SU 레이스 긴팔 드레스 봄과 가을 디자인 감각 틈새 허리 꽉 새로운 프랑스어 스타일 세련된 긴 드레스","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6287515708&itemId=12938983651&vendorItemId=80203322540&traceid=V0-153-619f61f147467cb9"}]}
+				</script>
+				
+			</amp-state>
 			<div class="listViewHolder">
 				
 				<div class="wrapper" id="lodingSuccess" style="display:none;">
@@ -54,18 +61,9 @@
 						</amp-accordion>
 					</div>
 					<br>
-					<amp-live-list id="live-list-1" data-poll-interval="20000" data-max-items-per-page="15">
-						<button update id="fixed-button" class="button" on="tap:live-list-1.update">
-							new updates on live list 1</button>
-						<div items class='liveListWrap_3'>
-							<div class='liveListItem_3 liveListItem_img'>이미지</div>
-							<div class='liveListItem_3 liveListItem_model'>상품명</div>
-							<div class='liveListItem_3 liveListItem_features'>정보</div>
-							<div class='liveListItem_3 liveListItem_button'>
-							</div>
-						</div>
-						<div id="contents_list"></div>
-					</amp-live-list>
+					
+					<div id="contents_list"></div>
+					
 					<div style="clear:both; margin-bottom: 1%;"></div>
 					<span style="color: rgb(194, 187, 187);">파트너스활동으로 수수료를 지급받을 수 있습니다.</span>
 				</div>
@@ -165,7 +163,7 @@
 		var contentLen = "";
 		var postKey =  "${postKey}";
 		var postTitle =  "${postTitle}";
-		
+		var jsonData = "";
 		$(function() {
 			
 			// 41은 예시임 컨트롤러에서 받아온 값으로 유동적으로 변하게 할것
@@ -244,28 +242,51 @@
 			if(res.ok){
 				console.log(data);
 				contentLen = data.content.length;
-				//console.log(contentLen);
+				console.log(contentLen);
+				// test Start
+				var storage = new Object();
+				var items = new Array();
 				
+				
+				// test End
 				if(contentLen > 0 && data.content[0].postNo != null){
-					console.log(contentLen);
-					var sHtml = "";
-					for(var i = 0; i < contentLen; i++){
-						//var contentsUrl_temp = data.content[i].contentPrdUrl;
-						sHtml += "<div items class='liveListWrap_3'>"
-						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_img amp-live-list-item'>"
-						sHtml +=        "<div>"
-						sHtml +=        "<span class='numbering''>"+(i+1)+"</span>"
-						sHtml +=            "<amp-img style='position: relative;'' height='130px'  src='"+data.content[i].contentPrdImg+"'>"
-						sHtml +=        "</div>"
-						sHtml +=    "</div>"
-						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_model postText'><div class='font_type'>&nbsp;&nbsp;&nbsp;&nbsp;"+data.content[i].contentPrdNm+"</div></div>"
-						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_features'><br><div class='font_type testView'>가격 : "+data.content[i].contentPrdPrice+"원</div></div>"
-						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_button'>"
-						sHtml +=    "<input type='hidden' id='contentsUrl"+i+"' value='"+data.content[i].contentPrdUrl+"' >"
-						sHtml +=        "<br><div class='testView'><button class='button-inner' onclick='countUp("+i+")'>최저가 보기</button></div>"
-						sHtml +=    "</div>"
-						sHtml += "</div>"
+					for(var i=0; i<contentLen; i++){
+						
+						// 객체 생성
+						var data_temp = new Object() ;
+						
+						data_temp.number = i+1 ;
+						data_temp.contentPrdPrice = data.content[i].contentPrdPrice;
+						data_temp.contentPrdImg = data.content[i].contentPrdImg;
+						data_temp.contentPrdNm = data.content[i].contentPrdNm;
+						data_temp.contentPrdUrl = data.content[i].contentPrdUrl;
+						// 리스트에 생성된 객체 삽입
+						items.push(data_temp) ;
 					}
+					storage.items = items;
+					jsonData = JSON.stringify(storage);
+					//console.log(jsonData);
+					var script = document.createElement('script');
+					script.setAttribute('type', 'application/json');
+					script.textContent = jsonData;
+					document.getElementById("testList").appendChild(script);
+					
+					var sHtml = "";
+					
+					sHtml += '<amp-list id="amp-list-placeholder" layout="fixed-height" height="654" src="amp-state:testList" binding="no">';
+					sHtml +=	'<template type="amp-mustache">';
+					sHtml +=		'<div class="product">';
+					sHtml +=			'<amp-img width="150" height="100" alt="" src="{{contentPrdImg}}"></amp-img>';
+					sHtml +=			'<div>';
+					sHtml +=				'<div>{{number}}</div>';
+					sHtml +=				'<div>{{contentPrdPrice}}</div>';
+					sHtml +=					'<div>{{contentPrdNm}}</div>';
+					sHtml +=					'<div>{{contentPrdUrl}}</div>';
+					sHtml +=				'</div>';
+					sHtml +=			'</div>';
+					sHtml +=		'</template>';
+					sHtml += '</amp-list>';
+					
 					$("#contents_list").html(sHtml);
 					$("#lodingSuccess").show();
 					$("#errorBox").hide();
