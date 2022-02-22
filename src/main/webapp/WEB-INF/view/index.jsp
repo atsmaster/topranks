@@ -28,8 +28,80 @@
 	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
 	<style amp-custom>
-	
-		/*가운데*/
+		
+		/*작은사이즈부터 우선순위*/
+		@media (min-width: 1280px) {
+       		.listViewHolderChild{
+        		--spacing: 68px
+        	}
+       	}
+        /*768~~~~~~~~~~~~~~~~~~~~~~*/
+        @media(min-width:768px) {
+            .-ad {
+                align-self: center;
+                display: initial;
+                grid-row: 1;
+                position: relative
+            }
+            /*리스트 한줄 틀*/
+            /*768px전에는 그대로*/
+			.listViewHolderChild{
+				grid-gap : 22px;
+				margin: 0 auto;
+				padding: 0 15px;
+			}
+        }
+        /*768~~~~~~~~~~~~~~~~~~~~~~*/
+        
+        /*1024~~~~~~~~~~~~~~~~~~~~~~*/
+        @media(min-width:1024px) {
+        	/*화살표크기*/
+            .-ad>button.amp-carousel-button {
+                background-size: 18px 18px
+            }
+            /*화살표버튼크기*/
+		    .amp-carousel-button{
+			    --spacing: 47px
+		    }
+		    /*화살표틀크기*/
+		    .-ad{
+			    width: 47px
+		    }
+		    /*가운데*/		
+		    .-ap{
+				padding: 0 47px
+			}
+        }
+        /*1024~~~~~~~~~~~~~~~~~~~~~*/
+        
+        /*1280~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        @media (min-width: 1280px) {
+        	/*화살표크기*/
+        	.-ad>button.amp-carousel-button {
+                background-size: 28px 28px
+            }
+        	/*화살표버튼크기*/
+		    .amp-carousel-button{
+			    --spacing: 68px
+		    }
+		    /*화살표틀크기*/
+		    .-ad{
+			    width: 68px
+		    }
+		    /*가운데*/		
+		    .-ap{
+				padding: 0 68px
+			}    
+		    
+		}
+		
+		
+		
+        /*1280~~~~~~~~~~~~~~~~~~~~~~*/
+        
+        /*그외~~~~~~~~~~~~~~~~~~~~~~*/
+        
+        /*가운데*/
 		.-ap {
             grid-column: 1/-1;
             grid-row: 1
@@ -44,7 +116,7 @@
         }
         /**/
         .listViewHolderChild {
-        	--spacing: 43px;
+         	--spacing: 43px; 
             grid-gap: 15px;
             grid-row-gap: unset;
             display: grid;
@@ -54,73 +126,6 @@
             position: relative
         }
         
-        /*1280~~~~~~~~~~~~~~~~~~~~~~~~~*/
-        /*container 전체틀*/
-        @media(min-width:1200px) {
-            .container {
-                --spacing: 68px
-            }
-        }
-        
-        @media(min-width:1200px) {
-       		/*화살표크기*/
-            .-ad>button.amp-carousel-button {
-                background-size: 28px 28px
-            }
-        }
-        @media (min-width: 1200px) {
-        	/*화살표크기*/
-        	.-ad>button.amp-carousel-button {
-                background-size: 28px 28px
-            }
-        	/*화살표버튼크기*/
-		    /*.amp-carousel-button{
-			    --spacing: 68px;
-		    }*/
-		    /*화살표틀크기*/
-		    /*.-ad{
-			    width: 68px; 
-		    }*/
-		    
-		}
-        /*1280~~~~~~~~~~~~~~~~~~~~~~*/
-        
-        /*1024~~~~~~~~~~~~~~~~~~~~~~*/
-        @media(min-width:1024px) {
-        	/*container 전체틀*/
-        	@media(min-width:1024px) {
-	            .-container {
-	                --spacing: 47px
-	            }
-	        }
-        	
-        	/*화살표크기*/
-            .-ad>button.amp-carousel-button {
-                background-size: 18px 18px
-            }
-            /*화살표버튼크기*/
-		    /*.amp-carousel-button{
-			    --spacing: 47px;
-		    }*/
-		    /*화살표틀크기*/
-		    /*.-ad{
-			    width: 47px; 
-		    }*/
-        }
-        /*1024~~~~~~~~~~~~~~~~~~~~~*/
-        
-        /*768~~~~~~~~~~~~~~~~~~~~~~*/
-        @media(min-width:768px) {
-            .-ad {
-                align-self: center;
-                display: initial;
-                grid-row: 1;
-                position: relative
-            }
-        }
-        /*768~~~~~~~~~~~~~~~~~~~~~~*/
-        
-        /*그외~~~~~~~~~~~~~~~~~~~~~~*/
         /*화살표*/
         .amp-carousel-button {
             width: 3em;
@@ -232,20 +237,18 @@
 		            		visible-count="(min-width: 1024px) 3, (min-width: 768px) 2, 1.05" aria-label="News" 
 		            		on="slideChange:teaser-carousel-pagination-news.toggle(index=event.index, value=true)" 
 		            		class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:523px;" i-amphtml-layout="fixed-height">
-		       				<!-- LIST 시작 -->
-		       					<!-- <div class="listViewHolder">
-									<div class="wrapper">
-										<amp-live-list id="live-list-2" data-poll-interval="20000" data-max-items-per-page="4">
-											<button update id="fixed-button" class="button" on="tap:live-list-2.update">
-												new updates on live list 1
-											</button>
-											<form name="frm_50000000" id="frm_50000000" action="post">
-												<input type="hidden" name="postTitle" value="">
-												<div items class="liveListWrap" id="50000000"></div>
-											</form>
-										</amp-live-list>
-									</div>
-								</div> -->
+		       				<!-- LIST 시작 @@@-->
+<!-- 		       					 <div class="wrapper"> -->
+<!-- 										<amp-live-list id="live-list-2" data-poll-interval="20000" data-max-items-per-page="4"> -->
+<!-- 											<button update id="fixed-button" class="button" on="tap:live-list-2.update"> -->
+<!-- 												new updates on live list 1 -->
+<!-- 											</button> -->
+<!-- 											<form name="frm_50000000" id="frm_50000000" action="post"> -->
+<!-- 												<input type="hidden" name="postTitle" value=""> -->
+<!-- 												<div items class="liveListWrap" id="50000000"></div> -->
+<!-- 											</form> -->
+<!-- 										</amp-live-list> -->
+<!-- 									</div> -->
 		       				<!-- LIST 끝 -->
 		            	</amp-base-carousel>
 			        </div>
@@ -561,6 +564,7 @@
 		}
 		
 		function func_50000000(num){
+			alert("@");
 			var url = document.frm_50000000.elements["ctgr50"+num].value;
 			document.frm_50000000.elements["postTitle"].value = document.frm_50000000.elements["postTitle"+num].value;
 			//location.href = url;
@@ -676,26 +680,43 @@
                         
                     }
                     $("#styleR").html(sHtml);
-                    break;
+                    break;//@@@
                     case"50000000":
                     if(contentLen > 0){
                         console.log(contentLen);
                         var sHtml = "";
                         for(var i = 0; i < contentLen; i++){
                             
-                            sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000000("+i+")'>"
-                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
-                            sHtml += "<input type='hidden' name='ctgr50"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
-                            sHtml += "</div>"
-                            sHtml +=     "<div>"
-                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
-                            sHtml +=     "</div>"
-                            sHtml += "</div>"
+                            //sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000000("+i+")'>"
+                            //<div class="wrapper">
+                            /*
+                            <form name='frm_50000000' id='frm_50000000' action='post'>
+								<input type='hidden' name='postTitle' value=''>
+								<div items class='liveListWrap' id='50000000'></div>
+							</form>
+							*/
+							
+							sHtml += "<form name='frm_50000000' id='frm_50000000' action='post'>";
+							sHtml += "<input type='hidden' name='postTitle' value=''>";
+							sHtml += "<div items class='liveListWrap' id='50000000'>";
+                            sHtml += "<div class='wrapper'>";
+                            sHtml += "<div onclick='func_50000000("+i+")'>";
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
+                            sHtml += "<input type='hidden' name='ctgr50"+i+"' value='"+data.content[i].postUrl+"' >";
+                            sHtml += "<div>";
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>";
+                            sHtml += "</div>";
+                            sHtml +=     "<div>";
+                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
+                            sHtml +=     "</div>";
+                            sHtml += "</div>";
+                           	sHtml += "</div>";
+                          	sHtml += "</div>";
+                        	sHtml += "</form>";
                         }
                     }
-                    $("#50000000").html(sHtml);
+                    $("body").find(".-ap").eq(0).find(".i-amphtml-carousel-scroll").html(sHtml)
+//                     $("#50000000").html(sHtml);
                     break;
                     case "50000001" :
                     if(contentLen > 0){
