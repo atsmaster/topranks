@@ -72,7 +72,6 @@
 		
 		<!-- sidebar section -->
 		<section>
-			
 			<amp-state id="placeholderState">
 				<script type="application/json">
 					{"items": 

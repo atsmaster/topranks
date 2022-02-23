@@ -97,16 +97,8 @@ div > header > nav > div > ul > li {
 .cursor{
 	cursor: pointer;
 }
-.product {
-	height: 100px;
-	max-width: 400px;
-	box-shadow: var(--box-shadow-1);
-	background: var(--color-bg-light);
-	border-radius: 2px;
-	margin: var(--space-1);
-	display: flex;
-	align-items: center;
-}
+
+
 .errorPage{
 	text-align: center;
 }
