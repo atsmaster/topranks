@@ -26,6 +26,169 @@
 	<link  href="../static/css/main.css" rel="stylesheet"/>
 	<link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
 	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+	<style amp-custom>
+		
+		/*작은사이즈부터 우선순위*/
+		@media (min-width: 1280px) {
+       		.listViewHolderChild{
+        		--spacing: 68px
+        	}
+       	}
+        /*768~~~~~~~~~~~~~~~~~~~~~~*/
+        @media(min-width:768px) {
+            .-ad {
+                align-self: center;
+                display: initial;
+                grid-row: 1;
+                position: relative
+            }
+            /*리스트 한줄 틀*/
+            /*768px전에는 그대로*/
+			.listViewHolderChild{
+				grid-gap : 22px;
+				margin: 0 auto;
+				padding: 0 15px;
+			}
+        }
+        /*768~~~~~~~~~~~~~~~~~~~~~~*/
+        
+        /*1024~~~~~~~~~~~~~~~~~~~~~~*/
+        @media(min-width:1024px) {
+        	/*화살표크기*/
+            .-ad>button.amp-carousel-button {
+                background-size: 18px 18px
+            }
+            /*화살표버튼크기*/
+		    .amp-carousel-button{
+			    --spacing: 47px
+		    }
+		    /*화살표틀크기*/
+		    .-ad{
+			    width: 47px
+		    }
+		    /*가운데*/		
+		    .-ap{
+				padding: 0 47px
+			}
+        }
+        /*1024~~~~~~~~~~~~~~~~~~~~~*/
+        
+        /*1280~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        @media (min-width: 1280px) {
+        	/*화살표크기*/
+        	.-ad>button.amp-carousel-button {
+                background-size: 28px 28px
+            }
+        	/*화살표버튼크기*/
+		    .amp-carousel-button{
+			    --spacing: 68px
+		    }
+		    /*화살표틀크기*/
+		    .-ad{
+			    width: 68px
+		    }
+		    /*가운데*/		
+		    .-ap{
+				padding: 0 68px
+			}    
+		    
+		}
+		
+		
+		
+        /*1280~~~~~~~~~~~~~~~~~~~~~~*/
+        
+        /*그외~~~~~~~~~~~~~~~~~~~~~~*/
+        
+        /*가운데*/
+		.-ap {
+            grid-column: 1/-1;
+            grid-row: 1
+        }
+        /*왼쪽*/
+        .-ad.--prev {
+            grid-column: 1
+        }
+		/*오른쪽*/
+        .-ad.--next {
+            grid-column-end: -1
+        }
+        /**/
+        .listViewHolderChild {
+         	--spacing: 43px; 
+            grid-gap: 15px;
+            grid-row-gap: unset;
+            display: grid;
+            grid-column: 1/-1;
+            grid-template-columns: repeat(24, 1fr);
+            max-width: 1200px;
+            position: relative
+        }
+        
+        /*화살표*/
+        .amp-carousel-button {
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .4);
+            transition: .4s;
+            background-color: #fff;
+            position: relative;
+            box-sizing: border-box;
+            margin: 1em;
+            border-style: none;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            z-index: 10;
+            pointer-events: all
+        }
+		
+		/* body>*>:not(.ap-o-code-preview)>*>.amp-carousel-button-prev */
+        .amp-carousel-button-prev {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23005AF0'%3E%3Cpath d='M15 8.25H5.87l4.19-4.19L9 3 3 9l6 6 1.06-1.06-4.19-4.19H15v-1.5z'/%3E%3C/svg%3E")
+        }
+
+        .amp-carousel-button-next { /* body>*>:not(.ap-o-code-preview)>*>.amp-carousel-button-next */
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23005AF0' %3E%3Cpath d='M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z'/%3E%3C/svg%3E")
+        }
+
+        .amp-carousel-button:hover { /* body>*>:not(.ap-o-code-preview)>*>.amp-carousel-button:hover */
+            cursor: pointer;
+            box-shadow: 0 20px 30px 0 rgba(0, 0, 0, .2);
+            background-color: #fff
+        }
+        
+       	.-ad>button.amp-carousel-button {
+            background-size: 19px 19px;
+            box-shadow: 0 15px 25px 0 rgba(0, 0, 0, .15);
+            height: var(--spacing);
+            left: 0;
+            margin: 0;
+            width: var(--spacing)
+        }
+        
+        .-ad>button.amp-carousel-button:hover {
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1)
+        }
+
+        .-ad>button.amp-carousel-button-prev {
+            transform: scaleX(-1)
+        }
+
+        .-ad>button.amp-carousel-button-next,
+        .-ad>button.amp-carousel-button-prev {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='%23005af0'%3E%3Cpath d='M43.16 10.18c-.881-.881-2.322-.881-3.203 0s-.881 2.322 0 3.203l16.335 16.335H2.241A2.238 2.238 0 0 0-.001 31.96c0 1.281.961 2.322 2.242 2.322h54.051L39.877 50.617c-.881.881-.881 2.322 0 3.203s2.322.881 3.203 0l20.259-20.259a2.271 2.271 0 0 0 0-3.203L43.16 10.179z'/%3E%3C/svg%3E")
+        }
+
+        .ap-components-showcase-demo-ui.--carousel amp-carousel .amp-carousel-button {
+            margin: 0;
+            position: absolute
+        }
+        /*그외~~~~~~~~~~~~~~~~~~~~~~*/
+        
+	</style>
+	
 </head>
 <body>
 	<div class="wrap">
@@ -67,12 +230,59 @@
 			</div>
 			<!-- 패션의류 50000000 Start  -->
 			<div class="listViewHolder">
-				<label>패션의류 게시물</label> 
+				<div class="listViewHolderChild">
+		            <div class="-ap">
+						<label>패션의류</label> 
+		            	<amp-base-carousel id="teaser-carousel-news" height="523" layout="fixed-height" role="region" snap-align="(min-width: 768px) start, center" 
+		            		visible-count="(min-width: 1024px) 3, (min-width: 768px) 2, 1.05" aria-label="News" 
+		            		on="slideChange:teaser-carousel-pagination-news.toggle(index=event.index, value=true)" 
+		            		class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:523px;" i-amphtml-layout="fixed-height">
+		       				<!-- LIST 시작 @@@-->
+<!-- 		       					 <div class="wrapper"> -->
+<!-- 										<amp-live-list id="live-list-2" data-poll-interval="20000" data-max-items-per-page="4"> -->
+<!-- 											<button update id="fixed-button" class="button" on="tap:live-list-2.update"> -->
+<!-- 												new updates on live list 1 -->
+<!-- 											</button> -->
+<!-- 											<form name="frm_50000000" id="frm_50000000" action="post"> -->
+<!-- 												<input type="hidden" name="postTitle" value=""> -->
+<!-- 												<div items class="liveListWrap" id="50000000"></div> -->
+<!-- 											</form> -->
+<!-- 										</amp-live-list> -->
+<!-- 									</div> -->
+		       				<!-- LIST 끝 -->
+		            	</amp-base-carousel>
+			        </div>
+		            <div class="-ad --prev"> <button on="tap: teaser-carousel-news.prev()" class="amp-carousel-button amp-carousel-button-prev" aria-label="Previous"></button> </div>
+		            <div class="-ad --next"> <button on="tap: teaser-carousel-news.next()" class="amp-carousel-button amp-carousel-button-next" aria-label="Next"></button> </div>
+			            <!-- <amp-selector class="-av i-amphtml-layout-container" id="teaser-carousel-pagination-news" layout="container" on="select: teaser-carousel-news.goToSlide(index=event.targetOption)" i-amphtml-layout="container">
+			                <div class="-am" option="0" selected></div>
+			                <div class="-am" option="1"></div>
+			                <div class="-am" option="2"></div>
+			                <div class="-am" option="3"></div>
+			                <div class="-am" option="4"></div>
+			                <div class="-am" option="5"></div>
+			            </amp-selector> -->
+					
+					<!-- <amp-base-carousel>
+						<div class="wrapper">
+							<amp-live-list id="live-list-2" data-poll-interval="20000" data-max-items-per-page="4">
+								<button update id="fixed-button" class="button" on="tap:live-list-2.update">
+									new updates on live list 1
+								</button>
+								<form name="frm_50000000" id="frm_50000000" action="post">
+									<input type="hidden" name="postTitle" value="">
+									<div items class="liveListWrap" id="50000000"></div>
+								</form>
+							</amp-live-list>
+						</div>
+					</amp-base-carousel> -->
+				</div>
+			</div>
+			
+			<!-- <div class="listViewHolder">
+				<label>패션의류</label> 
 				<div class="wrapper">
-					<amp-live-list
-						id="live-list-2"
-						data-poll-interval="20000"
-						data-max-items-per-page="4">
+					<amp-live-list id="live-list-2" data-poll-interval="20000" data-max-items-per-page="4">
 						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
 							new updates on live list 1
 						</button>
@@ -82,11 +292,11 @@
 						</form>
 					</amp-live-list>
 				</div>
-			</div>
+			</div> -->
 			<!-- 패션의류 50000000 Start  -->
 
 			<div class="listViewHolder">
-				<label>패션잡화 게시물</label> 
+				<label>패션잡화</label> 
 				<div class="wrapper">
 					<amp-live-list id="live-list-2" data-poll-interval="20000" data-max-items-per-page="4">
 						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
@@ -101,7 +311,7 @@
 			</div>
 
 			<div class="listViewHolder">
-				<label>화장품 미용 게시물</label> 
+				<label>화장품 미용</label> 
 				<div class="wrapper">
 					<amp-live-list
 						id="live-list-2"
@@ -120,7 +330,7 @@
 			
 
 			<div class="listViewHolder">
-				<label>디지털 가전 게시물</label> 
+				<label>디지털 가전</label> 
 				<div class="wrapper">
 					<amp-live-list
 						id="live-list-2"
@@ -138,7 +348,7 @@
 			</div>
 
 			<div class="listViewHolder">
-				<label>가구 인테리어 게시물</label> 
+				<label>가구 인테리어</label> 
 				<div class="wrapper">
 					<amp-live-list
 						id="live-list-2"
@@ -156,7 +366,7 @@
 			</div>
 
 			<div class="listViewHolder">
-				<label>출산 육아 게시물</label> 
+				<label>출산 육아</label> 
 				<div class="wrapper">
 					<amp-live-list
 						id="live-list-2"
@@ -174,7 +384,7 @@
 			</div>
 
 			<div class="listViewHolder">
-				<label>식품 게시물</label> 
+				<label>식품</label> 
 				<div class="wrapper">
 					<amp-live-list
 						id="live-list-2"
@@ -192,7 +402,7 @@
 			</div>
 
 			<div class="listViewHolder">
-				<label>스포츠 레저 게시물</label> 
+				<label>스포츠 레저</label> 
 				<div class="wrapper">
 					<amp-live-list
 						id="live-list-2"
@@ -210,7 +420,7 @@
 			</div>
 
 			<div class="listViewHolder">
-				<label>생활 건강 게시물</label> 
+				<label>생활 건강</label> 
 				<div class="wrapper">
 					<amp-live-list
 						id="live-list-2"
@@ -354,6 +564,7 @@
 		}
 		
 		function func_50000000(num){
+			alert("@");
 			var url = document.frm_50000000.elements["ctgr50"+num].value;
 			document.frm_50000000.elements["postTitle"].value = document.frm_50000000.elements["postTitle"+num].value;
 			//location.href = url;
@@ -469,26 +680,43 @@
                         
                     }
                     $("#styleR").html(sHtml);
-                    break;
+                    break;//@@@
                     case"50000000":
                     if(contentLen > 0){
                         console.log(contentLen);
                         var sHtml = "";
                         for(var i = 0; i < contentLen; i++){
                             
-                            sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000000("+i+")'>"
-                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
-                            sHtml += "<input type='hidden' name='ctgr50"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
-                            sHtml += "</div>"
-                            sHtml +=     "<div>"
-                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
-                            sHtml +=     "</div>"
-                            sHtml += "</div>"
+                            //sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000000("+i+")'>"
+                            //<div class="wrapper">
+                            /*
+                            <form name='frm_50000000' id='frm_50000000' action='post'>
+								<input type='hidden' name='postTitle' value=''>
+								<div items class='liveListWrap' id='50000000'></div>
+							</form>
+							*/
+							
+							sHtml += "<form name='frm_50000000' id='frm_50000000' action='post'>";
+							sHtml += "<input type='hidden' name='postTitle' value=''>";
+							sHtml += "<div items class='liveListWrap' id='50000000'>";
+                            sHtml += "<div class='wrapper'>";
+                            sHtml += "<div onclick='func_50000000("+i+")'>";
+                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
+                            sHtml += "<input type='hidden' name='ctgr50"+i+"' value='"+data.content[i].postUrl+"' >";
+                            sHtml += "<div>";
+                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>";
+                            sHtml += "</div>";
+                            sHtml +=     "<div>";
+                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
+                            sHtml +=     "</div>";
+                            sHtml += "</div>";
+                           	sHtml += "</div>";
+                          	sHtml += "</div>";
+                        	sHtml += "</form>";
                         }
                     }
-                    $("#50000000").html(sHtml);
+                    $("body").find(".-ap").eq(0).find(".i-amphtml-carousel-scroll").html(sHtml)
+//                     $("#50000000").html(sHtml);
                     break;
                     case "50000001" :
                     if(contentLen > 0){
@@ -647,7 +875,7 @@
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
                             sHtml +=     "</div>"
                             sHtml += "</div>"
-                        }
+                        }v
                     }
                     $("#50000008").html(sHtml);
                     break;
