@@ -43,11 +43,11 @@
 		<!-- main -->
 		<section class="container">
 			<amp-state id="testList">
-				 
+				<!-- 
 				<script type="application/json">
-					{"items":[{"number":1,"contentPrdPrice":47540,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/89e9/2f42d2f6a738f638e410b9d788bc22989cbd99c83583c69592c54f658bfa.jpg","contentPrdNm":"(우체국당일출고)14k귀걸이 사은품 빅사이즈 망또 케이프코트 여자코트 울코트","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6266888117&itemId=12793515836&vendorItemId=80512319991&traceid=V0-153-dc4b58a02d18d795"},{"number":2,"contentPrdPrice":149000,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/e238/1566e13d1a91dd57635123e62f17982a0462a0a7e4804fecf2273ad162c6.jpg","contentPrdNm":"[모조에스핀] J214XSE006 리본포인트 원피스","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6173328888&itemId=12065250823&vendorItemId=79337306511&traceid=V0-153-37968d1b152992a4"},{"number":3,"contentPrdPrice":99000,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/c153/2b133878d094adf7686ede00dabe2b3f5c9c5f0299f661c357119bef3cd2.jpg","contentPrdNm":"[모조에스핀] J214XSF002 트위드 나그랑 재킷","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6137346364&itemId=11745965678&vendorItemId=79019846681&traceid=V0-153-c4cf26e8f65a2d50"},{"number":4,"contentPrdPrice":45990,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/bb2e/6fca52d1d24077d3ca7b56b08993f3be395b32e96259beab4a2c03e052c5.jpg","contentPrdNm":"루스핏 라운드넥 모조에스핀 원피스 롱 니트 2021 가과 겨울 데님 슬링 크 블루","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6139118837&itemId=11761983894&vendorItemId=79035796779&traceid=V0-153-d309e50e35451687"},{"number":5,"contentPrdPrice":299000,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/4217/ffdd6eaa7d0c9ff4e65961c8dbb9f9f302eb2ed9d220abc816a7a242eb6c.JPG","contentPrdNm":"[모조에스핀] J221XSE001 프릴넥 앞트임 원피스","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6281979061&itemId=12904070762&vendorItemId=80179727095&traceid=V0-153-2c87fb4da781bbfd"},{"number":6,"contentPrdPrice":99000,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/1e60/1f09b3060a843929b7c71a5b8032716e63a4569b6462da77223d6bfff384.jpg","contentPrdNm":"모조에스핀 J212XSE003 네크라인 쉬폰 배색 원피스","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6322361482&itemId=13182923299&vendorItemId=80441506786&traceid=V0-153-c6b274b4a5a856d5"},{"number":7,"contentPrdPrice":41040,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/e622/ad5d7c1c9140aa9fe05a0838ae232d5a9eb4cf3ebdd83abf0470600a5fec.jpg","contentPrdNm":"루스핏 라운드넥 모조에스핀 원피스 롱 니트 대학 스타일 정장 드레스 여성 2021","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6139117344&itemId=11761971743&vendorItemId=79035784326&traceid=V0-153-796765874191506a"},{"number":8,"contentPrdPrice":129000,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/830f/4e4cb232dc20a1a8c9ca161d01b8ecb1439e2476e71235825fa358758b49.jpg","contentPrdNm":"케이엘 KL 중앙로 고급원단 센슈얼한 세미캐쥬얼재킷","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=2155533080&itemId=3661192604&vendorItemId=71646623549&traceid=V0-153-44f9fbc7dec60422"},{"number":9,"contentPrdPrice":41580,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/f65e/a2056dd00b06473c8fdfe28e29796432511d197fc4f50c683d0b73d388a8.jpg","contentPrdNm":"루스핏 라운드넥 모조에스핀 원피스 니트 롱 하이 센스 블랙 슈트 긴팔 드레스 프랑스","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6139119367&itemId=11761987291&vendorItemId=79035800616&traceid=V0-153-7d5ec54594c3df71"},{"number":10,"contentPrdPrice":122180,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/72f2/228d6a9f68b5a5a6f53d3deb2fb0086ff05bc076383d4e4a0ae588ee8079.jpg","contentPrdNm":"SU 레이스 긴팔 드레스 봄과 가을 디자인 감각 틈새 허리 꽉 새로운 프랑스어 스타일 세련된 긴 드레스","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6287515708&itemId=12938983651&vendorItemId=80203322540&traceid=V0-153-619f61f147467cb9"}]}
+					{"items":[{"number":1,"contentPrdPrice":38900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/4161/a9b92726b326f154567d1bb0fea9f76909b1a9f69d0d8d7053534bdbd9f6.jpg","contentPrdNm":"타니즈 털안감 카라퍼 여성 롱패딩 점퍼 라문","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4606029174&itemId=5687027836&vendorItemId=72985888389&traceid=V0-153-2e00016eba0d9275"},{"number":2,"contentPrdPrice":28900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/7f42/926b662f6c9300fc345a864d15248b125eb3fe35828dc63cd0985d1004e5.jpg","contentPrdNm":"타니즈 모넨 허리스트링 퍼카라 여성숏패딩","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4692196315&itemId=5898767130&vendorItemId=73196891112&traceid=V0-153-ca4be086fd503787"},{"number":3,"contentPrdPrice":36900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/eff2/2d812f245de1fa37bb7d0eeb7d3a2840e33bee9d18317a6a93a8fc27f2f4.jpg","contentPrdNm":"타니즈 털안감 여성 야상패딩 하몬","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4759207867&itemId=6062412340&vendorItemId=73359326406&traceid=V0-153-027da40f1021dc76"},{"number":4,"contentPrdPrice":54900,"contentPrdImg":"https://static.coupangcdn.com/image/retail/images/92010516073026-00d83bdb-3091-4186-8bf1-b6412d6913a8.jpg","contentPrdNm":"앨빈클로 패딩 후드집업 AZH570","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=286665166&itemId=908805014&vendorItemId=5275049643&traceid=V0-153-d66f170082c6cea4"},{"number":5,"contentPrdPrice":34860,"contentPrdImg":"https://static.coupangcdn.com/image/retail/images/2021/12/03/10/6/8a129689-cbad-4808-8265-82e9db258192.jpg","contentPrdNm":"메이첼 여성용 솜사탕 심플 패딩 점퍼 00389","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6216441459&itemId=12417899608&vendorItemId=79687261705&traceid=V0-153-d0f542de416d0cb2"},{"number":6,"contentPrdPrice":36900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/0888/3e04e1e0ff9fb48efb13d26ca7f31426c71c6a2e1a7a6e7ff513cd009b5d.jpg","contentPrdNm":"타니즈 테이론 하프 야상 여성패딩","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4353917274&itemId=5111812685&vendorItemId=72421337894&traceid=V0-153-33ffe2ff2e2785de"},{"number":7,"contentPrdPrice":42800,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/d7b7/d96e2a0150d28e4e08fea74ad1bcee40dc7ec2ac0fb3f219114ab875f845.jpg","contentPrdNm":"VANANA2 [남녀공용] 9color 하이넥 웰론 숏 패딩","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4568752325&itemId=5577928810&vendorItemId=72877243432&traceid=V0-153-203c90706b6261ae"},{"number":8,"contentPrdPrice":141000,"contentPrdImg":"https://static.coupangcdn.com/image/rs_quotation_api/to1fmhha/43fb0f03c7834d9f88c006b7d237df26.jpg","contentPrdNm":"RRACE 여성용 Long Strap Padding Coat","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6258437517&itemId=12728682408&vendorItemId=79995276865&traceid=V0-153-6372ab753f3c70d1"},{"number":9,"contentPrdPrice":28900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/9ecf/847dda44d59ea5041d81872ee34637bd2162eb491d0e75b135c6d47bd7a8.jpg","contentPrdNm":"타니즈 레비스 캐주얼 후드 숏패딩","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6042663197&itemId=11052327451&vendorItemId=78331842735&traceid=V0-153-d3f1205b364167f8"},{"number":10,"contentPrdPrice":34900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/3e89/5fe12c71d08cbf019d163c0b89c2e1f73a33821a32382c11373e5aa76093.jpg","contentPrdNm":"이힝 고퀄 루즈핏 웰론 여성 숏패딩","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4592298516&itemId=5649762538&vendorItemId=72948749385&traceid=V0-153-be73bb8b1fa95322"}]}
 				</script>
-				
+				 --> 
 			</amp-state>
 			<div class="listViewHolder">
 				
@@ -164,6 +164,7 @@
 		var postKey =  "${postKey}";
 		var postTitle =  "${postTitle}";
 		var jsonData = "";
+		var jsonData2 = "";
 		$(function() {
 			
 			// 41은 예시임 컨트롤러에서 받아온 값으로 유동적으로 변하게 할것
@@ -257,15 +258,18 @@
 						
 						data_temp.number = i+1 ;
 						data_temp.contentPrdPrice = data.content[i].contentPrdPrice;
-						data_temp.contentPrdImg = data.content[i].contentPrdImg;
+						//data_temp.contentPrdImg = data.content[i].contentPrdImg;
 						data_temp.contentPrdNm = data.content[i].contentPrdNm;
-						data_temp.contentPrdUrl = data.content[i].contentPrdUrl;
+						//data_temp.contentPrdUrl = data.content[i].contentPrdUrl;
 						// 리스트에 생성된 객체 삽입
 						items.push(data_temp) ;
 					}
 					storage.items = items;
 					jsonData = JSON.stringify(storage);
-					//console.log(jsonData);
+					//jsonData2 = JSON.parse(storage);
+					console.log(jsonData);
+					//console.log(jsonData2.items);
+					
 					var script = document.createElement('script');
 					script.setAttribute('type', 'application/json');
 					script.textContent = jsonData;
@@ -275,19 +279,20 @@
 					
 					sHtml += '<amp-list id="amp-list-placeholder" layout="fixed-height" height="654" src="amp-state:testList" binding="no">';
 					sHtml +=	'<template type="amp-mustache">';
-					sHtml +=		'<div class="product">';
+					sHtml +=		'<div class="">';
 					sHtml +=			'<amp-img width="150" height="100" alt="" src="{{contentPrdImg}}"></amp-img>';
 					sHtml +=			'<div>';
 					sHtml +=				'<div>{{number}}</div>';
 					sHtml +=				'<div>{{contentPrdPrice}}</div>';
-					sHtml +=					'<div>{{contentPrdNm}}</div>';
-					sHtml +=					'<div>{{contentPrdUrl}}</div>';
-					sHtml +=				'</div>';
+					sHtml +=				'<div>{{contentPrdNm}}</div>';
+					sHtml +=				'<div>{{contentPrdUrl}}</div>';
 					sHtml +=			'</div>';
-					sHtml +=		'</template>';
+					sHtml +=		'</div>';
+					sHtml +=	'</template>';
 					sHtml += '</amp-list>';
 					
 					$("#contents_list").html(sHtml);
+					
 					$("#lodingSuccess").show();
 					$("#errorBox").hide();
 				}else{
