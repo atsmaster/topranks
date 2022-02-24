@@ -35,6 +35,31 @@
         		--spacing: 68px
         	}
        	}
+       	
+       	/*사진하나틀*/
+       	.-st {
+			border-radius:8px;
+			box-shadow:0 15px 25px 0 rgba(0,0,0,.15);
+			color:#20202a;
+			display:flex;
+			flex-direction:column;
+			max-width:calc(100% - 10px);
+			transition:box-shadow .3s ease-in-out,transform .3s ease-in-out;
+			white-space:normal
+		}
+       	
+       	/*767~~~~~~~~~~~~~~~~~~~~~~*/
+        @media(max-width:767px) {
+            .-al .-ac:first-child {
+                padding-left: 15px
+            }
+
+            .-al .-ac:last-child {
+                padding-right: 15px
+            }
+        }
+        /*767~~~~~~~~~~~~~~~~~~~~~~*/
+       	
         /*768~~~~~~~~~~~~~~~~~~~~~~*/
         @media(min-width:768px) {
             .-ad {
@@ -50,6 +75,27 @@
 				margin: 0 auto;
 				padding: 0 15px;
 			}
+			
+			.-ac {
+                padding-bottom: 25px
+            }
+			
+			.-ac:nth-child(3n+1) {
+                align-items: center
+            }
+
+            .-ac:nth-child(3n+2) {
+                align-items: flex-end
+            }
+
+            .-ac:nth-child(3n+3) {
+                align-items: flex-start
+            }
+            
+            .-st {
+				max-width:calc(100% - 30px)
+			}
+			
         }
         /*768~~~~~~~~~~~~~~~~~~~~~~*/
         
@@ -185,6 +231,13 @@
             margin: 0;
             position: absolute
         }
+        
+        .-ac {
+            align-items: center;
+            display: flex;
+            justify-content: center
+        }
+        
         /*그외~~~~~~~~~~~~~~~~~~~~~~*/
         
 	</style>
@@ -563,14 +616,15 @@
 			$("#styleR_frm").submit();
 		}
 		
-		function func_50000000(num){
-			alert("@");
-			var url = document.frm_50000000.elements["ctgr50"+num].value;
-			document.frm_50000000.elements["postTitle"].value = document.frm_50000000.elements["postTitle"+num].value;
-			//location.href = url;
-			$("#frm_50000000").attr("action", "/"+url);
-			$("#frm_50000000").attr("method", "post");
-			$("#frm_50000000").submit();
+		function func_50000000(num){//@@@
+			var form = $("form[name=frm_50000000]").eq(num);
+			var url = form.find("input[name=ctgr50"+num+"]").val();
+			var titleVal = form.find("input[name=postTitle"+num+"]").val();
+			
+			form.find("#postTitle").val(titleVal);
+			form.attr("action", "/"+url);
+			form.attr("method", "post"); 
+			form.submit(); 
 		}
 		
 		function func_50000001(num){
@@ -645,8 +699,10 @@
 			$("#frm_50000008").submit();
 		}
 		
+		//postWrite("50000000", "posts", "search", "ctgrNo?ctgrNo=50000000&size=4&sort=postNo,desc");
 		async function postWrite(way, condition, condition_2, condition_3) {
 			// http://www.semochuree.com:11111/api/
+			console.log(condition);
 			var url = "https://www.semochuree.com:11111/api/"+ condition;
 			if("" != condition_2 && null != condition_2){
 				url += "/" + condition_2;
@@ -685,21 +741,11 @@
                     if(contentLen > 0){
                         console.log(contentLen);
                         var sHtml = "";
-                        for(var i = 0; i < contentLen; i++){
-                            
-                            //sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000000("+i+")'>"
-                            //<div class="wrapper">
-                            /*
-                            <form name='frm_50000000' id='frm_50000000' action='post'>
-								<input type='hidden' name='postTitle' value=''>
-								<div items class='liveListWrap' id='50000000'></div>
-							</form>
-							*/
-							
-							sHtml += "<form name='frm_50000000' id='frm_50000000' action='post'>";
+                        for(var i = 0; i < 3; i++){
+                            sHtml += "<div class='wrapper cursor -ac'>";
+							sHtml += "<form name='frm_50000000' id='frm_50000000' action='post' class='-st'>";
 							sHtml += "<input type='hidden' name='postTitle' value=''>";
 							sHtml += "<div items class='liveListWrap' id='50000000'>";
-                            sHtml += "<div class='wrapper'>";
                             sHtml += "<div onclick='func_50000000("+i+")'>";
                             sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
                             sHtml += "<input type='hidden' name='ctgr50"+i+"' value='"+data.content[i].postUrl+"' >";
@@ -710,13 +756,12 @@
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
                             sHtml +=     "</div>";
                             sHtml += "</div>";
-                           	sHtml += "</div>";
                           	sHtml += "</div>";
                         	sHtml += "</form>";
+                           	sHtml += "</div>";
                         }
                     }
-                    $("body").find(".-ap").eq(0).find(".i-amphtml-carousel-scroll").html(sHtml)
-//                     $("#50000000").html(sHtml);
+                    $("body").find(".-ap").eq(0).find(".i-amphtml-carousel-scroll").html(sHtml);
                     break;
                     case "50000001" :
                     if(contentLen > 0){
@@ -875,7 +920,7 @@
                             sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
                             sHtml +=     "</div>"
                             sHtml += "</div>"
-                        }v
+                        }
                     }
                     $("#50000008").html(sHtml);
                     break;
