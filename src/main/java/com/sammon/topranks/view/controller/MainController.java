@@ -58,6 +58,8 @@ public class MainController {
 			, @RequestParam(value = "postTitle", required = false) String postTitle
 			, Model model)throws Exception{
 		System.out.println("postTitle ["+postTitle+"] param1["+param1+"] param2["+param2+"]");
+		
+		model.addAttribute("pathCheck",param1);
 		model.addAttribute("postKey",param2);
 		model.addAttribute("postTitle",postTitle);
 		return "contentListPage";

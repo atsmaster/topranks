@@ -54,18 +54,6 @@
 						</amp-accordion>
 					</div>
 					<br>
-					<!-- <amp-live-list id="live-list-1" data-poll-interval="20000" data-max-items-per-page="15">
-						<button update id="fixed-button" class="button" on="tap:live-list-1.update">
-							new updates on live list 1</button>
-						<div items class='liveListWrap_3'>
-							<div class='liveListItem_3 liveListItem_img'>이미지</div>
-							<div class='liveListItem_3 liveListItem_model'>상품명</div>
-							<div class='liveListItem_3 liveListItem_features'>정보</div>
-							<div class='liveListItem_3 liveListItem_button'>
-							</div>
-						</div>
-						<div id="contents_list"></div>
-					</amp-live-list> -->
 					<div id="contents_list"></div>
 					<div style="clear:both; margin-bottom: 1%;"></div>
 					<span style="color: rgb(194, 187, 187);">파트너스활동으로 수수료를 지급받을 수 있습니다.</span>
@@ -164,13 +152,11 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script>
 		var contentLen = "";
+		var pathCheck =  "${pathCheck}";
 		var postKey =  "${postKey}";
 		var postTitle =  "${postTitle}";
 		
 		$(function() {
-			
-			// 41은 예시임 컨트롤러에서 받아온 값으로 유동적으로 변하게 할것
-			
 			//	navi
 			$(document).on('click', '.naviBtn', function(){
 				var t = $(this);
@@ -215,23 +201,31 @@
 			location.reload();
 		}
 		async function firstFnc(condition) {
-			var url = "https://www.semochuree.com:11111/api/posts/"+ condition;
-			console.log("firstFnc :: " + url);
-			var res = await fetch(url);
-			var data = await res.json();
-			if(res.ok){
-				if(data.postTitle != "" && data.postTitle != null){
-					$("#postTitle").text(data.postTitle);
-					
-					var contentsPath = "postNo?postNo="+postKey;
-					postWrite("contents", "search", contentsPath);
+			if(pathCheck == "clothes" || pathCheck == "accessories" || pathCheck == "beauty" || pathCheck == "appliances" ||
+					pathCheck == "interior" || pathCheck == "parenting" || pathCheck == "food" || pathCheck == "sport" || pathCheck == "health"){
+				//alert(pathCheck);
+				var url = "https://www.semochuree.com:11111/api/posts/"+ condition;
+				console.log("firstFnc :: " + url);
+				var res = await fetch(url);
+				var data = await res.json();
+				if(res.ok){
+					if(data.postTitle != "" && data.postTitle != null){
+						$("#postTitle").text(data.postTitle);
+						
+						var contentsPath = "postNo?postNo="+postKey;
+						postWrite("contents", "search", contentsPath);
+					}else{
+						$("#lodingSuccess").hide();
+						$("#errorBox").show();
+					}
 				}else{
-					$("#lodingSuccess").hide();
-					$("#errorBox").show();
+					throw Error(data);
 				}
 			}else{
-				throw Error(data);
+				$("#lodingSuccess").hide();
+				$("#errorBox").show();
 			}
+			
 		}
 		async function postWrite(condition, condition_2, condition_3) {
 			// http://www.semochuree.com:11111/api/
@@ -285,24 +279,6 @@
 						sHtml += 		'</div>';
 						sHtml += 	'</div>';
 						
-						
-						
-						
-						//var contentsUrl_temp = data.content[i].contentPrdUrl;
-						/* sHtml += "<div items class='liveListWrap_3'>"
-						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_img amp-live-list-item'>"
-						sHtml +=        "<div>"
-						sHtml +=        "<span class='numbering''>"+(i+1)+"</span>"
-						sHtml +=            "<amp-img style='position: relative;'' height='130px'  src='"+data.content[i].contentPrdImg+"'>"
-						sHtml +=        "</div>"
-						sHtml +=    "</div>"
-						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_model postText'><div class='font_type'>&nbsp;&nbsp;&nbsp;&nbsp;"+data.content[i].contentPrdNm+"</div></div>"
-						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_features'><br><div class='font_type testView'>가격 : "+data.content[i].contentPrdPrice+"원</div></div>"
-						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_button'>"
-						sHtml +=    "<input type='hidden' id='contentsUrl"+i+"' value='"+data.content[i].contentPrdUrl+"' >"
-						sHtml +=        "<br><div class='testView'><button class='button-inner' onclick='countUp("+i+")'>최저가 보기</button></div>"
-						sHtml +=    "</div>"
-						sHtml += "</div>" */
 					}
 					sHtml += '</amp-live-list>';
 					$("#contents_list").html(sHtml);
