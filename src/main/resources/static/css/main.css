@@ -98,7 +98,11 @@ div > header > nav > div > ul > li {
 	cursor: pointer;
 }
 
-
+amp-list div[role="list"] {
+  display: grid;
+  grid-gap: 0.5em;
+  }
+  
 .errorPage{
 	text-align: center;
 }
@@ -163,9 +167,127 @@ div > header > nav > div > ul > li {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
+
 .regDd{
-    font-style: oblique;
-    margin-left: 20px;
+	font-style: oblique;
+	margin-left: 20px;
+}
+
+.contentText{
+	margin-left: 20px;
+	width: calc(50%);
+}
+
+.contentText > .oneOverFlow> .goPageButton{
+	display:none!important;;
+}
+
+.contentText > .oneOverFlow> .prdPrice{
+	display:none!important;;
+}
+
+.contentText_2{
+	margin-left: 20px;
+	width: calc(20%);
+}
+.contentText_2 > .goPageButton{
+	display:none!important;;
+}
+
+.contentText_3{
+	
+}
+
+.priceName{
+	font-size:21px;
+	font-weight: bold;
+}
+
+@media only screen and (max-width:1111px) {
+	.contentText_3{
+		display:none;
+	}
+	.contentText_2 > .goPageButton{
+		display:block !important;
+	}
+	.contentText_2 > .prdPrice{
+		display:none !important;
+	}
+	.contentText > .oneOverFlow> .prdPrice{
+		display:block!important;
+	}
+	
+}
+
+@media only screen and (max-width:700px) {
+	.priceName{
+		font-size:18px;
+		font-weight: bold;
+	}
+	.contentText_2{
+		display:none !important;
+	}
+	.contentText > .oneOverFlow > .goPageButton{
+		display:block !important;
+	}
+	
+	.contentText > .oneOverFlow > .goPageButton > .webButton{
+		margin: 0px auto !important;
+	}
+	.product{
+		display: grid!important;
+	}
+	.numbering{
+		width: 19px !important;
+		height: 18px !important;
+		position: absolute !important;
+		color: #fff !important;
+		background-color: #dc3545 !important;
+		z-index: 1 !important;
+		text-align: center !important;
+		margin-top: 1px !important;
+		line-height: 15px !important;
+	}
+	.contentImgBox{
+		margin: 0px auto;
+		margin-top: 10px;
+	}
+	.contentText{
+		margin: 0px auto;
+		width:100% !important;
+		text-align: center;
+	}
+	
+	.oneOverFlow {
+		margin: 0px auto !important;
+		white-space: pre-line !important;
+		text-overflow:ellipsis !important;
+	}
+	
+	
+}
+
+@media only screen and (max-width:600px) {
+	.priceName{
+		font-size:15px;
+		font-weight: bold;
+	}
+}
+
+.webButton{
+	background-color: white;
+	color: #0082ff!important;
+	font-weight: bold;
+	padding: 6px!important;
+	border-radius: 20px;
+	border: 1px solid #0082ff;
+}
+
+.contentImgBox{
+	width: calc(14%);
+	width: 180px;
+	height:150px!important;
 }
 
 .button-inner{
@@ -193,6 +315,17 @@ div > header > nav > div > ul > li {
 	vertical-align: middle;
 }
 
+.product {
+	box-shadow: var(--box-shadow-1);
+	background: var(--color-bg-light);
+	border-radius: 12px;
+	margin: var(--space-1);
+	display: flex;
+	align-items: center;
+	background-color: #bab4d929;
+	margin-top: 3px;
+}
+
 .font_type{
 	margin-top: 10px;
 	font-family :fantasy
@@ -215,12 +348,15 @@ div > header > nav > div > ul > li {
 }
 
 .numbering{
-	width:17px;
-	position:absolute;
-	color:#fff;
-	background-color:#dc3545;
-	z-index:1;
+	width: 19px;
+	height: 18px;
+	position: absolute;
+	color: #fff;
+	background-color: #dc3545;
+	z-index: 1;
 	text-align: center;
+	margin-top: -74px;
+	line-height: 15px;
 }
 .labelName{
 	color:black!important;

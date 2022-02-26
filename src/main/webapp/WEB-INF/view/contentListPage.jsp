@@ -32,7 +32,7 @@
 		<!-- header -->
 		<header>
 			<nav>
-				<h1 style="text-align: center;">SEMO CHUREE</h1>
+				<h1 style="text-align: center;"><a href="/">SEMO CHUREE</a></h1>
 				<div>
 					<ul> 
 						<li on="tap:sidebar"><img src="../static/asset/svg/ic_menu.svg" alt="menu"></li> 
@@ -42,29 +42,31 @@
 		</header>
 		<!-- main -->
 		<section class="container">
-			<amp-state id="testList">
-				<!-- 
-				<script type="application/json">
-					{"items":[{"number":1,"contentPrdPrice":38900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/4161/a9b92726b326f154567d1bb0fea9f76909b1a9f69d0d8d7053534bdbd9f6.jpg","contentPrdNm":"타니즈 털안감 카라퍼 여성 롱패딩 점퍼 라문","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4606029174&itemId=5687027836&vendorItemId=72985888389&traceid=V0-153-2e00016eba0d9275"},{"number":2,"contentPrdPrice":28900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/7f42/926b662f6c9300fc345a864d15248b125eb3fe35828dc63cd0985d1004e5.jpg","contentPrdNm":"타니즈 모넨 허리스트링 퍼카라 여성숏패딩","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4692196315&itemId=5898767130&vendorItemId=73196891112&traceid=V0-153-ca4be086fd503787"},{"number":3,"contentPrdPrice":36900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/eff2/2d812f245de1fa37bb7d0eeb7d3a2840e33bee9d18317a6a93a8fc27f2f4.jpg","contentPrdNm":"타니즈 털안감 여성 야상패딩 하몬","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4759207867&itemId=6062412340&vendorItemId=73359326406&traceid=V0-153-027da40f1021dc76"},{"number":4,"contentPrdPrice":54900,"contentPrdImg":"https://static.coupangcdn.com/image/retail/images/92010516073026-00d83bdb-3091-4186-8bf1-b6412d6913a8.jpg","contentPrdNm":"앨빈클로 패딩 후드집업 AZH570","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=286665166&itemId=908805014&vendorItemId=5275049643&traceid=V0-153-d66f170082c6cea4"},{"number":5,"contentPrdPrice":34860,"contentPrdImg":"https://static.coupangcdn.com/image/retail/images/2021/12/03/10/6/8a129689-cbad-4808-8265-82e9db258192.jpg","contentPrdNm":"메이첼 여성용 솜사탕 심플 패딩 점퍼 00389","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6216441459&itemId=12417899608&vendorItemId=79687261705&traceid=V0-153-d0f542de416d0cb2"},{"number":6,"contentPrdPrice":36900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/0888/3e04e1e0ff9fb48efb13d26ca7f31426c71c6a2e1a7a6e7ff513cd009b5d.jpg","contentPrdNm":"타니즈 테이론 하프 야상 여성패딩","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4353917274&itemId=5111812685&vendorItemId=72421337894&traceid=V0-153-33ffe2ff2e2785de"},{"number":7,"contentPrdPrice":42800,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/d7b7/d96e2a0150d28e4e08fea74ad1bcee40dc7ec2ac0fb3f219114ab875f845.jpg","contentPrdNm":"VANANA2 [남녀공용] 9color 하이넥 웰론 숏 패딩","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4568752325&itemId=5577928810&vendorItemId=72877243432&traceid=V0-153-203c90706b6261ae"},{"number":8,"contentPrdPrice":141000,"contentPrdImg":"https://static.coupangcdn.com/image/rs_quotation_api/to1fmhha/43fb0f03c7834d9f88c006b7d237df26.jpg","contentPrdNm":"RRACE 여성용 Long Strap Padding Coat","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6258437517&itemId=12728682408&vendorItemId=79995276865&traceid=V0-153-6372ab753f3c70d1"},{"number":9,"contentPrdPrice":28900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/9ecf/847dda44d59ea5041d81872ee34637bd2162eb491d0e75b135c6d47bd7a8.jpg","contentPrdNm":"타니즈 레비스 캐주얼 후드 숏패딩","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=6042663197&itemId=11052327451&vendorItemId=78331842735&traceid=V0-153-d3f1205b364167f8"},{"number":10,"contentPrdPrice":34900,"contentPrdImg":"https://static.coupangcdn.com/image/vendor_inventory/3e89/5fe12c71d08cbf019d163c0b89c2e1f73a33821a32382c11373e5aa76093.jpg","contentPrdNm":"이힝 고퀄 루즈핏 웰론 여성 숏패딩","contentPrdUrl":"https://link.coupang.com/re/AFFSDP?lptag=AF3391775&pageKey=4592298516&itemId=5649762538&vendorItemId=72948749385&traceid=V0-153-be73bb8b1fa95322"}]}
-				</script>
-				 --> 
-				 
-			</amp-state>
 			<div class="listViewHolder">
 				
 				<div class="wrapper" id="lodingSuccess" style="display:none;">
-					<div style="width: 92.7%;">
+					<div style="width: 100%;">
 						<amp-accordion disable-session-states>
 							<section expanded>
-								<h2><label id="postTitle">SEME CHUREE</label></h2>
+								<span class="priceName"><label id="postTitle">SEME CHUREE</label></span>
 								<div>상품 설명입니다.</div>
 							</section>
 						</amp-accordion>
 					</div>
 					<br>
-					
+					<!-- <amp-live-list id="live-list-1" data-poll-interval="20000" data-max-items-per-page="15">
+						<button update id="fixed-button" class="button" on="tap:live-list-1.update">
+							new updates on live list 1</button>
+						<div items class='liveListWrap_3'>
+							<div class='liveListItem_3 liveListItem_img'>이미지</div>
+							<div class='liveListItem_3 liveListItem_model'>상품명</div>
+							<div class='liveListItem_3 liveListItem_features'>정보</div>
+							<div class='liveListItem_3 liveListItem_button'>
+							</div>
+						</div>
+						<div id="contents_list"></div>
+					</amp-live-list> -->
 					<div id="contents_list"></div>
-					
 					<div style="clear:both; margin-bottom: 1%;"></div>
 					<span style="color: rgb(194, 187, 187);">파트너스활동으로 수수료를 지급받을 수 있습니다.</span>
 				</div>
@@ -164,8 +166,7 @@
 		var contentLen = "";
 		var postKey =  "${postKey}";
 		var postTitle =  "${postTitle}";
-		var jsonData = "";
-		var jsonData2 = "";
+		
 		$(function() {
 			
 			// 41은 예시임 컨트롤러에서 받아온 값으로 유동적으로 변하게 할것
@@ -201,6 +202,10 @@
 			$("#frm").attr("action", url);
 			$("#frm").attr("method", "post");
 			$("#frm").submit();
+		}
+		
+		function priceToString(price) {
+			return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 		}
 		
 		function countUp(urlNo){
@@ -244,56 +249,63 @@
 			if(res.ok){
 				console.log(data);
 				contentLen = data.content.length;
-				console.log(contentLen);
-				// test Start
-				var storage = new Object();
-				var items = new Array();
+				//console.log(contentLen);
 				
-				
-				// test End
 				if(contentLen > 0 && data.content[0].postNo != null){
-					for(var i=0; i<contentLen; i++){
-						
-						// 객체 생성
-						var data_temp = new Object() ;
-						
-						data_temp.number = i+1 ;
-						data_temp.contentPrdPrice = data.content[i].contentPrdPrice;
-						//data_temp.contentPrdImg = data.content[i].contentPrdImg;
-						data_temp.contentPrdNm = data.content[i].contentPrdNm;
-						//data_temp.contentPrdUrl = data.content[i].contentPrdUrl;
-						// 리스트에 생성된 객체 삽입
-						items.push(data_temp) ;
-					}
-					storage.items = items;
-					jsonData = JSON.stringify(storage);
-					//jsonData2 = JSON.parse(storage);
-					console.log(jsonData);
-					//console.log(jsonData2.items);
-					
-					var script = document.createElement('script');
-					script.setAttribute('type', 'application/json');
-					script.textContent = jsonData;
-					document.getElementById("testList").appendChild(script);
-					
+					console.log(contentLen);
 					var sHtml = "";
-					
-					sHtml += '<amp-list id="amp-list-placeholder" layout="fixed-height" height="654" src="amp-state:testList" binding="no">';
-					sHtml +=	'<template type="amp-mustache">';
-					sHtml +=		'<div class="">';
-					sHtml +=			'<amp-img width="150" height="100" alt="" src="{{contentPrdImg}}"></amp-img>';
-					sHtml +=			'<div>';
-					sHtml +=				'<div>{{number}}</div>';
-					sHtml +=				'<div>{{contentPrdPrice}}</div>';
-					sHtml +=				'<div>{{contentPrdNm}}</div>';
-					sHtml +=				'<div>{{contentPrdUrl}}</div>';
-					sHtml +=			'</div>';
-					sHtml +=		'</div>';
-					sHtml +=	'</template>';
-					sHtml += '</amp-list>';
-					
+					sHtml += '<amp-live-list layout="container" data-poll-interval="15000" data-max-items-per-page="5" id="amp-live-list-insert-blog">';
+					sHtml += '<button update on="tap:amp-live-list-insert-blog.update">You have updates</button>';
+					for(var i = 0; i < contentLen; i++){
+						
+						sHtml += 	'<div items>';
+						sHtml += 		'<div class="blog-item product">';
+						sHtml +=        "<div>";
+						sHtml += 			"<div class='numbering''>"+(i+1)+"</div>";
+						sHtml += 		"</div>"
+						sHtml += 		"<div class='contentImgBox'>";
+						sHtml += 			'<amp-img width="180px" height="150px" src="'+data.content[i].contentPrdImg+'" alt="'+data.content[i].contentPrdNm+'"></amp-img>';
+						sHtml += 		"</div>"
+						sHtml += 		"<div class='contentText'>";
+						sHtml +=			'<div class="oneOverFlow">';
+						sHtml +=				'<div><font style="vertical-align: inherit;">'+data.content[i].contentPrdNm+'</font></div>';
+						sHtml +=				'<div class="prdPrice"><font style="vertical-align: inherit;">'+priceToString(data.content[i].contentPrdPrice)+'원</font></div>';
+						sHtml +=				'<div class="goPageButton"><a class="webButton" target="_blank" href="'+data.content[i].contentPrdUrl+'" cta-active="" style="font-size: 16px;">최저가보기</a></div>';
+						sHtml +=			'</div>';
+						sHtml += 		"</div>";
+						sHtml += 		"<div class='contentText_2'>"
+						sHtml +=				'<div class="prdPrice"><font style="vertical-align: inherit;">'+priceToString(data.content[i].contentPrdPrice)+'원</font></div>';
+						sHtml +=				'<div class="goPageButton"><a class="webButton" target="_blank" href="'+data.content[i].contentPrdUrl+'" cta-active="" style="font-size: 16px;">최저가보기</a></div>';
+						sHtml += 		"</div>";
+						sHtml += 		"<div class='contentText_3'>"
+						sHtml +=			'<div class="contentText_3 oneOverFlow">';
+						sHtml +=				'<div><a class="webButton" target="_blank" href="'+data.content[i].contentPrdUrl+'" cta-active="" style="font-size: 16px;">최저가보기</a></div>';
+						sHtml +=			'</div>';
+						sHtml += 		"</div>";
+						sHtml += 		'</div>';
+						sHtml += 	'</div>';
+						
+						
+						
+						
+						//var contentsUrl_temp = data.content[i].contentPrdUrl;
+						/* sHtml += "<div items class='liveListWrap_3'>"
+						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_img amp-live-list-item'>"
+						sHtml +=        "<div>"
+						sHtml +=        "<span class='numbering''>"+(i+1)+"</span>"
+						sHtml +=            "<amp-img style='position: relative;'' height='130px'  src='"+data.content[i].contentPrdImg+"'>"
+						sHtml +=        "</div>"
+						sHtml +=    "</div>"
+						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_model postText'><div class='font_type'>&nbsp;&nbsp;&nbsp;&nbsp;"+data.content[i].contentPrdNm+"</div></div>"
+						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_features'><br><div class='font_type testView'>가격 : "+data.content[i].contentPrdPrice+"원</div></div>"
+						sHtml +=    "<div class='liveListWrap_3_1 liveListItem_button'>"
+						sHtml +=    "<input type='hidden' id='contentsUrl"+i+"' value='"+data.content[i].contentPrdUrl+"' >"
+						sHtml +=        "<br><div class='testView'><button class='button-inner' onclick='countUp("+i+")'>최저가 보기</button></div>"
+						sHtml +=    "</div>"
+						sHtml += "</div>" */
+					}
+					sHtml += '</amp-live-list>';
 					$("#contents_list").html(sHtml);
-					
 					$("#lodingSuccess").show();
 					$("#errorBox").hide();
 				}else{
