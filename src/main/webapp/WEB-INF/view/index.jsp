@@ -4338,21 +4338,21 @@ hr {
 				<div class="listViewHolderChild --success-stories">
 		            <div class="-at">
 <!-- 						<label>패션의류</label>  -->
-		            	<!-- <amp-base-carousel id="teaser-carousel-news" height="523" layout="fixed-height" role="region" snap-align="(min-width: 768px) start, center" 
-		            		visible-count="(min-width: 1280px) 3, (min-width: 768px) 2, 1.05" aria-label="News" 
-		            		on="slideChange:teaser-carousel-pagination-success-stories.toggle(index=event.index, value=true)" 
-		            		class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:523px;" i-amphtml-layout="fixed-height">-->
-	            		<amp-base-carousel id="teaser-carousel-news" height="523" layout="fixed-height" role="region" snap-align="(min-width: 768px) start, center" 
+	            		<!-- <amp-base-carousel id="teaser-carousel-news" height="523" layout="fixed-height" role="region" snap-align="(min-width: 768px) start, center" 
 	            			visible-count="(min-width: 1024px) 3, (min-width: 768px) 2, 1.05" aria-label="News" 
 	            			on="slideChange:teaser-carousel-pagination-news.toggle(index=event.index, value=true)" 
-	            			class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:523px;" i-amphtml-layout="fixed-height">
+	            			class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:523px;" i-amphtml-layout="fixed-height">-->
+	            		<amp-base-carousel id="success-stories" height="573" layout="fixed-height" role="region" snap-align="(min-width: 768px) start, center" 
+	            			visible-count="(min-width: 1024px) 3, (min-width: 768px) 2, 1.05" aria-label="Success stories" 
+	            			on="slideChange:teaser-carousel-pagination-success-stories.toggle(index=event.index, value=true)" 
+	            			class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:573px;" i-amphtml-layout="fixed-height">
 		       				<!-- LIST 시작 @@@-->
 		       				
 		       				<!-- LIST 끝 -->
 		            	</amp-base-carousel>
 			        </div>
-		            <div class="-an --prev"> <button on="tap: teaser-carousel-news.prev()" class="amp-carousel-button amp-carousel-button-prev" aria-label="Previous"></button> </div>
-		            <div class="-an --next"> <button on="tap: teaser-carousel-news.next()" class="amp-carousel-button amp-carousel-button-next" aria-label="Next"></button> </div>
+		            <div class="-an --prev"> <button on="tap: success-stories.prev()" class="amp-carousel-button amp-carousel-button-prev" aria-label="Previous"></button> </div>
+		            <div class="-an --next"> <button on="tap: success-stories.next()" class="amp-carousel-button amp-carousel-button-next" aria-label="Next"></button> </div>
 					<amp-selector class="-ar i-amphtml-layout-container" id="teaser-carousel-pagination-success-stories" layout="container" on="select: success-stories.goToSlide(index=event.targetOption)" i-amphtml-layout="container">
 			        	<div class="-ai" option="0" selected></div>
 			        	<div class="-ai" option="1"></div>
