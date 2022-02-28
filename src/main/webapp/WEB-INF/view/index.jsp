@@ -20,6 +20,8 @@
 	<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
 	<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 	<script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
+	<script async src="https://cdn.ampproject.org/v0/amp-selector-0.1.mjs" custom-element="amp-selector" type="module" crossorigin="anonymous"></script>
+	<script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js" crossorigin="anonymous" custom-element="amp-selector"></script>
 	
 	<script src="../static/js/main.js"></script>
 	<!-- css -->
@@ -4336,10 +4338,14 @@ hr {
 				<div class="listViewHolderChild --success-stories">
 		            <div class="-at">
 <!-- 						<label>패션의류</label>  -->
-		            	<amp-base-carousel id="teaser-carousel-news" height="523" layout="fixed-height" role="region" snap-align="(min-width: 768px) start, center" 
+		            	<!-- <amp-base-carousel id="teaser-carousel-news" height="523" layout="fixed-height" role="region" snap-align="(min-width: 768px) start, center" 
 		            		visible-count="(min-width: 1280px) 3, (min-width: 768px) 2, 1.05" aria-label="News" 
 		            		on="slideChange:teaser-carousel-pagination-success-stories.toggle(index=event.index, value=true)" 
-		            		class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:523px;" i-amphtml-layout="fixed-height">
+		            		class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:523px;" i-amphtml-layout="fixed-height">-->
+	            		<amp-base-carousel id="teaser-carousel-news" height="523" layout="fixed-height" role="region" snap-align="(min-width: 768px) start, center" 
+	            			visible-count="(min-width: 1024px) 3, (min-width: 768px) 2, 1.05" aria-label="News" 
+	            			on="slideChange:teaser-carousel-pagination-news.toggle(index=event.index, value=true)" 
+	            			class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:523px;" i-amphtml-layout="fixed-height">
 		       				<!-- LIST 시작 @@@-->
 		       				
 		       				<!-- LIST 끝 -->
@@ -4751,7 +4757,7 @@ hr {
                         console.log(contentLen);
                         var sHtml = "";
                         for(var i = 0; i < 4; i++){
-                            sHtml += "<div class='-uz --success-story'>";
+                            sHtml += "<div class='-uz --success-story i-amphtml-carousel-slotted'>";//i-amphtml-carousel-slotted
 								sHtml += "<form name='frm_50000000' id='frm_50000000' action='post' >";
 									sHtml += "<input type='hidden' name='postTitle' value=''>";
 									sHtml += "<div items class='liveListWrap' id='50000000'>";
