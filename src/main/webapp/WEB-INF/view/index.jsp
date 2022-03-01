@@ -11,7 +11,8 @@
 	
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
 	<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-	<script async custom-element="amp-base-carousel" src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js"></script>
+	<script async src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.mjs" custom-element="amp-base-carousel" type="module" crossorigin="anonymous"></script>
+	<script async custom-element="amp-base-carousel" src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js" crossorigin="anonymous" custom-element="amp-base-carousel"></script>
 	<script async custom-element="amp-live-list" src="https://cdn.ampproject.org/v0/amp-live-list-0.1.js"></script>
 	<script async custom-element="amp-embedly-card" src="https://cdn.ampproject.org/v0/amp-embedly-card-1.0.js"></script>
 	<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
@@ -4292,6 +4293,11 @@ hr {
   height:1px;
   margin: 12px 0
 }
+
+.i-amphtml-base-carousel-arrows{
+	display: none;
+}
+
 </style>
 	
 </head>
@@ -4334,177 +4340,50 @@ hr {
 				</div>
 			</div>
 			<!-- 패션의류 50000000 Start  -->
+			<div class="listViewHolder"> <!-- @@@ -->
+				<div class="listViewHolderChild --success-stories">
+				</div>
+			</div>
+			<!-- 패션잡화 50000001 Start  -->
 			<div class="listViewHolder">
 				<div class="listViewHolderChild --success-stories">
-		            <div class="-at">
-<!-- 						<label>패션의류</label>  -->
-	            		<!-- <amp-base-carousel id="teaser-carousel-news" height="523" layout="fixed-height" role="region" snap-align="(min-width: 768px) start, center" 
-	            			visible-count="(min-width: 1024px) 3, (min-width: 768px) 2, 1.05" aria-label="News" 
-	            			on="slideChange:teaser-carousel-pagination-news.toggle(index=event.index, value=true)" 
-	            			class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:523px;" i-amphtml-layout="fixed-height">-->
-	            		<amp-base-carousel id="success-stories" height="573" layout="fixed-height" role="region" snap-align="(min-width: 768px) start, center" 
-	            			visible-count="(min-width: 1024px) 3, (min-width: 768px) 2, 1.05" aria-label="Success stories" 
-	            			on="slideChange:teaser-carousel-pagination-success-stories.toggle(index=event.index, value=true)" 
-	            			class="i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height:573px;" i-amphtml-layout="fixed-height">
-		       				<!-- LIST 시작 @@@-->
-		       				
-		       				<!-- LIST 끝 -->
-		            	</amp-base-carousel>
-			        </div>
-		            <div class="-an --prev"> <button on="tap: success-stories.prev()" class="amp-carousel-button amp-carousel-button-prev" aria-label="Previous"></button> </div>
-		            <div class="-an --next"> <button on="tap: success-stories.next()" class="amp-carousel-button amp-carousel-button-next" aria-label="Next"></button> </div>
-					<amp-selector class="-ar i-amphtml-layout-container" id="teaser-carousel-pagination-success-stories" layout="container" on="select: success-stories.goToSlide(index=event.targetOption)" i-amphtml-layout="container">
-			        	<div class="-ai" option="0" selected></div>
-			        	<div class="-ai" option="1"></div>
-						<div class="-ai" option="2"></div>
-						<div class="-ai" option="3"></div>
-			        </amp-selector>
 				</div>
 			</div>
-			<!-- 패션의류 50000000 Start  -->
-
+			<!-- 화장품 미용 50000002 Start  -->
 			<div class="listViewHolder">
-				<label>패션잡화</label> 
-				<div class="wrapper">
-					<amp-live-list id="live-list-2" data-poll-interval="20000" data-max-items-per-page="4">
-						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
-							new updates on live list 1
-						</button>
-						<form name="frm_50000001" id="frm_50000001" action="post">
-							<input type="hidden" name="postTitle" value="">
-							<div items class="liveListWrap" id="50000001"> </div>
-						</form>
-					</amp-live-list>
+				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
-
+			<!-- 디지털 가전 50000003 Start  -->
 			<div class="listViewHolder">
-				<label>화장품 미용</label> 
-				<div class="wrapper">
-					<amp-live-list
-						id="live-list-2"
-						data-poll-interval="20000"
-						data-max-items-per-page="4">
-						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
-							new updates on live list 1
-						</button>
-						<form name="frm_50000002" id="frm_50000002" action="post">
-							<input type="hidden" name="postTitle" value="">
-							<div items class="liveListWrap" id="50000002"> </div>
-						</form>
-					</amp-live-list>
+				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
-			
-
+			<!-- 가구 인테리어 50000004 Start  -->
 			<div class="listViewHolder">
-				<label>디지털 가전</label> 
-				<div class="wrapper">
-					<amp-live-list
-						id="live-list-2"
-						data-poll-interval="20000"
-						data-max-items-per-page="4">
-						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
-							new updates on live list 1
-						</button>
-						<form name="frm_50000003" id="frm_50000003" action="post">
-							<input type="hidden" name="postTitle" value="">
-							<div items class="liveListWrap" id="50000003"> </div>
-						</form>
-					</amp-live-list>
+				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
-
+			<!-- 출산 육아 50000005 Start  -->
 			<div class="listViewHolder">
-				<label>가구 인테리어</label> 
-				<div class="wrapper">
-					<amp-live-list
-						id="live-list-2"
-						data-poll-interval="20000"
-						data-max-items-per-page="4">
-						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
-							new updates on live list 1
-						</button>
-						<form name="frm_50000004" id="frm_50000004" action="post">
-							<input type="hidden" name="postTitle" value="">
-							<div items class="liveListWrap" id="50000004"> </div>
-						</form>
-					</amp-live-list>
+				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
-
+			<!-- 식품 50000006 Start  -->
 			<div class="listViewHolder">
-				<label>출산 육아</label> 
-				<div class="wrapper">
-					<amp-live-list
-						id="live-list-2"
-						data-poll-interval="20000"
-						data-max-items-per-page="4">
-						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
-							new updates on live list 1
-						</button>
-						<form name="frm_50000005" id="frm_50000005" action="post">
-							<input type="hidden" name="postTitle" value="">
-							<div items class="liveListWrap" id="50000005"> </div>
-						</form>
-					</amp-live-list>
+				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
-
+			<!-- 스포츠 레저 50000007 Start  -->
 			<div class="listViewHolder">
-				<label>식품</label> 
-				<div class="wrapper">
-					<amp-live-list
-						id="live-list-2"
-						data-poll-interval="20000"
-						data-max-items-per-page="4">
-						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
-							new updates on live list 1
-						</button>
-						<form name="frm_50000006" id="frm_50000006" action="post">
-							<input type="hidden" name="postTitle" value="">
-							<div items class="liveListWrap" id="50000006"> </div>
-						</form>
-					</amp-live-list>
+				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
-
+			<!-- 생활 건강 50000008 Start  -->
 			<div class="listViewHolder">
-				<label>스포츠 레저</label> 
-				<div class="wrapper">
-					<amp-live-list
-						id="live-list-2"
-						data-poll-interval="20000"
-						data-max-items-per-page="4">
-						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
-							new updates on live list 1
-						</button>
-						<form name="frm_50000007" id="frm_50000007" action="post">
-							<input type="hidden" name="postTitle" value="">
-							<div items class="liveListWrap" id="50000007"> </div>
-						</form>
-					</amp-live-list>
+				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
-
-			<div class="listViewHolder">
-				<label>생활 건강</label> 
-				<div class="wrapper">
-					<amp-live-list
-						id="live-list-2"
-						data-poll-interval="20000"
-						data-max-items-per-page="4">
-						<button update id="fixed-button" class="button" on="tap:live-list-2.update">
-							new updates on live list 1
-						</button>
-						<form name="frm_50000008" id="frm_50000008" action="post">
-							<input type="hidden" name="postTitle" value="">
-							<div items class="liveListWrap" id="50000008"> </div>
-						</form>
-					</amp-live-list>
-				</div>
-			</div>
-		
 		</section>
 
 		<!-- sidebar section -->
@@ -4587,15 +4466,15 @@ hr {
 			
 			// 최신게시물
 			postWrite("R", "posts?sort=postNo,desc&size=4");
-			postWrite("50000000", "posts", "search", "ctgrNo?ctgrNo=50000000&size=4&sort=postNo,desc");
-			postWrite("50000001", "posts", "search", "ctgrNo?ctgrNo=50000001&size=4&sort=postNo,desc");
-			postWrite("50000002", "posts", "search", "ctgrNo?ctgrNo=50000002&size=4&sort=postNo,desc");
-			postWrite("50000003", "posts", "search", "ctgrNo?ctgrNo=50000003&size=4&sort=postNo,desc");
-			postWrite("50000004", "posts", "search", "ctgrNo?ctgrNo=50000004&size=4&sort=postNo,desc");
-			postWrite("50000005", "posts", "search", "ctgrNo?ctgrNo=50000005&size=4&sort=postNo,desc");
-			postWrite("50000006", "posts", "search", "ctgrNo?ctgrNo=50000006&size=4&sort=postNo,desc");
-			postWrite("50000007", "posts", "search", "ctgrNo?ctgrNo=50000007&size=4&sort=postNo,desc");
-			postWrite("50000008", "posts", "search", "ctgrNo?ctgrNo=50000008&size=4&sort=postNo,desc");
+			postWrite("50000000", "posts", "search", "ctgrNo?ctgrNo=50000000&sort=postNo,desc");
+			postWrite("50000001", "posts", "search", "ctgrNo?ctgrNo=50000001&sort=postNo,desc");
+			postWrite("50000002", "posts", "search", "ctgrNo?ctgrNo=50000002&sort=postNo,desc");
+			postWrite("50000003", "posts", "search", "ctgrNo?ctgrNo=50000003&sort=postNo,desc");
+			postWrite("50000004", "posts", "search", "ctgrNo?ctgrNo=50000004&sort=postNo,desc");
+			postWrite("50000005", "posts", "search", "ctgrNo?ctgrNo=50000005&sort=postNo,desc");
+			postWrite("50000006", "posts", "search", "ctgrNo?ctgrNo=50000006&sort=postNo,desc");
+			postWrite("50000007", "posts", "search", "ctgrNo?ctgrNo=50000007&sort=postNo,desc");
+			postWrite("50000008", "posts", "search", "ctgrNo?ctgrNo=50000008&sort=postNo,desc");
 			
 			//	navi
 			$(document).on('click', '.naviBtn', function(){
@@ -4643,81 +4522,94 @@ hr {
 		}
 		
 		function func_50000001(num){
-			var url = document.frm_50000001.elements["ctgr51"+num].value;
-			document.frm_50000001.elements["postTitle"].value = document.frm_50000001.elements["postTitle"+num].value;
-			//location.href = url;
-			$("#frm_50000001").attr("action", "/"+url);
-			$("#frm_50000001").attr("method", "post");
-			$("#frm_50000001").submit();
+			var form = $("form[name=frm_50000001]").eq(num);
+			var url = form.find("input[name=ctgr51"+num+"]").val();
+			var titleVal = form.find("input[name=postTitle"+num+"]").val();
+			
+			form.find("#postTitle").val(titleVal);
+			form.attr("action", "/"+url);
+			form.attr("method", "post"); 
+			form.submit(); 
 		}
 		
 		function func_50000002(num){
-			var url = document.frm_50000002.elements["ctgr52"+num].value;
-			document.frm_50000002.elements["postTitle"].value = document.frm_50000002.elements["postTitle"+num].value;
-			//location.href = url;
-			$("#frm_50000002").attr("action", "/"+url);
-			$("#frm_50000002").attr("method", "post");
-			$("#frm_50000002").submit();
+			var form = $("form[name=frm_50000002]").eq(num);
+			var url = form.find("input[name=ctgr52"+num+"]").val();
+			var titleVal = form.find("input[name=postTitle"+num+"]").val();
+			
+			form.find("#postTitle").val(titleVal);
+			form.attr("action", "/"+url);
+			form.attr("method", "post"); 
+			form.submit(); 
 		}
 		
 		function func_50000003(num){
-			var url = document.frm_50000003.elements["ctgr53"+num].value;
-			document.frm_50000003.elements["postTitle"].value = document.frm_50000003.elements["postTitle"+num].value;
-			//location.href = url;
-			$("#frm_50000003").attr("action", "/"+url);
-			$("#frm_50000003").attr("method", "post");
-			$("#frm_50000003").submit();
+			var form = $("form[name=frm_50000003]").eq(num);
+			var url = form.find("input[name=ctgr53"+num+"]").val();
+			var titleVal = form.find("input[name=postTitle"+num+"]").val();
+			
+			form.find("#postTitle").val(titleVal);
+			form.attr("action", "/"+url);
+			form.attr("method", "post"); 
+			form.submit(); 
 		}
 		
 		function func_50000004(num){
-			var url = document.frm_50000004.elements["ctgr54"+num].value;
-			document.frm_50000004.elements["postTitle"].value = document.frm_50000004.elements["postTitle"+num].value;
-			//location.href = url;
-			$("#frm_50000004").attr("action", "/"+url);
-			$("#frm_50000004").attr("method", "post");
-			$("#frm_50000004").submit();
+			var form = $("form[name=frm_50000004]").eq(num);
+			var url = form.find("input[name=ctgr54"+num+"]").val();
+			var titleVal = form.find("input[name=postTitle"+num+"]").val();
+			
+			form.find("#postTitle").val(titleVal);
+			form.attr("action", "/"+url);
+			form.attr("method", "post"); 
+			form.submit(); 
 		}
 		
 		function func_50000005(num){
-			var url = document.frm_50000005.elements["ctgr55"+num].value;
-			document.frm_50000005.elements["postTitle"].value = document.frm_50000005.elements["postTitle"+num].value;
-			//location.href = url;
-			$("#frm_50000005").attr("action", "/"+url);
-			$("#frm_50000005").attr("method", "post");
-			$("#frm_50000005").submit();
+			var form = $("form[name=frm_50000005]").eq(num);
+			var url = form.find("input[name=ctgr55"+num+"]").val();
+			var titleVal = form.find("input[name=postTitle"+num+"]").val();
+			
+			form.find("#postTitle").val(titleVal);
+			form.attr("action", "/"+url);
+			form.attr("method", "post"); 
+			form.submit(); 
 		}
 		
 		function func_50000006(num){
-			var url = document.frm_50000006.elements["ctgr56"+num].value;
-			document.frm_50000006.elements["postTitle"].value = document.frm_50000006.elements["postTitle"+num].value;
-			//location.href = url;
-			$("#frm_50000006").attr("action", "/"+url);
-			$("#frm_50000006").attr("method", "post");
-			$("#frm_50000006").submit();
+			var form = $("form[name=frm_50000006]").eq(num);
+			var url = form.find("input[name=ctgr56"+num+"]").val();
+			var titleVal = form.find("input[name=postTitle"+num+"]").val();
+			
+			form.find("#postTitle").val(titleVal);
+			form.attr("action", "/"+url);
+			form.attr("method", "post"); 
+			form.submit(); 
 		}
 		
 		function func_50000007(num){
-			var url = document.frm_50000007.elements["ctgr57"+num].value;
-			document.frm_50000007.elements["postTitle"].value = document.frm_50000007.elements["postTitle"+num].value;
-			//location.href = url;
-			$("#frm_50000007").attr("action", "/"+url);
-			$("#frm_50000007").attr("method", "post");
-			$("#frm_50000007").submit();
+			var form = $("form[name=frm_50000007]").eq(num);
+			var url = form.find("input[name=ctgr57"+num+"]").val();
+			var titleVal = form.find("input[name=postTitle"+num+"]").val();
+			
+			form.find("#postTitle").val(titleVal);
+			form.attr("action", "/"+url);
+			form.attr("method", "post"); 
+			form.submit(); 
 		}
 		
 		function func_50000008(num){
-			var url = document.frm_50000008.elements["ctgr58"+num].value;
-			document.frm_50000008.elements["postTitle"].value = document.frm_50000008.elements["postTitle"+num].value;
-			//location.href = url;
-			$("#frm_50000008").attr("action", "/"+url);
-			$("#frm_50000008").attr("method", "post");
-			$("#frm_50000008").submit();
+			var form = $("form[name=frm_50000008]").eq(num);
+			var url = form.find("input[name=ctgr58"+num+"]").val();
+			var titleVal = form.find("input[name=postTitle"+num+"]").val();
+			
+			form.find("#postTitle").val(titleVal);
+			form.attr("action", "/"+url);
+			form.attr("method", "post"); 
+			form.submit(); 
 		}
 		
-		//postWrite("50000000", "posts", "search", "ctgrNo?ctgrNo=50000000&size=4&sort=postNo,desc");
 		async function postWrite(way, condition, condition_2, condition_3) {
-			// http://www.semochuree.com:11111/api/
-			console.log(condition);
 			var url = "https://www.semochuree.com:11111/api/"+ condition;
 			if("" != condition_2 && null != condition_2){
 				url += "/" + condition_2;
@@ -4725,17 +4617,14 @@ hr {
 					url += "/" + condition_3;
 				}
 			}
-			//console.log(url);
 
 			var res = await fetch(url);
 			var data = await res.json();
 			if(res.ok){
-				//console.log(data);
 				contentLen = data.content.length;
                 switch(way){
                     case 'R':
                     if(contentLen > 0){
-                        console.log(contentLen);
                         var sHtml = "";
                         for(var i = 0; i < contentLen; i++){
                             sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='styleR_Func("+i+")'>"
@@ -4751,13 +4640,16 @@ hr {
                         
                     }
                     $("#styleR").html(sHtml);
-                    break;//@@@
+                    break;
                     case"50000000":
                     if(contentLen > 0){
-                        console.log(contentLen);
                         var sHtml = "";
-                        for(var i = 0; i < 4; i++){
-                            sHtml += "<div class='-uz --success-story i-amphtml-carousel-slotted'>";//i-amphtml-carousel-slotted
+                        
+                       
+                        sHtml += "<div class='-at'>";
+                       	sHtml += "<amp-base-carousel id='success-stories50' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories50.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
+                        for(var i = 0; i < contentLen; i++){
+                            sHtml += "<div class='-uz --success-story'  >";
 								sHtml += "<form name='frm_50000000' id='frm_50000000' action='post' >";
 									sHtml += "<input type='hidden' name='postTitle' value=''>";
 									sHtml += "<div items class='liveListWrap' id='50000000'>";
@@ -4792,170 +4684,529 @@ hr {
 		                          	sHtml += "</div>";
 	                        	sHtml += "</form>";
                            	sHtml += "</div>";
+                       
                         }
+	                    sHtml += "</amp-base-carousel>";   
+	                    sHtml += "</div>";
+	                        
+                        sHtml += "<div class='-an --prev'><button on='tap: success-stories50.prev()' class='amp-carousel-button amp-carousel-button-prev' aria-label='Previous'></button></div>";
+                        sHtml += "<div class='-an --next'><button on='tap: success-stories50.next()' class='amp-carousel-button amp-carousel-button-next' aria-label='Next'></button></div>";
+	                    
+	                    sHtml += "<amp-selector class='-ar i-amphtml-layout-container' id='teaser-carousel-pagination-success-stories50' layout='container' on='select: success-stories50.goToSlide(index=event.targetOption)' i-amphtml-layout='container'>";
+	                    for(var i = 0; i < contentLen; i++){
+	                    	if(i == 0){
+	                    		sHtml += "<div class='-ai' option='0' selected></div>";
+	                    	}else{
+	                    		sHtml += "<div class='-ai' option='"+i+"'></div>";
+	                    	}
+	                    }
+	                    sHtml += "</amp-selector>";
+	                    
                     }
-                    $("body").find(".-at").eq(0).find(".i-amphtml-carousel-scroll").html(sHtml);
+                    $("body").find(".listViewHolderChild").eq(0).html(sHtml);
                     break;
                     case "50000001" :
-                    if(contentLen > 0){
-                        console.log(contentLen);
-                        var sHtml = "";
-                        for(var i = 0; i < contentLen; i++){
-                        	
-                            sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000001("+i+")'>"
-                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
-                            sHtml += "<input type='hidden' name='ctgr51"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
-                            sHtml += "</div>"
-                            sHtml +=     "<div>"
-                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
-                            sHtml +=     "</div>"
-                            sHtml += "</div>"
+                    	if(contentLen > 0){
+                            var sHtml = "";
+                            
+                           
+                            sHtml += "<div class='-at'>";
+                           	sHtml += "<amp-base-carousel id='success-stories51' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories51.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
+                            for(var i = 0; i < contentLen; i++){
+                                sHtml += "<div class='-uz --success-story'  >";
+    								sHtml += "<form name='frm_50000001' id='frm_50000001' action='post' >";
+    									sHtml += "<input type='hidden' name='postTitle' value=''>";
+    									sHtml += "<div items class='liveListWrap' id='50000001'>";
+    			                            sHtml += "<div onclick='func_50000001("+i+")' class='-ae cursor'>";
+    				                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
+    				                            sHtml += "<input type='hidden' name='ctgr51"+i+"' value='"+data.content[i].postUrl+"' >";
+    				                            
+    				                            sHtml += "<div class='-as'>";
+    					                            sHtml += "<div class='-ao'>";
+    						                            sHtml += "<svg fill='url(#gradient-websites)'>";
+    						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
+    					                            	sHtml += "</svg>";
+    			                            		sHtml += "</div>";
+    		                            			sHtml += "<h6>※패션잡화</h6>";
+                                				sHtml += "</div>";
+    				                            				
+    				                            sHtml += "<div class='-au'>";
+    				                            	sHtml += "<amp-img class='i-amphtml-layout-fill i-amphtml-layout-size-defined' src='"+data.content[i].postImgUrl+"' layout='fill' alt='WompMobile' i-amphtml-layout='fill'></amp-img>";
+    				                            sHtml += "</div>";
+    				                            
+//     				                            sHtml += "<div>";
+//     				                            	sHtml += "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
+//     				                            sHtml += "</div>";
+    				                            sHtml += "<div class='-af'>";
+    			                            	sHtml += "<div class='-aa'></div>";
+    		                            		sHtml += "<h4 class='-al'>"+data.content[i].postTitle+"</h4>";
+    		                            		sHtml += "<div class='-ac'>SEMO CHUREE</div>";
+    	                            			sHtml += "</div>";
+    				                            
+    				                            
+    			                            sHtml += "</div>";
+    		                          	sHtml += "</div>";
+    	                        	sHtml += "</form>";
+                               	sHtml += "</div>";
+                           
+                            }
+    	                    sHtml += "</amp-base-carousel>";   
+    	                    sHtml += "</div>";
+    	                        
+                            sHtml += "<div class='-an --prev'><button on='tap: success-stories51.prev()' class='amp-carousel-button amp-carousel-button-prev' aria-label='Previous'></button></div>";
+                            sHtml += "<div class='-an --next'><button on='tap: success-stories51.next()' class='amp-carousel-button amp-carousel-button-next' aria-label='Next'></button></div>";
+    	                    
+    	                    sHtml += "<amp-selector class='-ar i-amphtml-layout-container' id='teaser-carousel-pagination-success-stories51' layout='container' on='select: success-stories51.goToSlide(index=event.targetOption)' i-amphtml-layout='container'>";
+    	                    for(var i = 0; i < contentLen; i++){
+    	                    	if(i == 0){
+    	                    		sHtml += "<div class='-ai' option='0' selected></div>";
+    	                    	}else{
+    	                    		sHtml += "<div class='-ai' option='"+i+"'></div>";
+    	                    	}
+    	                    }
+    	                    sHtml += "</amp-selector>";
+    	                    
                         }
-                    }
-                    $("#50000001").html(sHtml);
+                        $("body").find(".listViewHolderChild").eq(1).html(sHtml);
                     break;
 
-                    case "50000002":
-                    if(contentLen > 0){
-                        console.log(contentLen);
-                        var sHtml = "";
-                        for(var i = 0; i < contentLen; i++){
+                    case "50000002"://@@@
+                    	if(contentLen > 0){
+                            var sHtml = "";
                             
-                            sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000002("+i+")'>"
-                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
-                            sHtml += "<input type='hidden' name='ctgr52"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
-                            sHtml += "</div>"
-                            sHtml +=     "<div>"
-                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
-                            sHtml +=     "</div>"
-                            sHtml += "</div>"
+                           
+                            sHtml += "<div class='-at'>";
+                           	sHtml += "<amp-base-carousel id='success-stories52' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories52.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
+                            for(var i = 0; i < contentLen; i++){
+                                sHtml += "<div class='-uz --success-story'  >";
+    								sHtml += "<form name='frm_50000002' id='frm_50000002' action='post' >";
+    									sHtml += "<input type='hidden' name='postTitle' value=''>";
+    									sHtml += "<div items class='liveListWrap' id='50000002'>";
+    			                            sHtml += "<div onclick='func_50000002("+i+")' class='-ae cursor'>";
+    				                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
+    				                            sHtml += "<input type='hidden' name='ctgr52"+i+"' value='"+data.content[i].postUrl+"' >";
+    				                            
+    				                            sHtml += "<div class='-as'>";
+    					                            sHtml += "<div class='-ao'>";
+    						                            sHtml += "<svg fill='url(#gradient-websites)'>";
+    						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
+    					                            	sHtml += "</svg>";
+    			                            		sHtml += "</div>";
+    		                            			sHtml += "<h6>※화장품 미용</h6>";
+                                				sHtml += "</div>";
+    				                            				
+    				                            sHtml += "<div class='-au'>";
+    				                            	sHtml += "<amp-img class='i-amphtml-layout-fill i-amphtml-layout-size-defined' src='"+data.content[i].postImgUrl+"' layout='fill' alt='WompMobile' i-amphtml-layout='fill'></amp-img>";
+    				                            sHtml += "</div>";
+    				                            
+//     				                            sHtml += "<div>";
+//     				                            	sHtml += "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
+//     				                            sHtml += "</div>";
+    				                            sHtml += "<div class='-af'>";
+    			                            	sHtml += "<div class='-aa'></div>";
+    		                            		sHtml += "<h4 class='-al'>"+data.content[i].postTitle+"</h4>";
+    		                            		sHtml += "<div class='-ac'>SEMO CHUREE</div>";
+    	                            			sHtml += "</div>";
+    				                            
+    				                            
+    			                            sHtml += "</div>";
+    		                          	sHtml += "</div>";
+    	                        	sHtml += "</form>";
+                               	sHtml += "</div>";
+                           
+                            }
+    	                    sHtml += "</amp-base-carousel>";   
+    	                    sHtml += "</div>";
+    	                        
+                            sHtml += "<div class='-an --prev'><button on='tap: success-stories52.prev()' class='amp-carousel-button amp-carousel-button-prev' aria-label='Previous'></button></div>";
+                            sHtml += "<div class='-an --next'><button on='tap: success-stories52.next()' class='amp-carousel-button amp-carousel-button-next' aria-label='Next'></button></div>";
+    	                    
+    	                    sHtml += "<amp-selector class='-ar i-amphtml-layout-container' id='teaser-carousel-pagination-success-stories52' layout='container' on='select: success-stories52.goToSlide(index=event.targetOption)' i-amphtml-layout='container'>";
+    	                    for(var i = 0; i < contentLen; i++){
+    	                    	if(i == 0){
+    	                    		sHtml += "<div class='-ai' option='0' selected></div>";
+    	                    	}else{
+    	                    		sHtml += "<div class='-ai' option='"+i+"'></div>";
+    	                    	}
+    	                    }
+    	                    sHtml += "</amp-selector>";
+    	                    
                         }
-                    }
-                    $("#50000002").html(sHtml);
+                        $("body").find(".listViewHolderChild").eq(2).html(sHtml);
                     break;
-                    case "50000003":
-                    if(contentLen > 0){
-                        console.log(contentLen);
-                        var sHtml = "";
-                        for(var i = 0; i < contentLen; i++){
+                    case "50000003"://@@@
+                    	if(contentLen > 0){
+                            var sHtml = "";
                             
-                            sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000003("+i+")'>"
-                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
-                            sHtml += "<input type='hidden' name='ctgr53"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
-                            sHtml += "</div>"
-                            sHtml +=     "<div>"
-                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
-                            sHtml +=     "</div>"
-                            sHtml += "</div>"
+                           
+                            sHtml += "<div class='-at'>";
+                           	sHtml += "<amp-base-carousel id='success-stories53' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories53.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
+                            for(var i = 0; i < contentLen; i++){
+                                sHtml += "<div class='-uz --success-story'  >";
+    								sHtml += "<form name='frm_50000003' id='frm_50000003' action='post' >";
+    									sHtml += "<input type='hidden' name='postTitle' value=''>";
+    									sHtml += "<div items class='liveListWrap' id='50000003'>";
+    			                            sHtml += "<div onclick='func_50000003("+i+")' class='-ae cursor'>";
+    				                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
+    				                            sHtml += "<input type='hidden' name='ctgr53"+i+"' value='"+data.content[i].postUrl+"' >";
+    				                            
+    				                            sHtml += "<div class='-as'>";
+    					                            sHtml += "<div class='-ao'>";
+    						                            sHtml += "<svg fill='url(#gradient-websites)'>";
+    						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
+    					                            	sHtml += "</svg>";
+    			                            		sHtml += "</div>";
+    		                            			sHtml += "<h6>※디지털 가전</h6>";
+                                				sHtml += "</div>";
+    				                            				
+    				                            sHtml += "<div class='-au'>";
+    				                            	sHtml += "<amp-img class='i-amphtml-layout-fill i-amphtml-layout-size-defined' src='"+data.content[i].postImgUrl+"' layout='fill' alt='WompMobile' i-amphtml-layout='fill'></amp-img>";
+    				                            sHtml += "</div>";
+    				                            
+//     				                            sHtml += "<div>";
+//     				                            	sHtml += "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
+//     				                            sHtml += "</div>";
+    				                            sHtml += "<div class='-af'>";
+    			                            	sHtml += "<div class='-aa'></div>";
+    		                            		sHtml += "<h4 class='-al'>"+data.content[i].postTitle+"</h4>";
+    		                            		sHtml += "<div class='-ac'>SEMO CHUREE</div>";
+    	                            			sHtml += "</div>";
+    				                            
+    				                            
+    			                            sHtml += "</div>";
+    		                          	sHtml += "</div>";
+    	                        	sHtml += "</form>";
+                               	sHtml += "</div>";
+                           
+                            }
+    	                    sHtml += "</amp-base-carousel>";   
+    	                    sHtml += "</div>";
+    	                        
+                            sHtml += "<div class='-an --prev'><button on='tap: success-stories53.prev()' class='amp-carousel-button amp-carousel-button-prev' aria-label='Previous'></button></div>";
+                            sHtml += "<div class='-an --next'><button on='tap: success-stories53.next()' class='amp-carousel-button amp-carousel-button-next' aria-label='Next'></button></div>";
+    	                    
+    	                    sHtml += "<amp-selector class='-ar i-amphtml-layout-container' id='teaser-carousel-pagination-success-stories53' layout='container' on='select: success-stories53.goToSlide(index=event.targetOption)' i-amphtml-layout='container'>";
+    	                    for(var i = 0; i < contentLen; i++){
+    	                    	if(i == 0){
+    	                    		sHtml += "<div class='-ai' option='0' selected></div>";
+    	                    	}else{
+    	                    		sHtml += "<div class='-ai' option='"+i+"'></div>";
+    	                    	}
+    	                    }
+    	                    sHtml += "</amp-selector>";
+    	                    
                         }
-                    }
-                    $("#50000003").html(sHtml);
+                        $("body").find(".listViewHolderChild").eq(3).html(sHtml);
                     break;
                     case "50000004":
-                    if(contentLen > 0){
-                        console.log(contentLen);
-                        var sHtml = "";
-                        for(var i = 0; i < contentLen; i++){
-                            
-                            sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000004("+i+")'>"
-                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
-                            sHtml += "<input type='hidden' name='ctgr54"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
-                            sHtml += "</div>"
-                            sHtml +=     "<div>"
-                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
-                            sHtml +=     "</div>"
-                            sHtml += "</div>"
+                    	if(contentLen > 0){
+                            var sHtml = "";
+                            sHtml += "<div class='-at'>";
+                           	sHtml += "<amp-base-carousel id='success-stories54' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories54.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
+                            for(var i = 0; i < contentLen; i++){
+                                sHtml += "<div class='-uz --success-story'  >";
+    								sHtml += "<form name='frm_50000004' id='frm_50000004' action='post' >";
+    									sHtml += "<input type='hidden' name='postTitle' value=''>";
+    									sHtml += "<div items class='liveListWrap' id='50000004'>";
+    			                            sHtml += "<div onclick='func_50000004("+i+")' class='-ae cursor'>";
+    				                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
+    				                            sHtml += "<input type='hidden' name='ctgr54"+i+"' value='"+data.content[i].postUrl+"' >";
+    				                            
+    				                            sHtml += "<div class='-as'>";
+    					                            sHtml += "<div class='-ao'>";
+    						                            sHtml += "<svg fill='url(#gradient-websites)'>";
+    						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
+    					                            	sHtml += "</svg>";
+    			                            		sHtml += "</div>";
+    		                            			sHtml += "<h6>※가구 인테리어</h6>";
+                                				sHtml += "</div>";
+    				                            				
+    				                            sHtml += "<div class='-au'>";
+    				                            	sHtml += "<amp-img class='i-amphtml-layout-fill i-amphtml-layout-size-defined' src='"+data.content[i].postImgUrl+"' layout='fill' alt='WompMobile' i-amphtml-layout='fill'></amp-img>";
+    				                            sHtml += "</div>";
+    				                            
+//     				                            sHtml += "<div>";
+//     				                            	sHtml += "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
+//     				                            sHtml += "</div>";
+    				                            sHtml += "<div class='-af'>";
+    			                            	sHtml += "<div class='-aa'></div>";
+    		                            		sHtml += "<h4 class='-al'>"+data.content[i].postTitle+"</h4>";
+    		                            		sHtml += "<div class='-ac'>SEMO CHUREE</div>";
+    	                            			sHtml += "</div>";
+    				                            
+    				                            
+    			                            sHtml += "</div>";
+    		                          	sHtml += "</div>";
+    	                        	sHtml += "</form>";
+                               	sHtml += "</div>";
+                           
+                            }
+    	                    sHtml += "</amp-base-carousel>";   
+    	                    sHtml += "</div>";
+    	                        
+                            sHtml += "<div class='-an --prev'><button on='tap: success-stories54.prev()' class='amp-carousel-button amp-carousel-button-prev' aria-label='Previous'></button></div>";
+                            sHtml += "<div class='-an --next'><button on='tap: success-stories54.next()' class='amp-carousel-button amp-carousel-button-next' aria-label='Next'></button></div>";
+    	                    
+    	                    sHtml += "<amp-selector class='-ar i-amphtml-layout-container' id='teaser-carousel-pagination-success-stories54' layout='container' on='select: success-stories54.goToSlide(index=event.targetOption)' i-amphtml-layout='container'>";
+    	                    for(var i = 0; i < contentLen; i++){
+    	                    	if(i == 0){
+    	                    		sHtml += "<div class='-ai' option='0' selected></div>";
+    	                    	}else{
+    	                    		sHtml += "<div class='-ai' option='"+i+"'></div>";
+    	                    	}
+    	                    }
+    	                    sHtml += "</amp-selector>";
+    	                    
                         }
-                    }
-                    $("#50000004").html(sHtml);
+                        $("body").find(".listViewHolderChild").eq(4).html(sHtml);
                     break;
                     case "50000005":
-                    if(contentLen > 0){
-                        console.log(contentLen);
-                        var sHtml = "";
-                        for(var i = 0; i < contentLen; i++){
-                            
-                            sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000005("+i+")'>"
-                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
-                            sHtml += "<input type='hidden' name='ctgr55"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
-                            sHtml += "</div>"
-                            sHtml +=     "<div>"
-                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
-                            sHtml +=     "</div>"
-                            sHtml += "</div>"
+                    	if(contentLen > 0){
+                            var sHtml = "";
+                            sHtml += "<div class='-at'>";
+                           	sHtml += "<amp-base-carousel id='success-stories55' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories55.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
+                            for(var i = 0; i < contentLen; i++){
+                                sHtml += "<div class='-uz --success-story'  >";
+    								sHtml += "<form name='frm_50000005' id='frm_50000005' action='post' >";
+    									sHtml += "<input type='hidden' name='postTitle' value=''>";
+    									sHtml += "<div items class='liveListWrap' id='50000005'>";
+    			                            sHtml += "<div onclick='func_50000005("+i+")' class='-ae cursor'>";
+    				                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
+    				                            sHtml += "<input type='hidden' name='ctgr55"+i+"' value='"+data.content[i].postUrl+"' >";
+    				                            
+    				                            sHtml += "<div class='-as'>";
+    					                            sHtml += "<div class='-ao'>";
+    						                            sHtml += "<svg fill='url(#gradient-websites)'>";
+    						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
+    					                            	sHtml += "</svg>";
+    			                            		sHtml += "</div>";
+    		                            			sHtml += "<h6>※출산 육아</h6>";
+                                				sHtml += "</div>";
+    				                            				
+    				                            sHtml += "<div class='-au'>";
+    				                            	sHtml += "<amp-img class='i-amphtml-layout-fill i-amphtml-layout-size-defined' src='"+data.content[i].postImgUrl+"' layout='fill' alt='WompMobile' i-amphtml-layout='fill'></amp-img>";
+    				                            sHtml += "</div>";
+    				                            
+//     				                            sHtml += "<div>";
+//     				                            	sHtml += "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
+//     				                            sHtml += "</div>";
+    				                            sHtml += "<div class='-af'>";
+    			                            	sHtml += "<div class='-aa'></div>";
+    		                            		sHtml += "<h4 class='-al'>"+data.content[i].postTitle+"</h4>";
+    		                            		sHtml += "<div class='-ac'>SEMO CHUREE</div>";
+    	                            			sHtml += "</div>";
+    				                            
+    				                            
+    			                            sHtml += "</div>";
+    		                          	sHtml += "</div>";
+    	                        	sHtml += "</form>";
+                               	sHtml += "</div>";
+                           
+                            }
+    	                    sHtml += "</amp-base-carousel>";   
+    	                    sHtml += "</div>";
+    	                        
+                            sHtml += "<div class='-an --prev'><button on='tap: success-stories55.prev()' class='amp-carousel-button amp-carousel-button-prev' aria-label='Previous'></button></div>";
+                            sHtml += "<div class='-an --next'><button on='tap: success-stories55.next()' class='amp-carousel-button amp-carousel-button-next' aria-label='Next'></button></div>";
+    	                    
+    	                    sHtml += "<amp-selector class='-ar i-amphtml-layout-container' id='teaser-carousel-pagination-success-stories55' layout='container' on='select: success-stories55.goToSlide(index=event.targetOption)' i-amphtml-layout='container'>";
+    	                    for(var i = 0; i < contentLen; i++){
+    	                    	if(i == 0){
+    	                    		sHtml += "<div class='-ai' option='0' selected></div>";
+    	                    	}else{
+    	                    		sHtml += "<div class='-ai' option='"+i+"'></div>";
+    	                    	}
+    	                    }
+    	                    sHtml += "</amp-selector>";
+    	                    
                         }
-                    }
-                    $("#50000005").html(sHtml);
+                        $("body").find(".listViewHolderChild").eq(5).html(sHtml);
                     break;
                     case "50000006":
-                    if(contentLen > 0){
-                        console.log(contentLen);
-                        var sHtml = "";
-                        for(var i = 0; i < contentLen; i++){
-                            
-                            sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000006("+i+")'>"
-                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
-                            sHtml += "<input type='hidden' name='ctgr56"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
-                            sHtml += "</div>"
-                            sHtml +=     "<div>"
-                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
-                            sHtml +=     "</div>"
-                            sHtml += "</div>"
+                    	if(contentLen > 0){
+                            var sHtml = "";
+                            sHtml += "<div class='-at'>";
+                           	sHtml += "<amp-base-carousel id='success-stories56' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories56.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
+                            for(var i = 0; i < contentLen; i++){
+                                sHtml += "<div class='-uz --success-story'  >";
+    								sHtml += "<form name='frm_50000006' id='frm_50000006' action='post' >";
+    									sHtml += "<input type='hidden' name='postTitle' value=''>";
+    									sHtml += "<div items class='liveListWrap' id='50000006'>";
+    			                            sHtml += "<div onclick='func_50000006("+i+")' class='-ae cursor'>";
+    				                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
+    				                            sHtml += "<input type='hidden' name='ctgr56"+i+"' value='"+data.content[i].postUrl+"' >";
+    				                            
+    				                            sHtml += "<div class='-as'>";
+    					                            sHtml += "<div class='-ao'>";
+    						                            sHtml += "<svg fill='url(#gradient-websites)'>";
+    						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
+    					                            	sHtml += "</svg>";
+    			                            		sHtml += "</div>";
+    		                            			sHtml += "<h6>※식품</h6>";
+                                				sHtml += "</div>";
+    				                            				
+    				                            sHtml += "<div class='-au'>";
+    				                            	sHtml += "<amp-img class='i-amphtml-layout-fill i-amphtml-layout-size-defined' src='"+data.content[i].postImgUrl+"' layout='fill' alt='WompMobile' i-amphtml-layout='fill'></amp-img>";
+    				                            sHtml += "</div>";
+    				                            
+//     				                            sHtml += "<div>";
+//     				                            	sHtml += "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
+//     				                            sHtml += "</div>";
+    				                            sHtml += "<div class='-af'>";
+    			                            	sHtml += "<div class='-aa'></div>";
+    		                            		sHtml += "<h4 class='-al'>"+data.content[i].postTitle+"</h4>";
+    		                            		sHtml += "<div class='-ac'>SEMO CHUREE</div>";
+    	                            			sHtml += "</div>";
+    				                            
+    				                            
+    			                            sHtml += "</div>";
+    		                          	sHtml += "</div>";
+    	                        	sHtml += "</form>";
+                               	sHtml += "</div>";
+                           
+                            }
+    	                    sHtml += "</amp-base-carousel>";   
+    	                    sHtml += "</div>";
+    	                        
+                            sHtml += "<div class='-an --prev'><button on='tap: success-stories56.prev()' class='amp-carousel-button amp-carousel-button-prev' aria-label='Previous'></button></div>";
+                            sHtml += "<div class='-an --next'><button on='tap: success-stories56.next()' class='amp-carousel-button amp-carousel-button-next' aria-label='Next'></button></div>";
+    	                    
+    	                    sHtml += "<amp-selector class='-ar i-amphtml-layout-container' id='teaser-carousel-pagination-success-stories56' layout='container' on='select: success-stories56.goToSlide(index=event.targetOption)' i-amphtml-layout='container'>";
+    	                    for(var i = 0; i < contentLen; i++){
+    	                    	if(i == 0){
+    	                    		sHtml += "<div class='-ai' option='0' selected></div>";
+    	                    	}else{
+    	                    		sHtml += "<div class='-ai' option='"+i+"'></div>";
+    	                    	}
+    	                    }
+    	                    sHtml += "</amp-selector>";
+    	                    
                         }
-                    }
-                    $("#50000006").html(sHtml);
+                        $("body").find(".listViewHolderChild").eq(6).html(sHtml);
                     break;
                     case "50000007":
-                    if(contentLen > 0){
-                        console.log(contentLen);
-                        var sHtml = "";
-                        for(var i = 0; i < contentLen; i++){
-                            
-                            sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000007("+i+")'>"
-                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
-                            sHtml += "<input type='hidden' name='ctgr57"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
-                            sHtml += "</div>"
-                            sHtml +=     "<div>"
-                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
-                            sHtml +=     "</div>"
-                            sHtml += "</div>"
+                    	if(contentLen > 0){
+                            var sHtml = "";
+                            sHtml += "<div class='-at'>";
+                           	sHtml += "<amp-base-carousel id='success-stories57' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories57.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
+                            for(var i = 0; i < contentLen; i++){
+                                sHtml += "<div class='-uz --success-story'  >";
+    								sHtml += "<form name='frm_50000007' id='frm_50000007' action='post' >";
+    									sHtml += "<input type='hidden' name='postTitle' value=''>";
+    									sHtml += "<div items class='liveListWrap' id='50000007'>";
+    			                            sHtml += "<div onclick='func_50000007("+i+")' class='-ae cursor'>";
+    				                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
+    				                            sHtml += "<input type='hidden' name='ctgr57"+i+"' value='"+data.content[i].postUrl+"' >";
+    				                            
+    				                            sHtml += "<div class='-as'>";
+    					                            sHtml += "<div class='-ao'>";
+    						                            sHtml += "<svg fill='url(#gradient-websites)'>";
+    						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
+    					                            	sHtml += "</svg>";
+    			                            		sHtml += "</div>";
+    		                            			sHtml += "<h6>※스포츠 레저</h6>";
+                                				sHtml += "</div>";
+    				                            				
+    				                            sHtml += "<div class='-au'>";
+    				                            	sHtml += "<amp-img class='i-amphtml-layout-fill i-amphtml-layout-size-defined' src='"+data.content[i].postImgUrl+"' layout='fill' alt='WompMobile' i-amphtml-layout='fill'></amp-img>";
+    				                            sHtml += "</div>";
+    				                            
+//     				                            sHtml += "<div>";
+//     				                            	sHtml += "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
+//     				                            sHtml += "</div>";
+    				                            sHtml += "<div class='-af'>";
+    			                            	sHtml += "<div class='-aa'></div>";
+    		                            		sHtml += "<h4 class='-al'>"+data.content[i].postTitle+"</h4>";
+    		                            		sHtml += "<div class='-ac'>SEMO CHUREE</div>";
+    	                            			sHtml += "</div>";
+    				                            
+    				                            
+    			                            sHtml += "</div>";
+    		                          	sHtml += "</div>";
+    	                        	sHtml += "</form>";
+                               	sHtml += "</div>";
+                           
+                            }
+    	                    sHtml += "</amp-base-carousel>";   
+    	                    sHtml += "</div>";
+    	                        
+                            sHtml += "<div class='-an --prev'><button on='tap: success-stories57.prev()' class='amp-carousel-button amp-carousel-button-prev' aria-label='Previous'></button></div>";
+                            sHtml += "<div class='-an --next'><button on='tap: success-stories57.next()' class='amp-carousel-button amp-carousel-button-next' aria-label='Next'></button></div>";
+    	                    
+    	                    sHtml += "<amp-selector class='-ar i-amphtml-layout-container' id='teaser-carousel-pagination-success-stories57' layout='container' on='select: success-stories57.goToSlide(index=event.targetOption)' i-amphtml-layout='container'>";
+    	                    for(var i = 0; i < contentLen; i++){
+    	                    	if(i == 0){
+    	                    		sHtml += "<div class='-ai' option='0' selected></div>";
+    	                    	}else{
+    	                    		sHtml += "<div class='-ai' option='"+i+"'></div>";
+    	                    	}
+    	                    }
+    	                    sHtml += "</amp-selector>";
+    	                    
                         }
-                    }
-                    $("#50000007").html(sHtml);
+                        $("body").find(".listViewHolderChild").eq(7).html(sHtml);
                     break;
                     case "50000008":
-                    if(contentLen > 0){
-                        console.log(contentLen);
-                        var sHtml = "";
-                        for(var i = 0; i < contentLen; i++){
-                            
-                            sHtml += "<div class='liveListItem amp-live-list-item cursor' onclick='func_50000008("+i+")'>"
-                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >"
-                            sHtml += "<input type='hidden' name='ctgr58"+i+"' value='"+data.content[i].postUrl+"' >"
-                            sHtml += "<div>"
-                            sHtml +=     "<amp-img height='250px' src='"+data.content[i].postImgUrl+"'>"
-                            sHtml += "</div>"
-                            sHtml +=     "<div>"
-                            sHtml +=         "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>"
-                            sHtml +=     "</div>"
-                            sHtml += "</div>"
+                    	if(contentLen > 0){
+                            var sHtml = "";
+                            sHtml += "<div class='-at'>";
+                           	sHtml += "<amp-base-carousel id='success-stories58' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories58.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
+                            for(var i = 0; i < contentLen; i++){
+                                sHtml += "<div class='-uz --success-story'  >";
+    								sHtml += "<form name='frm_50000008' id='frm_50000008' action='post' >";
+    									sHtml += "<input type='hidden' name='postTitle' value=''>";
+    									sHtml += "<div items class='liveListWrap' id='50000008'>";
+    			                            sHtml += "<div onclick='func_50000008("+i+")' class='-ae cursor'>";
+    				                            sHtml += "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"' >";
+    				                            sHtml += "<input type='hidden' name='ctgr58"+i+"' value='"+data.content[i].postUrl+"' >";
+    				                            
+    				                            sHtml += "<div class='-as'>";
+    					                            sHtml += "<div class='-ao'>";
+    						                            sHtml += "<svg fill='url(#gradient-websites)'>";
+    						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
+    					                            	sHtml += "</svg>";
+    			                            		sHtml += "</div>";
+    		                            			sHtml += "<h6>※생활 건강</h6>";
+                                				sHtml += "</div>";
+    				                            				
+    				                            sHtml += "<div class='-au'>";
+    				                            	sHtml += "<amp-img class='i-amphtml-layout-fill i-amphtml-layout-size-defined' src='"+data.content[i].postImgUrl+"' layout='fill' alt='WompMobile' i-amphtml-layout='fill'></amp-img>";
+    				                            sHtml += "</div>";
+    				                            
+//     				                            sHtml += "<div>";
+//     				                            	sHtml += "<label class='labelName' for=''>"+data.content[i].postTitle+"</label>";
+//     				                            sHtml += "</div>";
+    				                            sHtml += "<div class='-af'>";
+    			                            	sHtml += "<div class='-aa'></div>";
+    		                            		sHtml += "<h4 class='-al'>"+data.content[i].postTitle+"</h4>";
+    		                            		sHtml += "<div class='-ac'>SEMO CHUREE</div>";
+    	                            			sHtml += "</div>";
+    				                            
+    				                            
+    			                            sHtml += "</div>";
+    		                          	sHtml += "</div>";
+    	                        	sHtml += "</form>";
+                               	sHtml += "</div>";
+                           
+                            }
+    	                    sHtml += "</amp-base-carousel>";   
+    	                    sHtml += "</div>";
+    	                        
+                            sHtml += "<div class='-an --prev'><button on='tap: success-stories58.prev()' class='amp-carousel-button amp-carousel-button-prev' aria-label='Previous'></button></div>";
+                            sHtml += "<div class='-an --next'><button on='tap: success-stories58.next()' class='amp-carousel-button amp-carousel-button-next' aria-label='Next'></button></div>";
+    	                    
+    	                    sHtml += "<amp-selector class='-ar i-amphtml-layout-container' id='teaser-carousel-pagination-success-stories58' layout='container' on='select: success-stories58.goToSlide(index=event.targetOption)' i-amphtml-layout='container'>";
+    	                    for(var i = 0; i < contentLen; i++){
+    	                    	if(i == 0){
+    	                    		sHtml += "<div class='-ai' option='0' selected></div>";
+    	                    	}else{
+    	                    		sHtml += "<div class='-ai' option='"+i+"'></div>";
+    	                    	}
+    	                    }
+    	                    sHtml += "</amp-selector>";
+    	                    
                         }
-                    }
-                    $("#50000008").html(sHtml);
+                        $("body").find(".listViewHolderChild").eq(8).html(sHtml);
                     break;
                 }
                 
