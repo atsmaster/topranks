@@ -33,7 +33,7 @@
 		<!-- header -->
 		<header>
 			<nav>
-				<h1 style="text-align: center;">SEMO CHUREE</h1>
+				<h1 style="text-align: center;"><a href="/">SEMO CHUREE</a></h1>
 				<div>
 					<ul> 
 						<li on="tap:sidebar"><img src="../static/asset/svg/ic_menu.svg" alt="menu"></li> 
@@ -275,16 +275,16 @@
 							
 							sHtml +=        "</div>"
 							sHtml +=        "<div items class='liveListItem_2_3'>"
-							sHtml +=            "<h2 class='oneOverFlow'>"+data.content[i].postTitle+"</h2>"
+							sHtml +=            "<span class='priceName oneOverFlow'>"+data.content[i].postTitle+"</span>"
 							sHtml +=            "<input type='hidden' name='postUrl'"+i+" value="+data.content[i].postUrl+">"
-							sHtml +=            "<div class='postText' style='font-size:15px'>"
+							sHtml +=            "<div class='postText'>"
 							sHtml +=                "<span>"
 							sHtml +=                    "게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명게시물설명"
 							sHtml +=                "</span>"
 							sHtml +=            "</div>"
 							sHtml +=            "<input type='hidden' name='postTitle"+i+"' value='"+data.content[i].postTitle+"'>"
 							sHtml +=            "<input type='hidden' name='postUrl"+i+"' value='"+data.content[i].postUrl+"'>"
-							sHtml +=            "<span class='regDd'>등록일 "+data.content[i].regDd.substring(0,4)+"년 "+data.content[i].regDd.substring(4,6)+"월 "+data.content[i].regDd.substring(6)+"일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class='moreBtn' onclick='goMoreThan("+i+")'>더보기</button></span>" 
+							sHtml +=            "<span class='regDd'>등록일 "+data.content[i].regDd.substring(0,4)+"년 "+data.content[i].regDd.substring(4,6)+"월 "+data.content[i].regDd.substring(6)+"일<button class='moreBtn' onclick='goMoreThan("+i+")'>더보기</button></span>" 
 							sHtml +=        "</div>"
 							sHtml +=    "</div>"
 							sHtml += "</amp-live-list>"

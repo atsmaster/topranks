@@ -160,6 +160,7 @@ amp-list div[role="list"] {
     -webkit-box-orient:vertical;
     overflow:hidden;
     text-overflow:ellipsis;
+    font-size:15px
 }
 
 .oneOverFlow{
@@ -172,7 +173,10 @@ amp-list div[role="list"] {
 .regDd{
 	font-style: oblique;
 	margin-left: 20px;
+	position: absolute;
+	top: 220px;
 }
+
 
 .contentText{
 	margin-left: 20px;
@@ -203,7 +207,9 @@ amp-list div[role="list"] {
 	font-size:21px;
 	font-weight: bold;
 }
-
+.postTextSpan{
+	font-size:21px;
+}
 @media only screen and (max-width:1111px) {
 	.contentText_3{
 		display:none;
@@ -273,13 +279,24 @@ amp-list div[role="list"] {
 		font-size:15px;
 		font-weight: bold;
 	}
+	.postText{
+    	font-size:13px;
+	}
+	.regDd{
+		font-size:13px;
+		font-style: oblique;
+		margin-left: 0px;
+	}
+	.moreBtn {
+		margin-left: 5px !important;
+	}
 }
 
 .webButton{
 	background-color: white;
-	color: #0082ff!important;
+	color: #0082ff !important;
 	font-weight: bold;
-	padding: 6px!important;
+	padding: 6px !important;
 	border-radius: 20px;
 	border: 1px solid #0082ff;
 }
@@ -345,6 +362,7 @@ amp-list div[role="list"] {
 	border:0;
 	outline:0;
 	cursor:pointer;
+	margin-left:20px;
 }
 
 .numbering{
