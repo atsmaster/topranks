@@ -265,9 +265,9 @@
 					if(way == "F"){
 						for(var i = 0; i < contentLen; i++){
 							
-							sHtml += "<amp-live-list id='live-list-"+i+"' data-poll-interval='20000' data-max-items-per-page='1' style='margin-top:10px'>"
+							sHtml += "<amp-live-list id='live-list-"+i+"' data-poll-interval='20000' data-max-items-per-page='1' style='margin-top:10px' >"
 							sHtml +=    "<button update id='fixed-button' class='button' on='tap:live-list-"+i+".update'>new updates on live list 1</button>"
-							sHtml +=     "<div items class='liveListWrap_2'>"
+							sHtml +=     "<div items class='liveListWrap_2' onclick='goMoreThan("+i+")'>"
 							sHtml +=        "<div class='liveListItem_2 amp-live-list-item'>"
 							sHtml +=            "<div>"
 							sHtml +=                "<amp-img class='ampImg"+i+"' height='250px'  src=''>"

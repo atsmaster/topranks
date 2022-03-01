@@ -282,13 +282,24 @@ amp-list div[role="list"] {
 	.postText{
     	font-size:13px;
 	}
+	.moreBtn {
+		margin-left: 5px !important;
+	}
+}
+
+@media only screen and (max-width:680px) {
 	.regDd{
 		font-size:13px;
 		font-style: oblique;
 		margin-left: 0px;
+		top: 0;
+		position: static;
 	}
-	.moreBtn {
-		margin-left: 5px !important;
+	.liveListWrap_2{
+	  	height: 100%;
+	  }
+	.liveListItem_2{
+		width: 100%;
 	}
 }
 
