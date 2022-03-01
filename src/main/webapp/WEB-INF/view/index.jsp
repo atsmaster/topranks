@@ -4168,15 +4168,15 @@ hr {
 			
 			// 최신게시물
 			postWrite("R", "posts?sort=postNo,desc&size=4");
-			postWrite("50000000", "posts", "search", "ctgrNo?ctgrNo=50000000&sort=postNo,desc");
-			postWrite("50000001", "posts", "search", "ctgrNo?ctgrNo=50000001&sort=postNo,desc");
-			postWrite("50000002", "posts", "search", "ctgrNo?ctgrNo=50000002&sort=postNo,desc");
-			postWrite("50000003", "posts", "search", "ctgrNo?ctgrNo=50000003&sort=postNo,desc");
-			postWrite("50000004", "posts", "search", "ctgrNo?ctgrNo=50000004&sort=postNo,desc");
-			postWrite("50000005", "posts", "search", "ctgrNo?ctgrNo=50000005&sort=postNo,desc");
-			postWrite("50000006", "posts", "search", "ctgrNo?ctgrNo=50000006&sort=postNo,desc");
-			postWrite("50000007", "posts", "search", "ctgrNo?ctgrNo=50000007&sort=postNo,desc");
-			postWrite("50000008", "posts", "search", "ctgrNo?ctgrNo=50000008&sort=postNo,desc");
+			postWrite("50000000", "posts", "search", "ctgrNo?ctgrNo=50000000&size=10&sort=postNo,desc");
+			postWrite("50000001", "posts", "search", "ctgrNo?ctgrNo=50000001&size=10&sort=postNo,desc");
+			postWrite("50000002", "posts", "search", "ctgrNo?ctgrNo=50000002&size=10&sort=postNo,desc");
+			postWrite("50000003", "posts", "search", "ctgrNo?ctgrNo=50000003&size=10&sort=postNo,desc");
+			postWrite("50000004", "posts", "search", "ctgrNo?ctgrNo=50000004&size=10&sort=postNo,desc");
+			postWrite("50000005", "posts", "search", "ctgrNo?ctgrNo=50000005&size=10&sort=postNo,desc");
+			postWrite("50000006", "posts", "search", "ctgrNo?ctgrNo=50000006&size=10&sort=postNo,desc");
+			postWrite("50000007", "posts", "search", "ctgrNo?ctgrNo=50000007&size=10&sort=postNo,desc");
+			postWrite("50000008", "posts", "search", "ctgrNo?ctgrNo=50000008&size=10&sort=postNo,desc");
 			
 			//	navi
 			$(document).on('click', '.naviBtn', function(){
