@@ -3251,13 +3251,13 @@ a code {
   padding:10px 30px
 }
 .-ao {
-  height:26px;
+  height:0px;
   margin-right:10px;
   width:26px
 }
 .-au {
   filter:brightness(97%);
-  height:220px;
+  height:310px;
   position:relative
 }
 .-au amp-img img {
@@ -3952,13 +3952,11 @@ h1,h2,h3,h4,h5,h6 {
   font-size:18px;
   line-height:24px
 }
-.ap-h5,.ap-h6,h5,h6 {
+.ap-h5,.h5 {
   letter-spacing:.5px;
   line-height:22px
 }
-.ap-h6,h6 {
-  font-size:14px
-}
+
 .ap-p,a,p {
   font-size:16px
 }
@@ -3988,6 +3986,11 @@ hr {
 	display: none;
 }
 
+.listTilte{
+	margin-left: 15px;
+	padding-top: 15px;
+}
+
 </style>
 	
 </head>
@@ -4011,8 +4014,8 @@ hr {
 		
 		<!-- main -->
 		<section class="container">
-		
-			<div class="listViewHolder">
+			
+			<!-- <div class="listViewHolder">
 				<label>최신 게시물</label> 
 				<div class="wrapper">
 					<amp-live-list
@@ -4028,49 +4031,58 @@ hr {
 						</form>
 					</amp-live-list>
 				</div>
-			</div>
+			</div> -->
 			<!-- 패션의류 50000000 Start  -->
 			<div class="listViewHolder"> <!-- @@@ -->
+				<h4 class="listTilte">패션의류</h4>
 				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
 			<!-- 패션잡화 50000001 Start  -->
 			<div class="listViewHolder">
+				<h4 class="listTilte">패션잡화</h4>
 				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
 			<!-- 화장품 미용 50000002 Start  -->
 			<div class="listViewHolder">
+				<h4 class="listTilte">화장품 미용</h4>
 				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
 			<!-- 디지털 가전 50000003 Start  -->
 			<div class="listViewHolder">
+				<h4 class="listTilte">디지털 가전</h4>
 				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
 			<!-- 가구 인테리어 50000004 Start  -->
 			<div class="listViewHolder">
+				<h4 class="listTilte">가구 인테리어</h4>
 				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
 			<!-- 출산 육아 50000005 Start  -->
 			<div class="listViewHolder">
+				<h4 class="listTilte">출산 육아</h4>
 				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
 			<!-- 식품 50000006 Start  -->
 			<div class="listViewHolder">
+				<h4 class="listTilte">식품</h4>
 				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
 			<!-- 스포츠 레저 50000007 Start  -->
 			<div class="listViewHolder">
+				<h4 class="listTilte">스포츠 레저</h4>
 				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
 			<!-- 생활 건강 50000008 Start  -->
 			<div class="listViewHolder">
+				<h4 class="listTilte">생활 건강</h4>
 				<div class="listViewHolderChild --success-stories">
 				</div>
 			</div>
@@ -4331,11 +4343,11 @@ hr {
                     }
                     $("#styleR").html(sHtml);
                     break;
-                    case"50000000":
+                    case"50000000"://@@@
                     if(contentLen > 0){
                         var sHtml = "";
                         
-                       
+//                         sHtml += "<h4>패션의류</h4>";
                         sHtml += "<div class='-at'>";
                        	sHtml += "<amp-base-carousel id='success-stories50' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories50.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
                         for(var i = 0; i < contentLen; i++){
@@ -4353,7 +4365,7 @@ hr {
 						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
 					                            	sHtml += "</svg>";
 			                            		sHtml += "</div>";
-		                            			sHtml += "<h6>※패션의류</h6>";
+		                            			//sHtml += "<h6></h6>";
                             				sHtml += "</div>";
 				                            				
 				                            sHtml += "<div class='-au'>";
@@ -4417,7 +4429,7 @@ hr {
     						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
     					                            	sHtml += "</svg>";
     			                            		sHtml += "</div>";
-    		                            			sHtml += "<h6>※패션잡화</h6>";
+    		                            			//sHtml += "<h6></h6>";
                                 				sHtml += "</div>";
     				                            				
     				                            sHtml += "<div class='-au'>";
@@ -4460,11 +4472,10 @@ hr {
                         $("body").find(".listViewHolderChild").eq(1).html(sHtml);
                     break;
 
-                    case "50000002"://@@@
+                    case "50000002":
                     	if(contentLen > 0){
                             var sHtml = "";
                             
-                           
                             sHtml += "<div class='-at'>";
                            	sHtml += "<amp-base-carousel id='success-stories52' height='573' layout='fixed-height' role='region' snap-align='(min-width: 768px) start, center' visible-count='(min-width: 1024px) 3, (min-width: 768px) 2, 1.05' aria-label='Success stories' on='slideChange:teaser-carousel-pagination-success-stories52.toggle(index=event.index, value=true)' class='i-amphtml-layout-fixed-height i-amphtml-layout-size-defined' style='height:573px;' i-amphtml-layout='fixed-height'>";
                             for(var i = 0; i < contentLen; i++){
@@ -4482,7 +4493,7 @@ hr {
     						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
     					                            	sHtml += "</svg>";
     			                            		sHtml += "</div>";
-    		                            			sHtml += "<h6>※화장품 미용</h6>";
+    		                            			//sHtml += "<h6></h6>";
                                 				sHtml += "</div>";
     				                            				
     				                            sHtml += "<div class='-au'>";
@@ -4546,7 +4557,7 @@ hr {
     						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
     					                            	sHtml += "</svg>";
     			                            		sHtml += "</div>";
-    		                            			sHtml += "<h6>※디지털 가전</h6>";
+    		                            			//sHtml += "<h6></h6>";
                                 				sHtml += "</div>";
     				                            				
     				                            sHtml += "<div class='-au'>";
@@ -4608,7 +4619,7 @@ hr {
     						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
     					                            	sHtml += "</svg>";
     			                            		sHtml += "</div>";
-    		                            			sHtml += "<h6>※가구 인테리어</h6>";
+    		                            			//sHtml += "<h6></h6>";
                                 				sHtml += "</div>";
     				                            				
     				                            sHtml += "<div class='-au'>";
@@ -4670,7 +4681,7 @@ hr {
     						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
     					                            	sHtml += "</svg>";
     			                            		sHtml += "</div>";
-    		                            			sHtml += "<h6>※출산 육아</h6>";
+    		                            			//sHtml += "<h6></h6>";
                                 				sHtml += "</div>";
     				                            				
     				                            sHtml += "<div class='-au'>";
@@ -4732,7 +4743,7 @@ hr {
     						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
     					                            	sHtml += "</svg>";
     			                            		sHtml += "</div>";
-    		                            			sHtml += "<h6>※식품</h6>";
+    		                            			//sHtml += "<h6></h6>";
                                 				sHtml += "</div>";
     				                            				
     				                            sHtml += "<div class='-au'>";
@@ -4794,7 +4805,7 @@ hr {
     						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
     					                            	sHtml += "</svg>";
     			                            		sHtml += "</div>";
-    		                            			sHtml += "<h6>※스포츠 레저</h6>";
+    		                            			//sHtml += "<h6></h6>";
                                 				sHtml += "</div>";
     				                            				
     				                            sHtml += "<div class='-au'>";
@@ -4856,7 +4867,7 @@ hr {
     						                            	sHtml += "<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#amp-websites' />";
     					                            	sHtml += "</svg>";
     			                            		sHtml += "</div>";
-    		                            			sHtml += "<h6>※생활 건강</h6>";
+    		                            			//sHtml += "<h6></h6>";
                                 				sHtml += "</div>";
     				                            				
     				                            sHtml += "<div class='-au'>";

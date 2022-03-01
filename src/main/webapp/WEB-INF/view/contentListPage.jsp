@@ -26,6 +26,12 @@
 	<link  href="../static/css/main.css" rel="stylesheet"/>
 	<link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
 	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<style type="text/css">
+		a:link {text-decoration:none; color:#646464;}
+		a:visited {text-decoration:none; color:#646464;}
+		a:active {text-decoration:none; color:#646464;}
+		a:hover {text-decoration:none; color:#646464;}
+	</style>
 </head>
 <body>
 	<div class="wrap">
@@ -258,11 +264,11 @@
 						sHtml += 			"<div class='numbering''>"+(i+1)+"</div>";
 						sHtml += 		"</div>"
 						sHtml += 		"<div class='contentImgBox'>";
-						sHtml += 			'<amp-img width="180px" height="150px" src="'+data.content[i].contentPrdImg+'" alt="'+data.content[i].contentPrdNm+'"></amp-img>';
+						sHtml += 			'<a target="_blank" href="'+data.content[i].contentPrdUrl+'"><amp-img width="180px" height="150px" src="'+data.content[i].contentPrdImg+'" alt="'+data.content[i].contentPrdNm+'"></amp-img></a>';
 						sHtml += 		"</div>"
 						sHtml += 		"<div class='contentText'>";
 						sHtml +=			'<div class="oneOverFlow">';
-						sHtml +=				'<div><font style="vertical-align: inherit;">'+data.content[i].contentPrdNm+'</font></div>';
+						sHtml +=				'<a target="_blank" cta-active="" href="'+data.content[i].contentPrdUrl+'"><div><font style="vertical-align: inherit;">'+data.content[i].contentPrdNm+'</font></div></a>';
 						sHtml +=				'<div class="prdPrice"><font style="vertical-align: inherit;">'+priceToString(data.content[i].contentPrdPrice)+'원</font></div>';
 						sHtml +=				'<div class="goPageButton"><a class="webButton" target="_blank" href="'+data.content[i].contentPrdUrl+'" cta-active="" style="font-size: 16px;">최저가보기</a></div>';
 						sHtml +=			'</div>';
