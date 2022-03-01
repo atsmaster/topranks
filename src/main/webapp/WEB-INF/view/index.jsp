@@ -35,20 +35,6 @@
         overflow-x: hidden !important
       }
 
-      html.i-amphtml-fie {
-        height: 100% !important;
-        width: 100% !important
-      }
-
-      html:not([amp4ads]),
-      html:not([amp4ads]) body {
-        height: auto !important
-      }
-
-      html:not([amp4ads]) body {
-        margin: 0 !important
-      }
-
       body {
         -webkit-text-size-adjust: 100%;
         -moz-text-size-adjust: 100%;
@@ -162,36 +148,7 @@
       amp-list[diffable] div[role=list] {
         display: block
       }
-
-      amp-story-page,
-      amp-story[standalone] {
-        min-height: 1px !important;
-        display: block !important;
-        height: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow: hidden !important;
-        width: 100% !important
-      }
-
-      amp-story[standalone] {
-        background-color: #000 !important;
-        position: relative !important
-      }
-
-      amp-story-page {
-        background-color: #757575
-      }
-
-      amp-story .amp-active>div,
-      amp-story .i-amphtml-loader-background {
-        display: none !important
-      }
-
-      amp-story-page:not(:first-of-type):not([distance]):not([active]) {
-        transform: translateY(1000vh) !important
-      }
-
+      
       amp-autocomplete {
         position: relative !important;
         display: inline-block !important
@@ -210,66 +167,12 @@
         line-height: 1.5rem
       }
 
-      [amp-fx^=fly-in] {
-        visibility: hidden
-      }
-
-      amp-script[nodom],
-      amp-script[sandboxed] {
-        position: fixed !important;
-        top: 0 !important;
-        width: 1px !important;
-        height: 1px !important;
-        overflow: hidden !important;
-        visibility: hidden
-      }
-
-      /*# sourceURL=/css/ampdoc.css*/
-      [hidden] {
-        display: none !important
-      }
-
       .i-amphtml-element {
         display: inline-block
       }
 
-      .i-amphtml-blurry-placeholder {
-        transition: opacity 0.3s cubic-bezier(0.0, 0.0, 0.2, 1) !important;
-        pointer-events: none
-      }
-
       [layout=nodisplay]:not(.i-amphtml-element) {
         display: none !important
-      }
-
-      .i-amphtml-layout-fixed,
-      [layout=fixed][width][height]:not(.i-amphtml-layout-fixed) {
-        display: inline-block;
-        position: relative
-      }
-
-      .i-amphtml-layout-responsive,
-      [layout=responsive][width][height]:not(.i-amphtml-layout-responsive),
-      [width][height][heights]:not([layout]):not(.i-amphtml-layout-responsive),
-      [width][height][sizes]:not(img):not([layout]):not(.i-amphtml-layout-responsive) {
-        display: block;
-        position: relative
-      }
-
-      .i-amphtml-layout-intrinsic,
-      [layout=intrinsic][width][height]:not(.i-amphtml-layout-intrinsic) {
-        display: inline-block;
-        position: relative;
-        max-width: 100%
-      }
-
-      .i-amphtml-layout-intrinsic .i-amphtml-sizer {
-        max-width: 100%
-      }
-
-      .i-amphtml-intrinsic-sizer {
-        max-width: 100%;
-        display: block !important
       }
 
       .i-amphtml-layout-container,
@@ -304,39 +207,10 @@
         display: inline !important
       }
 
-      .i-amphtml-layout-flex-item,
-      [layout=flex-item]:not(.i-amphtml-layout-flex-item) {
-        display: block;
-        position: relative;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto
-      }
-
-      .i-amphtml-layout-fluid {
-        position: relative
-      }
-
       .i-amphtml-layout-size-defined {
         overflow: hidden !important
       }
 
-      .i-amphtml-layout-awaiting-size {
-        position: absolute !important;
-        top: auto !important;
-        bottom: auto !important
-      }
-
-      i-amphtml-sizer {
-        display: block !important
-      }
-
-      @supports (aspect-ratio:1/1) {
-        i-amphtml-sizer.i-amphtml-disable-ar {
-          display: none !important
-        }
-      }
-
-      .i-amphtml-blurry-placeholder,
       .i-amphtml-fill-content {
         display: block;
         height: 0;
@@ -387,16 +261,6 @@
         left: 16px !important
       }
 
-      .i-amphtml-unresolved {
-        position: relative;
-        overflow: hidden !important
-      }
-
-      .i-amphtml-select-disabled {
-        -webkit-user-select: none !important;
-        -ms-user-select: none !important;
-        user-select: none !important
-      }
 
       .i-amphtml-notbuilt,
       [layout]:not(.i-amphtml-element),
@@ -426,9 +290,6 @@
         line-height: 0 !important
       }
 
-      .i-amphtml-ghost {
-        visibility: hidden !important
-      }
 
       .i-amphtml-element>[placeholder],
       [layout]:not(.i-amphtml-element)>[placeholder],
@@ -438,10 +299,6 @@
         line-height: normal
       }
 
-      .i-amphtml-element>[placeholder].amp-hidden,
-      .i-amphtml-element>[placeholder].hidden {
-        visibility: hidden
-      }
 
       .i-amphtml-element:not(.amp-notsupported)>[fallback],
       .i-amphtml-layout-container>[placeholder].amp-hidden,
@@ -467,20 +324,6 @@
         display: block !important
       }
 
-      .i-amphtml-hidden-by-media-query {
-        display: none !important
-      }
-
-      .i-amphtml-element-error {
-        background: red !important;
-        color: #fff !important;
-        position: relative !important
-      }
-
-      .i-amphtml-element-error:before {
-        content: attr(error-message)
-      }
-
       i-amp-scroll-container,
       i-amphtml-scroll-container {
         position: absolute;
@@ -497,19 +340,11 @@
         -webkit-overflow-scrolling: touch
       }
 
-      .i-amphtml-loading-container {
-        display: block !important;
-        pointer-events: none;
-        z-index: 1
-      }
 
       .i-amphtml-notbuilt>.i-amphtml-loading-container {
         display: block !important
       }
 
-      .i-amphtml-loading-container.amp-hidden {
-        visibility: hidden
-      }
 
       .i-amphtml-element>[overflow] {
         cursor: pointer;
@@ -532,16 +367,6 @@
         display: none !important
       }
 
-      .amp-border-box,
-      .amp-border-box *,
-      .amp-border-box :after,
-      .amp-border-box :before {
-        box-sizing: border-box
-      }
-
-      amp-pixel {
-        display: none !important
-      }
 
       amp-analytics,
       amp-auto-ads,
@@ -4093,61 +3918,7 @@ a code {
   margin:0;
   padding:0 0 1.5em
 }
-.ap-link-text,.ap-link:before {
-  transition:transform .3s ease
-}
-.ap-link:hover .ap-link-text,.ap-link:hover:before {
-  transform:translateX(10px)
-}
-.ap-link.--external:before,.ap-link.--internal:before {
-  background-color:currentColor;
-  background-position:50%;
-  background-repeat:no-repeat;
-  content:"";
-  height:1em;
-  margin-bottom:auto;
-  margin-right:.625em;
-  mask-position:center;
-  -webkit-mask-position:center;
-  mask-repeat:no-repeat;
-  -webkit-mask-repeat:no-repeat;
-  padding:.438em 0;
-  width:1em
-}
-.ap-link.--internal:before {
-  mask-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg'viewBox='0 0 64 64'%3E%3Cpath d='M43.16 10.18c-.881-.881-2.322-.881-3.203 0s-.881 2.322 0 3.203l16.335 16.335H2.241A2.238 2.238 0 0 0-.001 31.96c0 1.281.961 2.322 2.242 2.322h54.051L39.877 50.617c-.881.881-.881 2.322 0 3.203s2.322.881 3.203 0l20.259-20.259a2.271 2.271 0 0 0 0-3.203L43.16 10.179z'/%3E%3C/svg%3E");
-  -webkit-mask-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg'viewBox='0 0 64 64'%3E%3Cpath d='M43.16 10.18c-.881-.881-2.322-.881-3.203 0s-.881 2.322 0 3.203l16.335 16.335H2.241A2.238 2.238 0 0 0-.001 31.96c0 1.281.961 2.322 2.242 2.322h54.051L39.877 50.617c-.881.881-.881 2.322 0 3.203s2.322.881 3.203 0l20.259-20.259a2.271 2.271 0 0 0 0-3.203L43.16 10.179z'/%3E%3C/svg%3E")
-}
-.ap-link.--external:before {
-  mask-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg'viewBox='0 0 64 64'%3E%3Cpath d='M28.879 11.24a2.156 2.156 0 0 0-3.048 3.048l15.543 15.543H2.133A2.127 2.127 0 0 0 0 31.964c0 1.219.914 2.207 2.133 2.207h39.241L25.758 49.714a2.156 2.156 0 0 0 3.048 3.048l19.273-19.279a2.156 2.156 0 0 0 0-3.048l-19.2-19.194zm30.55 16.152c2.511 0 4.571 2.06 4.571 4.571s-2.06 4.571-4.571 4.571-4.571-2.06-4.571-4.571 2.06-4.571 4.571-4.571z'/%3E%3C/svg%3E");
-  -webkit-mask-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg'viewBox='0 0 64 64'%3E%3Cpath d='M28.879 11.24a2.156 2.156 0 0 0-3.048 3.048l15.543 15.543H2.133A2.127 2.127 0 0 0 0 31.964c0 1.219.914 2.207 2.133 2.207h39.241L25.758 49.714a2.156 2.156 0 0 0 3.048 3.048l19.273-19.279a2.156 2.156 0 0 0 0-3.048l-19.2-19.194zm30.55 16.152c2.511 0 4.571 2.06 4.571 4.571s-2.06 4.571-4.571 4.571-4.571-2.06-4.571-4.571 2.06-4.571 4.571-4.571z'/%3E%3C/svg%3E")
-}
-.ap-link.--square {
-  border-bottom:1px solid #ebebf0;
-  color:#20202a;
-  font-family:Poppins,system
-}
-.ap-link.--square:before {
-  background-color:#005af0;
-  background-size:1.375em;
-  box-shadow:0 15px 25px 0 rgba(0,0,0,.15);
-  height:1.375em;
-  margin-right:.9375em;
-  mask-image:unset;
-  -webkit-mask-image:unset;
-  overflow:hidden;
-  padding:.563em;
-  width:1.375em
-}
-.ap-link.--square.--internal:before {
-  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg'viewBox='0 0 64 64'fill='%23fff'%3E%3Cpath d='M43.16 10.18c-.881-.881-2.322-.881-3.203 0s-.881 2.322 0 3.203l16.335 16.335H2.241A2.238 2.238 0 0 0-.001 31.96c0 1.281.961 2.322 2.242 2.322h54.051L39.877 50.617c-.881.881-.881 2.322 0 3.203s2.322.881 3.203 0l20.259-20.259a2.271 2.271 0 0 0 0-3.203L43.16 10.179z'/%3E%3C/svg%3E")
-}
-.ap-link.--square.--external:before {
-  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg'viewBox='0 0 64 64'fill='%23fff'%3E%3Cpath d='M28.879 11.24a2.156 2.156 0 0 0-3.048 3.048l15.543 15.543H2.133A2.127 2.127 0 0 0 0 31.964c0 1.219.914 2.207 2.133 2.207h39.241L25.758 49.714a2.156 2.156 0 0 0 3.048 3.048l19.273-19.279a2.156 2.156 0 0 0 0-3.048l-19.2-19.194zm30.55 16.152c2.511 0 4.571 2.06 4.571 4.571s-2.06 4.571-4.571 4.571-4.571-2.06-4.571-4.571 2.06-4.571 4.571-4.571z'/%3E%3C/svg%3E")
-}
-.ap-link.--square:hover:before {
-  animation:duepduep2021 .3s ease
-}
+
 @keyframes duepduep2021 {
   0% {
     background-position-x:center
@@ -4162,44 +3933,11 @@ a code {
     background-position-x:center
   }
 }
-.ap-newsletter {
-  display:flex
-}
-.amp-geo-group-doubleOptIn .ap-newsletter,.amp-geo-pending .ap-newsletter,.ap-newsletter-double {
-  display:none
-}
-.amp-geo-group-doubleOptIn .ap-newsletter-double,.amp-geo-pending .ap-newsletter-double {
-  display:flex
-}
+
 body,html {
   color:#20202a
 }
-main {
-  grid-gap:15px;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  display:grid;
-  grid-template-columns:repeat(24,1fr);
-  margin:0 auto;
-  padding:0;
-  width:100%
-}
-@media(min-width:1280px) {
-  main {
-    grid-gap:30px;
-    max-width:1920px
-  }
-}
-.ap-container {
-  display:flex;
-  grid-column:2/24;
-  position:relative
-}
-@media(min-width:1680px) {
-  .ap-container {
-    grid-column:4/22
-  }
-}
+
 h1,h2,h3,h4,h5,h6 {
   color:inherit;
   margin-bottom:.3em;
@@ -4210,18 +3948,9 @@ h1,h2,h3,h4,h5,h6 {
     font-size:52px
   }
 }
-.ap-h2,h2 {
-  font-size:2.4em
-}
-.ap-h3,h3 {
-  font-size:20px
-}
 .ap-h4,h4 {
   font-size:18px;
   line-height:24px
-}
-.ap-h5,h5 {
-  font-size:16px
 }
 .ap-h5,.ap-h6,h5,h6 {
   letter-spacing:.5px;
@@ -4233,17 +3962,7 @@ h1,h2,h3,h4,h5,h6 {
 .ap-p,a,p {
   font-size:16px
 }
-.ap-p,p {
-  color:inherit;
-  line-height:1.625;
-  margin-bottom:0;
-  margin-top:1.1em;
-  max-width:920px
-}
-.ap-p-large {
-  font-size:18px;
-  line-height:1.78
-}
+
 button {
   -webkit-appearance:none;
   background:transparent;
@@ -4252,37 +3971,8 @@ button {
   cursor:pointer;
   padding:0
 }
-code,p code {
-  color:#000;
-  display:inline;
-  font-family:Fira Mono,monospace;
-  font-size:.9em;
-  font-weight:500;
-  padding:2px 4px;
-  word-break:normal
-}
-code {
-  max-width:100%;
-  overflow:hidden;
-  word-break:break-word
-}
-ul {
-  list-style:none
-}
-li,ul {
-  padding:0
-}
-li {
-  line-height:1.63
-}
-select {
-  -webkit-appearance:none;
-  background:transparent;
-  border:none
-}
-figure {
-  margin:0
-}
+
+
 svg {
   max-height:100%;
   max-width:100%
@@ -4442,7 +4132,7 @@ hr {
 						<input type='hidden' name='ctgrNo' value=''>
 						<input type='hidden' name='postUrl' value=''>
 						<!-- <amp-list layout="fixed-height" height="400" [height]="200" src="../static/json/navigation.json" binding="no"> -->
-						<amp-list layout="fixed-height" height="400" [height]="200" src="amp-state:placeholderState" binding="no">
+						<amp-list layout="fixed-height" height="444" [height]="200" src="amp-state:placeholderState" binding="no">
 							<template type="amp-mustache" class="test">
 								
 								<input type='hidden' name='{{title}}url' value='{{url}}'>
