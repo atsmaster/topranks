@@ -299,7 +299,8 @@ amp-list div[role="list"] {
 	  	height: 100%;
 	  }
 	.liveListItem_2{
-		width: 100%;
+		width: 90%;
+		padding-left: 4.5%;
 	}
 }
 
